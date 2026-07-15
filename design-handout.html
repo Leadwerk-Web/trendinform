@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Handout · Trend in Form GmbH</title>
+<meta name="description" content="UI Style Guide und Komponenten-Dokumentation der Trend in Form Startseite.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="design-handout.css">
+</head>
+<body class="handout is-static">
+
+<!-- ======= COVER ======= -->
+<header class="handout-cover" id="top">
+  <div class="handout-cover__bg" aria-hidden="true">
+    <img src="assets/hero-poster.jpg" alt="">
+  </div>
+  <div class="handout-cover__lightline" aria-hidden="true"></div>
+
+  <div class="handout-cover__top">
+    <img src="assets/logo_negativ.png" alt="Trend in Form GmbH" class="handout-cover__logo">
+    <span class="handout-cover__tag">UI Style Guide · Juli 2026</span>
+  </div>
+
+  <div class="handout-cover__body">
+    <p class="handout-cover__label">Design Handout</p>
+    <h1>Visuelle Dokumentation der <em>Trend in Form</em> Startseite</h1>
+    <p class="handout-cover__intro">Farben, Typografie, Layout und UI-Komponenten — kuratiert als Referenz für Design, Entwicklung und Präsentation. Basierend auf der live index-Seite.</p>
+    <nav class="handout-cover__chips" aria-label="Schnellnavigation">
+      <a href="#farben">Farben</a>
+      <a href="#typografie">Typografie</a>
+      <a href="#hero">Hero</a>
+      <a href="#cards">Cards</a>
+      <a href="#faq">FAQ</a>
+      <a href="#summary">Summary</a>
+    </nav>
+  </div>
+
+  <div class="handout-cover__bar">
+    <div class="handout-cover__bar-inner">
+      <div><strong>15 Kapitel</strong><span>Komponenten &amp; System</span></div>
+      <div><strong>Live-Demos</strong><span>Aus style.css übernommen</span></div>
+      <div><strong>PDF-ready</strong><span>Print-optimiertes Layout</span></div>
+      <div><strong>Markenmotiv</strong><span>Lichtlinie · Formen-Trio</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="handout-layout">
+
+  <!-- ======= SIDEBAR NAV ======= -->
+  <nav class="handout-nav" aria-label="Inhaltsverzeichnis">
+    <p class="handout-nav__title">Inhalt</p>
+    <ol>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#farben">Farbigkeit</a></li>
+      <li><a href="#typografie">Typografie</a></li>
+      <li><a href="#headlines">Headlines</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#cta">CTA-Elemente</a></li>
+      <li><a href="#navigation">Navigation</a></li>
+      <li><a href="#hero">Hero-Section</a></li>
+      <li><a href="#grid">Grid &amp; Layout</a></li>
+      <li><a href="#cards">Kacheln &amp; Cards</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#slider">Slider &amp; Vergleich</a></li>
+      <li><a href="#weitere">Weitere UI</a></li>
+      <li><a href="#footer">Footer</a></li>
+      <li><a href="#summary">Zusammenfassung</a></li>
+    </ol>
+  </nav>
+
+  <main class="handout-main">
+
+    <!-- 1 · INTRO -->
+    <section class="doc-section" id="intro">
+      <p class="doc-section__num">01 · Übersicht</p>
+      <h2>Was dieses Handout zeigt</h2>
+      <p class="doc-section__lead">Die Startseite von Trend in Form verbindet handwerkliche Präzision mit einem modernen, dunklen Hero-Auftritt, Marken-Gelb als Lichtakzent und Petrol als ruhigen Gegenpol. Dieses Dokument erfasst das visuelle System — nicht als technisches Audit, sondern als gestalterische Referenz.</p>
+
+      <div class="demo-grid-3">
+        <div class="handout-card">
+          <div class="handout-card__img" style="aspect-ratio:16/10;background:var(--ink);overflow:hidden">
+            <img src="assets/hero-poster.jpg" alt="Hero-Section" style="width:100%;height:100%;object-fit:cover;opacity:0.85">
+          </div>
+          <div class="handout-card__body">
+            <h4>Hero &amp; Erster Eindruck</h4>
+            <p>Video-Hintergrund, Lichtlinie, gestaffelte Headline</p>
+          </div>
+        </div>
+        <div class="handout-card">
+          <img src="preview/sektion-vergleich.png" alt="Vorher-Nachher-Section" class="handout-card__img">
+          <div class="handout-card__body">
+            <h4>Interaktive Module</h4>
+            <p>Vorher-Nachher-Slider, Feature-Blöcke</p>
+          </div>
+        </div>
+        <div class="handout-card">
+          <img src="preview/sektion-faq.png" alt="FAQ und Kontakt" class="handout-card__img">
+          <div class="handout-card__body">
+            <h4>Conversion &amp; Vertrauen</h4>
+            <p>FAQ, Formular, Kontaktkarte</p>
+          </div>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:32px">
+        <div class="spec-item"><dt>Seiten-Typ</dt><dd>Landing Page / One-Pager</dd></div>
+        <div class="spec-item"><dt>Design-Charakter</dt><dd>Modern-dark, editorial, premium</dd></div>
+        <div class="spec-item"><dt>Markenmotiv</dt><dd>Lichtlinie · Formen-Trio</dd></div>
+        <div class="spec-item"><dt>CSS-Variablen</dt><dd>style.css :root</dd></div>
+      </dl>
+    </section>
+
+    <!-- 2 · FARBEN -->
+    <section class="doc-section" id="farben">
+      <p class="doc-section__num">02 · Farbkonzept</p>
+      <h2>Farbigkeit</h2>
+      <p class="doc-section__lead">Gelb ist der Conversion-Akzent — reserviert für Buttons, Lichtlinien und Highlights. Petrol wirkt als sekundäre Markenfarbe für Links, Chips und Vertrauenssignale. Dunkle Flächen schaffen Tiefe, helle Abschnitte Atemraum.</p>
+
+      <div class="color-group">
+        <h3>Primärfarben · Marken-Gelb</h3>
+        <p>Conversion, Lichtlinien-Motiv, Sterne, Scroll-Akzente</p>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#F7D954"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Yellow</p>
+              <p class="color-swatch__hex">#F7D954 · --yellow</p>
+              <p class="color-swatch__use">Primärbuttons, Akzent-Text, Lichtlinie, Selection</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#EFC93B"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Yellow Deep</p>
+              <p class="color-swatch__hex">#EFC93B · --yellow-deep</p>
+              <p class="color-swatch__use">Button-Hover, Maus-Schweif</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <h3>Sekundärfarben · Petrol</h3>
+        <p>Ruhiger Gegenpol zum Gelb — Vertrauen, Navigation, aktive Filter</p>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#3E7C87"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Secondary</p>
+              <p class="color-swatch__hex">#3E7C87 · --sec</p>
+              <p class="color-swatch__use">Chips aktiv, Fokus-Ring, Checkmarks, Tags</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#336A74"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Secondary Deep</p>
+              <p class="color-swatch__hex">#336A74 · --sec-deep</p>
+              <p class="color-swatch__use">Step-Nummern, Hover auf hellem Grund</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#9BC7CF"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Secondary Soft</p>
+              <p class="color-swatch__hex">#9BC7CF · --sec-soft</p>
+              <p class="color-swatch__use">Hero-Badges, Links auf Dark, Nav-Hover</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:rgba(62,124,135,0.13)"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Secondary Tint</p>
+              <p class="color-swatch__hex">rgba(62,124,135,0.13)</p>
+              <p class="color-swatch__use">Step-Badge-Hintergrund</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <h3>Neutrale Farben · Hintergründe &amp; Text</h3>
+        <p>Dark-Ink für Hero, Stats und Footer — Paper-Tint für rhythmische Abschnitte</p>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#0E0F11"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Ink</p>
+              <p class="color-swatch__hex">#0E0F11 · --ink</p>
+              <p class="color-swatch__use">Hero-Overlay, Dark Sections, Footer</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#1E2025"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Ink Card</p>
+              <p class="color-swatch__hex">#1E2025 · --ink-card</p>
+              <p class="color-swatch__use">Karten auf dunklem Grund</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#FFFFFF;border-bottom:1px solid #eee"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Paper</p>
+              <p class="color-swatch__hex">#FFFFFF · --paper</p>
+              <p class="color-swatch__use">Standard-Hintergrund, Cards, Formular</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#F6F5F1"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Paper Tint</p>
+              <p class="color-swatch__hex">#F6F5F1 · --paper-tint</p>
+              <p class="color-swatch__use">Alternierende Sections, Input-Felder</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#26282D"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Text</p>
+              <p class="color-swatch__hex">#26282D · --text</p>
+              <p class="color-swatch__use">Fließtext, Headlines auf hellem Grund</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#5D6067"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Text Soft</p>
+              <p class="color-swatch__hex">#5D6067 · --text-soft</p>
+              <p class="color-swatch__use">Beschreibungen, Meta-Texte, Labels</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#F4F4F2"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Text Inverse</p>
+              <p class="color-swatch__hex">#F4F4F2 · --text-inverse</p>
+              <p class="color-swatch__use">Headlines und Text auf Dark</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background:#A9ABB2"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Text Inverse Soft</p>
+              <p class="color-swatch__hex">#A9ABB2 · --text-inverse-soft</p>
+              <p class="color-swatch__use">Subtexte auf Dark, Hero-Beschreibung</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · TYPOGRAFIE -->
+    <section class="doc-section" id="typografie">
+      <p class="doc-section__num">03 · Typografie</p>
+      <h2>Schriftarten &amp; Hierarchien</h2>
+      <p class="doc-section__lead">Outfit für Headlines und UI-Elemente — leicht, modern, mit leicht negativem Letter-Spacing. Inter für Fließtext und Formulare — neutral und gut lesbar.</p>
+
+      <dl class="spec-grid">
+        <div class="spec-item"><dt>Headlines</dt><dd>Outfit · 200–600</dd></div>
+        <div class="spec-item"><dt>Body</dt><dd>Inter · 300–500</dd></div>
+        <div class="spec-item"><dt>Letter-Spacing</dt><dd>−0.02em (Headlines)</dd></div>
+        <div class="spec-item"><dt>Line-Height</dt><dd>1.16 (H) · 1.6 (Body)</dd></div>
+      </dl>
+
+      <div class="type-stack">
+        <div class="type-sample type-sample--dark">
+          <p class="type-sample__label">H1 · Hero Headline</p>
+          <p class="type-h1">Morgens Baustelle. Abends ein Raum, <span class="accent">der Dich begeistert.</span></p>
+          <p class="type-sample__spec">Outfit · clamp(38px, 6vw, 72px) · weight 300 / accent 500 · line-height 1.12</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-sample__label">H2 · Section Headline</p>
+          <p class="type-h2">Jeder Raum hat eine Decke.<br>Wenige haben ein Konzept.</p>
+          <p class="type-sample__spec">Outfit · clamp(32px, 4.2vw, 48px) · weight 400 · max-width 680px</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-sample__label">H3 · Card / Step Title</p>
+          <p class="type-h3">Spanndecke im Bad</p>
+          <p class="type-sample__spec">Outfit · 21px (Cards) / 17px (Steps) · weight 400</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-sample__label">Fließtext · Section Description</p>
+          <p class="type-body">Sag uns, wo Dein Projekt spielt. Wir zeigen Dir, was darüber möglich ist — von der ersten Beratung bis zur Abnahme.</p>
+          <p class="type-sample__spec">Inter · 17px · color --text-soft · line-height 1.6</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-sample__label">Eyebrow · Section Label</p>
+          <p class="type-eyebrow">Unsere Leistungen</p>
+          <p class="type-sample__spec" style="margin-top:20px">Outfit · 12px · weight 500 · letter-spacing 0.18em · uppercase · + Formen-Signet</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-sample__label">Meta / Small · Badges, Captions</p>
+          <p class="type-small">DIN 18168 · dokumentierter Montagestandard · 13px</p>
+          <p class="type-sample__spec">Inter · 12–14px · --text-soft / --text-inverse-soft</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · HEADLINES -->
+    <section class="doc-section" id="headlines">
+      <p class="doc-section__num">04 · Headlinestruktur</p>
+      <h2>Überschriften-Hierarchie</h2>
+      <p class="doc-section__lead">Jede Section folgt dem Muster Eyebrow → H2 → Beschreibung. Der Hero nutzt eine gestaffelte H1 mit gelbem Akzent in der letzten Zeile. Auf dunklem Grund sind Headlines bewusst leichter (weight 300).</p>
+
+      <div class="demo-frame">
+        <div class="demo-frame__label">Section Header · Standard-Muster</div>
+        <div class="demo-frame__body">
+          <div class="section__head" style="margin-bottom:0">
+            <span class="eyebrow">Referenzen</span>
+            <h2>Wir könnten viel erzählen.<br>Unsere Decken zeigen es lieber.</h2>
+            <p>Vom privaten Bad bis zum Showroom von Mercedes Benz: ein Auszug aus unseren Montagen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-cols">
+        <div class="doc-note">
+          <p class="doc-sub" style="margin-top:0">Hierarchie &amp; Wirkung</p>
+          <ul>
+            <li><strong>Eyebrow</strong> — Kategorisiert die Section, trägt das Formen-Trio als Marken-Signet</li>
+            <li><strong>H2</strong> — Emotionaler Hook, oft zweizeilig mit Zeilenumbruch</li>
+            <li><strong>Beschreibung</strong> — Sachliche Ergänzung in --text-soft, max. ~680px breit</li>
+            <li><strong>Accent</strong> — Gelb (.accent) oder Petrol-Highlight (.accent-dark) für Schlüsselworte</li>
+          </ul>
+        </div>
+        <div class="demo-frame">
+          <div class="demo-frame__label">Accent-Varianten</div>
+          <div class="demo-frame__body--dark demo-frame__body">
+            <p style="font-family:var(--font-head);font-size:28px;font-weight:300;color:var(--text-inverse);line-height:1.2;margin-bottom:20px">
+              Licht, das nicht leuchtet.<br>Es <span class="accent">wohnt.</span>
+            </p>
+            <p style="font-family:var(--font-head);font-size:28px;font-weight:400;color:var(--text);background:var(--paper);padding:20px;border-radius:12px;line-height:1.2">
+              Echte Bäder, echte Ergebnisse.<br><span class="accent-dark">Zieh selbst die Linie.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · BUTTONS -->
+    <section class="doc-section" id="buttons">
+      <p class="doc-section__num">05 · Buttons</p>
+      <h2>Button-System</h2>
+      <p class="doc-section__lead">Pill-förmige Buttons mit Outfit Medium. Primär in Marken-Gelb für Conversion, Ghost für sekundäre Aktionen. Hover hebt leicht an (translateY −2px) und vertieft den Schatten.</p>
+
+      <div class="demo-frame">
+        <div class="demo-frame__label">Button-Varianten · Hell</div>
+        <div class="demo-frame__body demo-row">
+          <a href="#" class="btn btn--primary" onclick="return false">Primärbutton</a>
+          <a href="#" class="btn btn--primary btn--lg" onclick="return false">Primär · Large</a>
+          <a href="#" class="btn btn--ghost" style="color:var(--text);border-color:var(--line)" onclick="return false">Ghost · Hell</a>
+          <a href="#" class="btn btn--primary btn--block" style="max-width:280px" onclick="return false">Block Button</a>
+        </div>
+      </div>
+
+      <div class="demo-frame" style="margin-top:20px">
+        <div class="demo-frame__label">Button-Varianten · Dark (Hero-Kontext)</div>
+        <div class="demo-frame__body demo-frame__body--dark demo-row">
+          <a href="#" class="btn btn--primary btn--lg" onclick="return false">Termin vor Ort anfragen</a>
+          <a href="#" class="btn btn--ghost btn--lg" onclick="return false">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Verwandlung ansehen
+          </a>
+          <a href="#" class="btn btn--primary btn--nav" onclick="return false">Nav-CTA</a>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:24px">
+        <div class="spec-item"><dt>Border-Radius</dt><dd>999px (Pill)</dd></div>
+        <div class="spec-item"><dt>Padding Standard</dt><dd>14px 26px</dd></div>
+        <div class="spec-item"><dt>Padding Large</dt><dd>17px 34px</dd></div>
+        <div class="spec-item"><dt>Font</dt><dd>Outfit 500 · 15–16px</dd></div>
+        <div class="spec-item"><dt>Border</dt><dd>2px solid transparent</dd></div>
+        <div class="spec-item"><dt>Hover Primary</dt><dd>translateY(−2px) · --yellow-deep</dd></div>
+        <div class="spec-item"><dt>Hover Ghost</dt><dd>border --sec-soft / --sec</dd></div>
+        <div class="spec-item"><dt>Schatten Primary</dt><dd>0 10px 26px −14px rgba(14,15,17,.45)</dd></div>
+      </dl>
+    </section>
+
+    <!-- 6 · CTA -->
+    <section class="doc-section" id="cta">
+      <p class="doc-section__num">06 · CTA-Elemente</p>
+      <h2>Call-to-Action-System</h2>
+      <p class="doc-section__lead">CTAs sind durch Marken-Gelb sofort erkennbar. Sie erscheinen im Hero, in Feature-Blöcken, nach dem Vergleichs-Slider, im B2B-Strip und als Sticky-Bar auf Mobile.</p>
+
+      <div class="demo-grid-2">
+        <div class="demo-frame">
+          <div class="demo-frame__label">Hero CTA-Gruppe</div>
+          <div class="demo-frame__body demo-frame__body--dark">
+            <div class="hero__cta" style="margin-top:0">
+              <a href="#" class="btn btn--primary btn--lg" onclick="return false">Termin vor Ort anfragen</a>
+              <a href="#" class="btn btn--ghost btn--lg" onclick="return false">Verwandlung ansehen</a>
+            </div>
+          </div>
+        </div>
+        <div class="demo-frame">
+          <div class="demo-frame__label">Card Link CTA</div>
+          <div class="demo-frame__body demo-frame__body--dark" style="background:linear-gradient(185deg,rgba(10,11,13,0) 30%,rgba(10,11,13,0.88) 82%), url('assets/bad-1.jpg') center/cover; min-height:200px; display:flex; align-items:flex-end">
+            <div>
+              <h3 style="color:#fff;font-size:21px;margin-bottom:8px">Spanndecke im Bad</h3>
+              <span class="case__link">Kostenvoranschlag fürs Bad →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-frame" style="margin-top:20px">
+        <div class="demo-frame__label">Sticky Mobile CTA · sichtbar ab scrollY &gt; 500px</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <div class="sticky-cta" style="position:relative;display:flex;transform:none;box-shadow:none">
+            <a href="#" class="sticky-cta__call" onclick="return false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Anrufen
+            </a>
+            <a href="#" class="sticky-cta__form" onclick="return false">Termin vor Ort anfragen</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-note" style="margin-top:24px">
+        <strong>Positionierung:</strong> Primär-CTA immer links oder alleinstehend. Ghost-CTA als visuell leichtere Alternative. Card-Links in Petrol (--sec-soft) mit Pfeil →. Telefonnummer als alternativer Conversion-Pfad in Navigation und FAQ.
+      </div>
+    </section>
+
+    <!-- 7 · NAVIGATION -->
+    <section class="doc-section" id="navigation">
+      <p class="doc-section__num">07 · Navigation</p>
+      <h2>Hauptnavigation</h2>
+      <p class="doc-section__lead">Fixed Header mit transparentem Startzustand über dem Hero. Beim Scrollen (>40px) wechselt er zu hellem, geblurrtem Hintergrund — inklusive Logo-Swap von Negativ zu Positiv.</p>
+
+      <div class="demo-frame">
+        <div class="demo-frame__label">Navigation · Scroll-Zustand (simuliert)</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <div style="background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);box-shadow:0 8px 30px -18px rgba(0,0,0,0.35);padding:14px 3vw">
+            <div style="display:flex;align-items:center;justify-content:space-between;max-width:1320px;margin:0 auto;gap:24px">
+              <a href="#" class="demo-logo" onclick="return false"><img src="assets/logo.png" alt="Trend in Form GmbH"></a>
+              <nav style="display:flex;gap:28px;font-weight:500;font-size:15px;color:var(--text)">
+                <a href="#" onclick="return false">Leistungen</a>
+                <a href="#" onclick="return false">Lichtlinie</a>
+                <a href="#" onclick="return false">Referenzen</a>
+              </nav>
+              <div style="display:flex;align-items:center;gap:18px">
+                <span style="display:flex;align-items:center;gap:8px;font-weight:500;font-size:15px;color:var(--text)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--sec)" stroke-width="2" width="17" height="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  07248 927 30 50
+                </span>
+                <a href="#" class="btn btn--primary btn--nav" onclick="return false">Termin vor Ort anfragen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-frame" style="margin-top:20px">
+        <div class="demo-frame__label">Navigation · Hero-Zustand (transparent über Bild)</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <div style="position:relative;min-height:100px;background:url('assets/hero-poster.jpg') center/cover">
+            <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,11,13,0.85),rgba(10,11,13,0.4))"></div>
+            <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:14px 3vw;gap:24px">
+              <a href="#" class="demo-logo" onclick="return false"><img src="assets/logo_negativ.png" alt="Trend in Form GmbH"></a>
+              <nav style="display:flex;gap:28px;font-weight:500;font-size:15px;color:var(--text-inverse)">
+                <span>Leistungen</span>
+                <span>Lichtlinie</span>
+                <span>Referenzen</span>
+              </nav>
+              <div style="display:flex;align-items:center;gap:18px">
+                <span style="display:flex;align-items:center;gap:8px;font-weight:500;font-size:15px;color:var(--text-inverse)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--sec-soft)" stroke-width="2" width="17" height="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  07248 927 30 50
+                </span>
+                <a href="#" class="btn btn--primary btn--nav" onclick="return false">Termin vor Ort anfragen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:24px">
+        <div class="spec-item"><dt>Position</dt><dd>fixed · z-index 100</dd></div>
+        <div class="spec-item"><dt>Container</dt><dd>min(1320px, 94vw)</dd></div>
+        <div class="spec-item"><dt>Logo Hero</dt><dd>84px → 64px (scrolled)</dd></div>
+        <div class="spec-item"><dt>Link-Hover</dt><dd>2px Unterstreichung --sec</dd></div>
+        <div class="spec-item"><dt>Mobile ≤720px</dt><dd>Burger-Menü · Fullscreen-Dropdown</dd></div>
+        <div class="spec-item"><dt>Mobile CTA</dt><dd>Telefon-Icon · Sticky-Bar unten</dd></div>
+      </dl>
+    </section>
+
+    <!-- 8 · HERO -->
+    <section class="doc-section" id="hero">
+      <p class="doc-section__num">08 · Hero-Section</p>
+      <h2>Hero-Aufbau</h2>
+      <p class="doc-section__lead">Vollbild-Hero mit Video-Hintergrund, zweistufigem Gradient-Overlay, animierter Lichtlinie und schwebenden Logo-Formen. Rating, gestaffelte H1, Subline, CTA-Gruppe und Trust-Bar bilden den ersten Conversion-Moment.</p>
+
+      <div class="hero-showcase">
+        <div class="hero-showcase__frame">
+          <div class="hero-showcase__media">
+            <img src="assets/hero-poster.jpg" alt="Hero-Hintergrund: Spanndecken-Montage">
+          </div>
+          <div class="hero-showcase__overlay"></div>
+          <div class="hero-showcase__line" aria-hidden="true"></div>
+
+          <div class="hero-showcase__shapes" aria-hidden="true">
+            <span class="hs-c"></span>
+            <span class="hs-t"></span>
+            <span class="hs-s"></span>
+          </div>
+
+          <div class="hero-showcase__nav">
+            <a href="#" class="demo-logo" onclick="return false"><img src="assets/logo_negativ.png" alt="Trend in Form GmbH"></a>
+            <div class="hero-showcase__nav-links handout-cover__nav-links">
+              <span>Leistungen</span>
+              <span>Lichtlinie</span>
+              <span>Referenzen</span>
+            </div>
+            <span class="hero-showcase__nav-cta">Termin vor Ort anfragen</span>
+          </div>
+
+          <div class="hero-showcase__content">
+            <div class="hero-showcase__rating">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span>„Ausgezeichnet" bei Google, über 40 Bewertungen</span>
+            </div>
+            <h3 class="hero-showcase__title">
+              Morgens Baustelle.<br>
+              Abends ein Raum,<br>
+              <span class="accent">der Dich begeistert.</span>
+            </h3>
+            <p class="hero-showcase__sub">Wir verbinden Spanndecke, Licht und Akustik zu einem Ergebnis, das man spürt: eine makellose Fläche, ruhiges Licht und ein klarer Plan von der ersten Beratung bis zur Abnahme.</p>
+            <div class="hero-showcase__cta">
+              <a href="#" class="btn btn--primary btn--lg" onclick="return false">Termin vor Ort anfragen</a>
+              <a href="#" class="btn btn--ghost btn--lg" onclick="return false">Verwandlung ansehen</a>
+            </div>
+          </div>
+
+          <ul class="hero-showcase__badges">
+            <li><strong>DIN 18168</strong><span>dokumentierter Montagestandard</span></li>
+            <li><strong>B-s2, d0</strong><span>Brandschutz nach DIN EN 14716</span></li>
+            <li><strong>Phthalatfrei</strong><span>und RoHS konform</span></li>
+            <li><strong>1 Tag</strong><span>typische Montage im Bad</span></li>
+            <li><strong>1 Ansprechpartner</strong><span>für Decke, Licht und Montage</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-showcase__legend">
+          <div class="hero-legend-item">
+            <strong>Video &amp; Overlay</strong>
+            <p>Autoplay-Video mit 0.4× Rate, Kino-Zoom. Gradient links dunkel, unten abdunkelnd.</p>
+          </div>
+          <div class="hero-legend-item">
+            <strong>Lichtlinie</strong>
+            <p>2px gelbe Vertikale bei 8% links — Markenmotiv mit Glow-Effekt.</p>
+          </div>
+          <div class="hero-legend-item">
+            <strong>Formen-Trio</strong>
+            <p>Kreis, Dreieck, Quadrat aus dem Logo — Drift + Maus-Verdrängung.</p>
+          </div>
+          <div class="hero-legend-item">
+            <strong>Headline</strong>
+            <p>Gestaffelte H1-Zeilen, letzte Zeile in Marken-Gelb (.accent).</p>
+          </div>
+          <div class="hero-legend-item">
+            <strong>CTA-Gruppe</strong>
+            <p>Primär + Ghost nebeneinander — klarer Conversion-Fokus.</p>
+          </div>
+          <div class="hero-legend-item">
+            <strong>Trust-Bar</strong>
+            <p>5 Badges mit blur-Hintergrund — Normen und Social Proof.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-breakdown">
+        <div class="hero-breakdown__card">
+          <div class="hero-breakdown__card-head">Layer-Stack · z-Index Aufbau</div>
+          <div class="hero-breakdown__card-body">
+            <div class="hero-breakdown__stack">
+              <div class="hero-breakdown__layer">
+                <i aria-hidden="true"></i>
+                <div><strong>Video / Poster</strong><span>object-fit: cover · min-height 100svh</span></div>
+              </div>
+              <div class="hero-breakdown__layer">
+                <i aria-hidden="true"></i>
+                <div><strong>Gradient-Overlay</strong><span>100deg + 0deg — Lesbarkeit links</span></div>
+              </div>
+              <div class="hero-breakdown__layer">
+                <i aria-hidden="true"></i>
+                <div><strong>Lichtlinie</strong><span>linear-gradient gelb · drop-shadow Glow</span></div>
+              </div>
+              <div class="hero-breakdown__layer">
+                <i aria-hidden="true"></i>
+                <div><strong>Content + UI</strong><span>Nav fixed · Content z-index relativ</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-breakdown__card">
+          <div class="hero-breakdown__card-head">Typografie &amp; Specs</div>
+          <div class="hero-breakdown__card-body hero-breakdown__card-body--dark">
+            <dl class="spec-grid" style="margin-top:0">
+              <div class="spec-item" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)">
+                <dt style="color:var(--text-inverse-soft)">H1</dt>
+                <dd style="color:var(--text-inverse)">clamp(38px, 6vw, 72px)</dd>
+              </div>
+              <div class="spec-item" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)">
+                <dt style="color:var(--text-inverse-soft)">Subline</dt>
+                <dd style="color:var(--text-inverse)">clamp(16px, 2vw, 19px)</dd>
+              </div>
+              <div class="spec-item" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)">
+                <dt style="color:var(--text-inverse-soft)">Content-Padding</dt>
+                <dd style="color:var(--text-inverse)">140px top · 120px bottom</dd>
+              </div>
+              <div class="spec-item" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)">
+                <dt style="color:var(--text-inverse-soft)">Container</dt>
+                <dd style="color:var(--text-inverse)">min(1180px, 92vw)</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · GRID -->
+    <section class="doc-section" id="grid">
+      <p class="doc-section__num">09 · Grid &amp; Layout</p>
+      <h2>Layoutsystem</h2>
+      <p class="doc-section__lead">Ein zentrierter Container (1180px / 92vw) bildet das Rückgrat. Sections wechseln zwischen White, Paper-Tint und Ink-Dark — mit 132px vertikalem Padding (88px Mobile).</p>
+
+      <div class="layout-diagram">
+        <div class="layout-bar">Fixed Navigation · max 1320px</div>
+        <div class="layout-container">
+          <div class="layout-cols">
+            <div class="layout-col">Col 1</div>
+            <div class="layout-col">Col 2</div>
+            <div class="layout-col">Col 3</div>
+          </div>
+        </div>
+        <div class="layout-notes">
+          <div class="layout-note"><strong>Container</strong>min(1180px, 92vw) — zentriert, einheitliche Seitenränder</div>
+          <div class="layout-note"><strong>Section-Padding</strong>132px vertikal · scroll-margin-top 70px für Anker</div>
+          <div class="layout-note"><strong>Border-Radius</strong>18px (--radius) für Cards, Bilder, Formular</div>
+          <div class="layout-note"><strong>3-Spalten-Grid</strong>Cases, Gallery — gap 22–26px</div>
+          <div class="layout-note"><strong>2-Spalten-Split</strong>Feature, FAQ, Contact — gap 70px</div>
+          <div class="layout-note"><strong>5-Spalten-Steps</strong>Ablauf — responsive 3 → 2 → 1</div>
+        </div>
+      </div>
+
+      <div class="demo-frame" style="margin-top:28px">
+        <div class="demo-frame__label">Screenshot · Gesamtseite (Layout-Rhythmus)</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <img src="preview/desktop.png" alt="Gesamtseiten-Layout">
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · CARDS -->
+    <section class="doc-section" id="cards">
+      <p class="doc-section__num">10 · Kacheln &amp; Cards</p>
+      <h2>Card-Elemente</h2>
+      <p class="doc-section__lead">Drei Card-Typen prägen die Seite: Leistungs-Cases (hoch, bilddominant), Galerie-Items (4:3) und Prozess-Steps (textbasiert). Alle nutzen 18px Radius und dezente Schatten.</p>
+
+      <p class="doc-sub">Leistungs-Cards · .case</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body demo-frame__body--flush">
+          <div class="cases" style="grid-template-columns:repeat(3,1fr);gap:16px;padding:16px">
+            <a href="#" class="case" style="aspect-ratio:4/3.6" onclick="return false">
+              <img src="assets/bad-1.jpg" alt="Bad">
+              <div class="case__body">
+                <h3>Spanndecke im Bad</h3>
+                <p>Feuchtraumgeeignet, mit Spots oder Lichtlinie.</p>
+                <span class="case__link">Kostenvoranschlag fürs Bad →</span>
+              </div>
+            </a>
+            <a href="#" class="case" style="aspect-ratio:4/3.6" onclick="return false">
+              <img src="assets/bad-dark.jpg" alt="Lichtlinie">
+              <div class="case__body">
+                <h3>Lichtlinie und Lichtkonzept</h3>
+                <p>Homogene Linien, nahezu niveaugleich.</p>
+                <span class="case__link">Licht planen lassen →</span>
+              </div>
+            </a>
+            <a href="#" class="case" style="aspect-ratio:4/3.6" onclick="return false">
+              <img src="assets/objekt-1.jpg" alt="Objekt">
+              <div class="case__body">
+                <h3>Objekt und Gewerbe</h3>
+                <p>Normgerecht, lückenlos dokumentiert.</p>
+                <span class="case__link">Angebot fürs Objekt →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="doc-sub">Galerie-Cards · .gallery__item</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body">
+          <div class="gallery" style="grid-template-columns:repeat(3,1fr);gap:16px">
+            <figure class="gallery__item">
+              <img src="assets/bad-2.jpg" alt="Gästebad">
+              <figcaption><strong>Gästebad</strong><span>Nahtfreie Decke, Lichtlinie in 3000 K</span></figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/wohnen-1.jpg" alt="Esszimmer">
+              <figcaption><strong>Lichtkonzept Esszimmer</strong><span>Warmes, zoniertes Licht</span></figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/objekt-2.jpg" alt="Showroom">
+              <figcaption><strong>AMG Showroom Essen</strong><span>Lichtdesign im Verkaufsraum</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <p class="doc-sub">Prozess-Steps · .steps li</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body demo-frame__body--tint">
+          <ol class="steps" style="grid-template-columns:repeat(3,1fr);gap:16px">
+            <li><span>01</span><h3>Anfrage und Aufmaß</h3><p>Du sendest uns Raum, Maße und Lichtwunsch.</p></li>
+            <li><span>02</span><h3>Klares Angebot</h3><p>Jede Leistung als eigene Position.</p></li>
+            <li><span>03</span><h3>Saubere Montage</h3><p>Meist an einem Tag, staubarm.</p></li>
+          </ol>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:20px">
+        <div class="spec-item"><dt>Case Hover</dt><dd>translateY(−6px) · img scale(1.06)</dd></div>
+        <div class="spec-item"><dt>Spotlight</dt><dd>Radial-Gradient folgt Maus</dd></div>
+        <div class="spec-item"><dt>Gradient Overlay</dt><dd>185deg · transparent → 88% ink</dd></div>
+        <div class="spec-item"><dt>Schatten</dt><dd>--shadow · 0 18px 50px −30px</dd></div>
+      </dl>
+    </section>
+
+    <!-- 11 · FAQ -->
+    <section class="doc-section" id="faq">
+      <p class="doc-section__num">11 · FAQ</p>
+      <h2>Accordion / FAQ</h2>
+      <p class="doc-section__lead">Native &lt;details&gt;-Elemente mit Custom-Styling. 2-Spalten-Layout: Headline links, Accordion rechts. Nur ein Eintrag gleichzeitig offen — Icon rotiert, Hintergrund wechselt zu Petrol.</p>
+
+      <div class="demo-frame">
+        <div class="demo-frame__label">Screenshot · FAQ-Section</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <img src="preview/sektion-faq.png" alt="FAQ Section" style="max-height:480px;object-fit:cover;object-position:top">
+        </div>
+      </div>
+
+      <div class="demo-frame" style="margin-top:20px">
+        <div class="demo-frame__label">Live-Demo · FAQ Accordion</div>
+        <div class="demo-frame__body demo-frame__body--tint">
+          <div class="faq__list" style="max-width:640px">
+            <details open>
+              <summary>Was kostet eine Spanndecke im Bad?<span class="faq__icon"></span></summary>
+              <div class="faq__body">
+                <p>Ein typisches Bad mit rund 9 m² liegt als Referenzrahmen bei etwa 2.000 bis 2.500 Euro — transparent und ohne versteckte Kosten.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Wie lange dauert die Montage?<span class="faq__icon"></span></summary>
+              <div class="faq__body">
+                <p>Ein Bad ist in der Regel an einem Tag fertig montiert, inklusive Licht. Es entsteht kein Abriss und kaum Staub.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Spots oder Lichtlinie: Was passt zu mir?<span class="faq__icon"></span></summary>
+              <div class="faq__body">
+                <p>Spots liefern punktuelles Licht. Die Lichtlinie wirkt ruhiger und moderner — oft kombinieren wir beides.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:20px">
+        <div class="spec-item"><dt>Border-Radius</dt><dd>18px (--radius)</dd></div>
+        <div class="spec-item"><dt>Summary Padding</dt><dd>20px 24px</dd></div>
+        <div class="spec-item"><dt>Icon</dt><dd>26px Kreis · +/− Toggle</dd></div>
+        <div class="spec-item"><dt>Open State</dt><dd>Icon --sec · shadow · fadeUp</dd></div>
+      </dl>
+    </section>
+
+    <!-- 12 · SLIDER -->
+    <section class="doc-section" id="slider">
+      <p class="doc-section__num">12 · Slider &amp; Vergleich</p>
+      <h2>Interaktive Slider</h2>
+      <p class="doc-section__lead">Zwei slider-ähnliche Elemente: der Vorher-Nachher-Vergleich (Drag-Slider mit gelbem Handle) und das Trust-Marquee (endloser Text-Bandlauf). Beide sind zentrale Storytelling-Werkzeuge.</p>
+
+      <div class="demo-frame">
+        <div class="demo-frame__label">Screenshot · Vorher-Nachher-Slider</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <img src="preview/sektion-vergleich.png" alt="Vorher-Nachher Slider">
+        </div>
+      </div>
+
+      <div class="doc-cols" style="margin-top:24px">
+        <div class="doc-note">
+          <p class="doc-sub" style="margin-top:0">Vorher-Nachher · .compare__stage</p>
+          <ul>
+            <li>Aspect-Ratio 21:10 (Desktop) · 4:3.4 (Mobile)</li>
+            <li>Gelber Divider mit ‹ › Handle</li>
+            <li>Tags: „Vorher" (dark) · „Nachher" (petrol)</li>
+            <li>Projekt-Auswahl via .chip-Buttons</li>
+            <li>Mobile: Toggle statt Drag-Slider</li>
+          </ul>
+        </div>
+        <div class="doc-note">
+          <p class="doc-sub" style="margin-top:0">Trust-Marquee · .marquee</p>
+          <ul>
+            <li>Endlos-Animation · 36s linear</li>
+            <li>Uppercase Outfit · 14px · gap 34px</li>
+            <li>Formen-Icons (Kreis, Dreieck, Quadrat) als Trenner</li>
+            <li>Hintergrund --ink · border-top rgba white 6%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="demo-frame" style="margin-top:20px">
+        <div class="demo-frame__label">Marquee · Live-Demo</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <div class="marquee" style="padding:16px 0">
+            <div class="marquee__track" style="animation-duration:20s">
+              <span>Spanndecken</span><i class="shape-c"></i><span>Lichtlinien</span><i class="shape-t"></i><span>Akustikdecken</span><i class="shape-s"></i><span>Montage nach DIN 18168</span><i class="shape-c"></i>
+              <span>Spanndecken</span><i class="shape-t"></i><span>Lichtlinien</span><i class="shape-s"></i><span>Akustikdecken</span><i class="shape-c"></i><span>Brandschutz B-s2, d0</span><i class="shape-t"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 · WEITERE UI -->
+    <section class="doc-section" id="weitere">
+      <p class="doc-section__num">13 · Weitere UI-Komponenten</p>
+      <h2>Zusätzliche Bausteine</h2>
+      <p class="doc-section__lead">Neben den Kernkomponenten nutzt die Seite Chips, Stats, Testimonials, Formulare, Feature-Blöcke und Spezial-Elemente wie die Scroll-Lichtlinie.</p>
+
+      <p class="doc-sub">Chips / Filter · .chip</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body demo-row">
+          <button class="chip is-active">Alle</button>
+          <button class="chip">Bad</button>
+          <button class="chip">Wohnen und Licht</button>
+          <button class="chip">Objekt und Gewerbe</button>
+        </div>
+      </div>
+
+      <p class="doc-sub">Stats · .stat</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body demo-frame__body--dark">
+          <div class="stats" style="grid-template-columns:repeat(4,1fr);gap:20px">
+            <div class="stat"><strong>1</strong><span>Tag von der Baustelle<br>zum fertigen Raum</span></div>
+            <div class="stat"><strong>40</strong><span>Google Bewertungen</span></div>
+            <div class="stat"><strong>16</strong><span>mm schmale Lichtlinie</span></div>
+            <div class="stat"><strong>0</strong><span>versteckte Kosten</span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="doc-sub">Testimonials · .quotes blockquote</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body">
+          <div class="quotes" style="grid-template-columns:1fr;max-width:480px">
+            <blockquote>
+              <div class="stars">★★★★★</div>
+              <p>„Die Spanndecken in unserem Wohn- und Esszimmer mit den passenden Lichtelementen sind bis ins letzte Detail perfekt."</p>
+              <footer>Achim K. <span>· Bewertung bei Google</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <p class="doc-sub">Formular · .form (2-Stufen)</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body demo-frame__body--tint">
+          <form class="form" style="max-width:520px;margin:0" onsubmit="return false">
+            <div class="form__progress"><span style="width:50%"></span></div>
+            <fieldset class="form__step is-active">
+              <legend>Schritt 1 von 2 · Dein Projekt</legend>
+              <label class="form__label">Worum geht es?</label>
+              <div class="form__options">
+                <label><input type="radio" name="demo" checked><span>Bad</span></label>
+                <label><input type="radio" name="demo"><span>Wohnen</span></label>
+                <label><input type="radio" name="demo"><span>Objekt</span></label>
+              </div>
+              <div class="form__field">
+                <label>Name *</label>
+                <input type="text" placeholder="Vorname und Nachname">
+              </div>
+              <button type="button" class="btn btn--primary btn--block">Weiter zu den Details →</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <p class="doc-sub">Feature-Block · Bild-Text-Modul</p>
+      <div class="demo-frame">
+        <div class="demo-frame__body demo-frame__body--dark">
+          <div class="feature__grid" style="grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+            <div class="feature__text">
+              <span class="eyebrow">Unsere Königsdisziplin</span>
+              <h2 style="font-size:32px;font-weight:300;margin:14px 0">Licht, das nicht leuchtet.<br>Es wohnt.</h2>
+              <ul class="feature__specs">
+                <li><strong>Etwa 16 mm</strong> schmales Lichtband</li>
+                <li><strong>Dimmbar</strong> über Betriebsgeräte</li>
+              </ul>
+              <a href="#" class="btn btn--primary" onclick="return false">Lichtlinie planen lassen</a>
+            </div>
+            <div class="feature__img">
+              <img src="assets/bad-2.jpg" alt="Feature" style="height:280px">
+              <figcaption>Gästebad mit Lichtlinie</figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:24px">
+        <div class="spec-item"><dt>Scroll-Lichtlinie</dt><dd>3px links · wächst mit Scroll</dd></div>
+        <div class="spec-item"><dt>Preloader</dt><dd>Formen-Trio + Licht-Sweep</dd></div>
+        <div class="spec-item"><dt>Contact Card</dt><dd>--ink Hintergrund · Petrol-Links</dd></div>
+        <div class="spec-item"><dt>B2B Checkmarks</dt><dd>Petrol-Kreis · weißes ✓</dd></div>
+        <div class="spec-item"><dt>Focus Ring</dt><dd>2px --sec · offset 3px</dd></div>
+        <div class="spec-item"><dt>Selection</dt><dd>--yellow bg · --ink text</dd></div>
+      </dl>
+    </section>
+
+    <!-- 14 · FOOTER -->
+    <section class="doc-section" id="footer">
+      <p class="doc-section__num">14 · Footer</p>
+      <h2>Footer-Struktur</h2>
+      <p class="doc-section__lead">Vier-spaltiger Footer auf --ink: Brand mit Logo und Formen-Trio, Leistungslinks, Kontakt und Region. Darunter Copyright-Zeile mit Norm-Badges.</p>
+
+      <div class="demo-frame">
+        <div class="demo-frame__label">Live-Demo · Footer</div>
+        <div class="demo-frame__body demo-frame__body--flush">
+          <footer class="footer" style="padding:48px 0 24px">
+            <div class="container footer__grid">
+              <div class="footer__brand">
+                <img src="assets/logo_negativ.png" alt="Trend in Form" class="footer__logo">
+                <p>Trend in Form GmbH<br>Licht | Spanndecken | Akustik</p>
+                <div class="shape-trio"></div>
+              </div>
+              <div>
+                <h4>Leistungen</h4>
+                <a href="#">Spanndecke im Bad</a>
+                <a href="#">Lichtlinie</a>
+                <a href="#">Objekt und Gewerbe</a>
+              </div>
+              <div>
+                <h4>Kontakt</h4>
+                <a href="#">07248 927 30 50</a>
+                <a href="#">mk@trend-in-form.de</a>
+                <p>Hardtstraße 70<br>76185 Karlsruhe</p>
+              </div>
+              <div>
+                <h4>Region</h4>
+                <p>Karlsruhe · Pforzheim · Ettlingen · Umgebung</p>
+              </div>
+            </div>
+            <div class="container footer__bottom">
+              <p>© 2026 Trend in Form GmbH · Impressum · Datenschutz</p>
+              <p class="footer__badges">Montage nach DIN 18168 · Brandschutz B-s2, d0</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:20px">
+        <div class="spec-item"><dt>Grid</dt><dd>1.3fr · 1fr · 1fr · 1fr</dd></div>
+        <div class="spec-item"><dt>Logo</dt><dd>74px Höhe · negativ</dd></div>
+        <div class="spec-item"><dt>Link-Hover</dt><dd>--sec-soft</dd></div>
+        <div class="spec-item"><dt>Bottom-Bar</dt><dd>13px · flex space-between</dd></div>
+      </dl>
+    </section>
+
+    <!-- 15 · SUMMARY -->
+    <section class="doc-section" id="summary">
+      <p class="doc-section__num">15 · Designcharakter</p>
+      <h2>Zusammenfassung</h2>
+      <p class="doc-section__lead">Das Design verbindet handwerkliche Verlässlichkeit mit editorialer Eleganz — dunkle Inszenierung, warmes Licht-Gelb und präzise Typografie bilden ein wiedererkennbares System.</p>
+
+      <div class="summary-card">
+        <h3>Gestalterische Prinzipien</h3>
+        <ul class="summary-list">
+          <li><strong>Licht als Leitmotiv</strong> — Die vertikale Lichtlinie, Scroll-Fortschritt und gelbe Akzente visualisieren das Kernprodukt: präzise, ruhige Beleuchtung.</li>
+          <li><strong>Dark meets Light</strong> — Hero, Stats und Feature-Sections in Ink; Leistungen, FAQ und Kontakt auf hellem Grund. Der Wechsel erzeugt Rhythmus und Lesbarkeit.</li>
+          <li><strong>Conversion durch Kontrast</strong> — Marken-Gelb ist bewusst sparsam eingesetzt: Buttons, CTA, Lichtlinie. Petrol übernimmt sekundäre Interaktionen.</li>
+          <li><strong>Vertrauen durch Details</strong> — DIN-Normen, Google-Rating, Vorher-Nachher-Slider und Testimonials bauen Glaubwürdigkeit auf, ohne die Ästhetik zu stören.</li>
+          <li><strong>Formen-Trio als Signet</strong> — Kreis, Dreieck, Quadrat aus dem Logo wiederholen sich in Eyebrows, Marquee, Preloader und Footer — subtile Markenkonsistenz.</li>
+          <li><strong>Micro-Interactions</strong> — Scroll-Reveal, Spotlight auf Cards, animierte Stats, Maus-Schweif und Hero-Formen machen die Seite lebendig, ohne zu überladen.</li>
+        </ul>
+      </div>
+
+      <dl class="spec-grid" style="margin-top:32px">
+        <div class="spec-item"><dt>Gesamtwirkung</dt><dd>Premium · präzise · vertrauenswürdig</dd></div>
+        <div class="spec-item"><dt>Typografie</dt><dd>Leicht · großzügig · klar hierarchisch</dd></div>
+        <div class="spec-item"><dt>Spacing</dt><dd>Viel Weißraum · 132px Section-Rhythmus</dd></div>
+        <div class="spec-item"><dt>Radius</dt><dd>Durchgängig 18px · Pill-Buttons</dd></div>
+      </dl>
+
+      <p style="margin-top:48px;font-size:13px;color:var(--handout-muted);text-align:center">
+        Design Handout · Trend in Form GmbH · Basierend auf index.html &amp; style.css · <a href="index.html" style="color:var(--sec)">Zur Live-Seite →</a>
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<script>
+// Sidebar active state on scroll
+const navLinks = document.querySelectorAll('.handout-nav a');
+const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href')));
+
+const onScroll = () => {
+  let current = sections[0];
+  sections.forEach(sec => {
+    if (sec && window.scrollY >= sec.offsetTop - 120) current = sec;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('is-active', a.getAttribute('href') === '#' + current.id);
+  });
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// FAQ demo: only one open
+document.querySelectorAll('.faq__list details').forEach(d => {
+  d.querySelector('summary').addEventListener('click', e => {
+    e.preventDefault();
+    const open = !d.open;
+    d.closest('.faq__list').querySelectorAll('details').forEach(o => o.open = false);
+    d.open = open;
+  });
+});
+</script>
+</body>
+</html>
