@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trend in Form GmbH | Spanndecken, Licht und Akustik in Karlsruhe</title>
+<meta name="description" content="Spanndecken mit Licht und Akustik aus einer Hand. Montage nach DIN 18168, Brandschutz B-s2, d0. Kostenvoranschlag und Termin vor Ort in Karlsruhe, Pforzheim, Ettlingen und Umgebung.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Preloader: Formen-Trio aus dem Logo -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__shapes">
+      <span class="pl-c"></span>
+      <span class="pl-t"></span>
+      <span class="pl-s"></span>
+    </div>
+    <div class="preloader__line"></div>
+  </div>
+</div>
+
+<!-- Lichtlinie als Scroll-Fortschritt am linken Rand -->
+<div class="scroll-light" aria-hidden="true"></div>
+
+<!-- ======= NAVIGATION ======= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo">
+      <img src="assets/logo_negativ.png" alt="Trend in Form GmbH | Licht, Spanndecken, Akustik" class="nav__logo--dark">
+      <img src="assets/logo.png" alt="" aria-hidden="true" class="nav__logo--light">
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#lichtlinie">Lichtlinie</a>
+      <a href="#vergleich">Vorher Nachher</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#b2b">Objekt und Gewerbe</a>
+    </nav>
+    <div class="nav__actions">
+      <a href="tel:+4972489273050" class="nav__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>07248 927 30 50</span>
+      </a>
+      <a href="#kontakt" class="btn btn--primary btn--nav">Termin vor Ort anfragen</a>
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="hero" id="top">
+  <div class="hero__bg">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-label="Imagefilm: Spanndecken-Montage von Trend in Form">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="hero__lightline" aria-hidden="true"></div>
+  <div class="hero__shapes" aria-hidden="true">
+    <span class="hshape hshape--c"></span>
+    <span class="hshape hshape--t"></span>
+    <span class="hshape hshape--s"></span>
+  </div>
+  <div class="hero__content">
+    <div class="hero__rating reveal">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span>„Ausgezeichnet" bei Google, über 40 Bewertungen</span>
+    </div>
+    <h1 class="hero__title">
+      <span class="line"><span>Morgens Baustelle.</span></span>
+      <span class="line"><span>Abends ein Raum,</span></span>
+      <span class="line"><span class="accent">der Dich begeistert.</span></span>
+    </h1>
+    <p class="hero__sub reveal delay-2">Wir verbinden Spanndecke, Licht und Akustik zu einem Ergebnis, das man spürt: eine makellose Fläche, ruhiges Licht und ein klarer Plan von der ersten Beratung bis zur Abnahme.</p>
+    <div class="hero__cta reveal delay-3">
+      <a href="#kontakt" class="btn btn--primary btn--lg">Termin vor Ort anfragen</a>
+      <a href="#vergleich" class="btn btn--ghost btn--lg">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Verwandlung ansehen
+      </a>
+    </div>
+  </div>
+  <div class="hero__bar reveal delay-4">
+    <ul class="hero__badges">
+      <li><strong>DIN 18168</strong><span>dokumentierter Montagestandard</span></li>
+      <li><strong>B-s2, d0</strong><span>Brandschutz nach DIN EN 14716</span></li>
+      <li><strong>Phthalatfrei</strong><span>und RoHS konform</span></li>
+      <li><strong>1 Tag</strong><span>typische Montage im Bad</span></li>
+      <li><strong>1 Ansprechpartner</strong><span>für Decke, Licht und Montage</span></li>
+    </ul>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ======= TRUST MARQUEE ======= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Spanndecken</span><i class="shape-c"></i><span>Lichtlinien</span><i class="shape-t"></i><span>Akustikdecken</span><i class="shape-s"></i><span>Montage nach DIN 18168</span><i class="shape-c"></i><span>Brandschutz B-s2, d0</span><i class="shape-t"></i><span>Nahtfreie Oberflächen</span><i class="shape-s"></i><span>Folientausch und Reparatur</span><i class="shape-c"></i>
+    <span>Spanndecken</span><i class="shape-t"></i><span>Lichtlinien</span><i class="shape-s"></i><span>Akustikdecken</span><i class="shape-c"></i><span>Montage nach DIN 18168</span><i class="shape-t"></i><span>Brandschutz B-s2, d0</span><i class="shape-s"></i><span>Nahtfreie Oberflächen</span><i class="shape-c"></i><span>Folientausch und Reparatur</span><i class="shape-t"></i>
+  </div>
+</div>
+
+<!-- ======= USE CASES / LEISTUNGEN ======= -->
+<section class="section" id="leistungen">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Jeder Raum hat eine Decke.<br>Wenige haben ein Konzept.</h2>
+      <p>Sag uns, wo Dein Projekt spielt. Wir zeigen Dir, was darüber möglich ist.</p>
+    </div>
+    <div class="cases">
+      <a href="#kontakt" class="case reveal" data-usecase="Badezimmer">
+        <img src="assets/bad-1.jpg" alt="Weiße Hochglanz-Spanndecke mit umlaufender Lichtlinie im Badezimmer" loading="lazy">
+        <div class="case__body">
+          <h3>Spanndecke im Bad</h3>
+          <p>Feuchtraumgeeignet, mit Spots oder Lichtlinie. Morgens montiert, abends fertig.</p>
+          <span class="case__link">Kostenvoranschlag fürs Bad →</span>
+        </div>
+      </a>
+      <a href="#kontakt" class="case reveal delay-1" data-usecase="Wohnen und Essen">
+        <img src="assets/wohnen-1.jpg" alt="Esszimmer mit warmem Lichtkonzept und Pendelleuchten" loading="lazy">
+        <div class="case__body">
+          <h3>Wohnen und Essen</h3>
+          <p>Große Flächen, Lichtzonen und dimmbare Konzepte. Nahtfrei, ruhig, wertig.</p>
+          <span class="case__link">Projekt anfragen →</span>
+        </div>
+      </a>
+      <a href="#kontakt" class="case reveal delay-2" data-usecase="Lichtlinie und Lichtkonzept">
+        <img src="assets/bad-dark.jpg" alt="Schwarze Spanndecke mit präziser LED-Lichtlinie" loading="lazy">
+        <div class="case__body">
+          <h3>Lichtlinie und Lichtkonzept</h3>
+          <p>Homogene Linien, nahezu niveaugleich in der Decke. Unsere Königsdisziplin.</p>
+          <span class="case__link">Licht planen lassen →</span>
+        </div>
+      </a>
+      <a href="#kontakt" class="case reveal" data-usecase="Akustik">
+        <img src="assets/akustik-1.jpg" alt="Saal mit gewölbter Akustikdecke und Beleuchtung" loading="lazy">
+        <div class="case__body">
+          <h3>Akustiklösungen</h3>
+          <p>Hörbar ruhigere Räume für Büro, Praxis und öffentliche Gebäude. Decke und Akustik in einem System.</p>
+          <span class="case__link">Beratung anfragen →</span>
+        </div>
+      </a>
+      <a href="#kontakt" class="case reveal delay-1" data-usecase="Reparatur oder Folientausch">
+        <img src="assets/bad-4.jpg" alt="Sanierte Baddecke mit Einbaustrahlern" loading="lazy">
+        <div class="case__body">
+          <h3>Reparatur und Folientausch</h3>
+          <p>Auch wenn andere montiert haben: Wir tauschen die Folie und setzen Deine Leuchten sauber wieder ein.</p>
+          <span class="case__link">Schaden melden →</span>
+        </div>
+      </a>
+      <a href="#kontakt" class="case reveal delay-2" data-usecase="Objekt oder Gewerbe">
+        <img src="assets/objekt-1.jpg" alt="Flur mit umlaufenden LED-Lichtrahmen in einem Gewerbeobjekt" loading="lazy">
+        <div class="case__body">
+          <h3>Objekt und Gewerbe</h3>
+          <p>Für Bauträger, Hausverwaltung und Büro: normgerecht ausgeführt, lückenlos dokumentiert, termintreu.</p>
+          <span class="case__link">Angebot fürs Objekt →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ZAHLEN / USP ======= -->
+<section class="section section--dark stats-section">
+  <div class="container">
+    <div class="stats">
+      <div class="stat reveal"><strong data-count="1">0</strong><span>Tag von der Baustelle<br>zum fertigen Raum</span></div>
+      <div class="stat reveal delay-1"><strong data-count="40">0</strong><span>Google Bewertungen,<br>Urteil „Ausgezeichnet"</span></div>
+      <div class="stat reveal delay-2"><strong data-count="16">0</strong><span>Millimeter schmale Lichtlinie,<br>homogen und dimmbar</span></div>
+      <div class="stat reveal delay-3"><strong data-count="0">0</strong><span>versteckte Kosten.<br>Jede Position steht im Angebot</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= LICHTLINIE FEATURE ======= -->
+<section class="section section--dark feature" id="lichtlinie">
+  <div class="feature__line" aria-hidden="true"></div>
+  <div class="container feature__grid">
+    <div class="feature__text">
+      <span class="eyebrow reveal">Unsere Königsdisziplin</span>
+      <h2 class="reveal delay-1">Licht, das nicht leuchtet.<br>Es wohnt.</h2>
+      <p class="reveal delay-2">Unsere Lichtlinien verlaufen nahezu niveaugleich in der Decke. Kein Aufbau, keine sichtbaren Punkte, nur eine ruhige, gleichmäßige Fläche aus Licht. Geplant für Deine Räume, Deine Zonen, Deinen Alltag.</p>
+      <ul class="feature__specs reveal delay-3">
+        <li><strong>Etwa 16 mm</strong> schmales Lichtband im Kühlprofil</li>
+        <li><strong>1.500 bis 2.200 lm/m</strong> Helligkeit, kraftvoll oder dezent</li>
+        <li><strong>Dimmbar</strong> über Betriebsgeräte und Dimmer mit Phasenabschnitt</li>
+        <li><strong>3000 K oder 4000 K</strong> Lichtfarbe, passend zu Raum und Wirkung</li>
+      </ul>
+      <div class="reveal delay-4">
+        <a href="#kontakt" class="btn btn--primary">Lichtlinie oder Spots planen lassen</a>
+      </div>
+    </div>
+    <div class="feature__img reveal delay-2">
+      <img src="assets/bad-2.jpg" alt="Gäste-WC mit Hochglanz-Spanndecke und durchgehender LED-Lichtlinie" loading="lazy">
+      <figcaption>Gästebad mit nahtfreier Hochglanzdecke und Lichtlinie</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ======= VORHER / NACHHER ======= -->
+<section class="section section--tint compare-section" id="vergleich">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">Vorher · Nachher</span>
+      <h2>Echte Bäder, echte Ergebnisse.<br><span class="accent-dark">Zieh selbst die Linie.</span></h2>
+      <p>Beide Projekte stammen aus unserer Werkstatt, ohne Retusche. Zieh den Regler über das Bild und sieh, was eine Spanndecke mit Licht aus einem Raum macht.</p>
+    </div>
+    <div class="compare__chips reveal" role="tablist">
+      <button class="chip is-active"
+        data-vorher="assets/vergleich-bad-vorher.jpg"
+        data-nachher="assets/vergleich-bad-nachher.jpg"
+        data-line="Hochglanzdecke in Weiß · Einbauspots in Warmweiß · montiert an einem Tag"
+        data-alt="Badsanierung: offene Decke mit Rohrleitung vorher, nahtfreie Hochglanz-Spanndecke mit Spots nachher">
+        Badsanierung · Spots
+      </button>
+      <button class="chip"
+        data-vorher="assets/vergleich-marmor-vorher.jpg"
+        data-nachher="assets/vergleich-marmor-nachher.jpg"
+        data-line="Bad im Dachgeschoss · alte Paneeldecke ersetzt · Spanndecke mit umlaufender Lichtlinie"
+        data-alt="Dachgeschoss-Bad: alte Holzpaneel-Decke vorher, Spanndecke mit umlaufender LED-Lichtlinie nachher">
+        Dachgeschoss · Lichtlinie
+      </button>
+    </div>
+    <div class="compare__stage reveal delay-1" id="compareStage" tabindex="0" role="slider"
+         aria-label="Vorher-Nachher-Vergleich, mit Pfeiltasten oder Ziehen bedienbar"
+         aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+      <img class="compare__img compare__img--nachher" id="compareNachher" src="assets/vergleich-bad-nachher.jpg" alt="Nachher: nahtfreie Hochglanz-Spanndecke mit Spots">
+      <div class="compare__clip" id="compareClip">
+        <img class="compare__img" id="compareVorher" src="assets/vergleich-bad-vorher.jpg" alt="Vorher: offene Decke mit Rohrleitung">
+      </div>
+      <span class="compare__tag compare__tag--vorher">Vorher</span>
+      <span class="compare__tag compare__tag--nachher">Nachher</span>
+      <div class="compare__divider" id="compareDivider">
+        <span class="compare__handle">‹ ›</span>
+      </div>
+      <div class="compare__toggle" id="compareToggle">
+        <button class="is-active" data-mode="vorher">Vorher</button>
+        <button data-mode="nachher">Nachher</button>
+      </div>
+    </div>
+    <div class="compare__meta reveal delay-2">
+      <span class="compare__line" id="compareLine">Hochglanzdecke in Weiß · Einbauspots in Warmweiß · montiert an einem Tag</span>
+      <a href="#kontakt" class="btn btn--primary">Kostenvoranschlag fürs Bad anfragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= REFERENZEN ======= -->
+<section class="section" id="referenzen">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">Referenzen</span>
+      <h2>Wir könnten viel erzählen.<br>Unsere Decken zeigen es lieber.</h2>
+      <p>Vom privaten Bad bis zum Showroom von Mercedes Benz: ein Auszug aus unseren Montagen.</p>
+    </div>
+    <div class="gallery__filter reveal" role="tablist">
+      <button class="chip is-active" data-filter="all">Alle</button>
+      <button class="chip" data-filter="bad">Bad</button>
+      <button class="chip" data-filter="wohnen">Wohnen und Licht</button>
+      <button class="chip" data-filter="objekt">Objekt und Gewerbe</button>
+    </div>
+    <div class="gallery">
+      <figure class="gallery__item reveal" data-cat="bad">
+        <img src="assets/bad-1.jpg" alt="Badezimmer mit weißer Spanndecke und umlaufender Lichtlinie" loading="lazy">
+        <figcaption><strong>Badsanierung</strong><span>Hochglanzdecke, umlaufende Lichtlinie</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal delay-1" data-cat="bad">
+        <img src="assets/bad-dark.jpg" alt="Schwarze Hochglanz-Spanndecke mit Lichtlinie über Dusche" loading="lazy">
+        <figcaption><strong>Designbad in Schwarz</strong><span>Hochglanzfolie, präzise Lichtlinie</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal delay-2" data-cat="objekt">
+        <img src="assets/objekt-1.jpg" alt="LED-Lichtrahmen in Flur eines Gewerbeobjekts" loading="lazy">
+        <figcaption><strong>Daimler MediaCube</strong><span>Umlaufende Lichtrahmen im Objekt</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal" data-cat="wohnen">
+        <img src="assets/wohnen-1.jpg" alt="Esszimmer mit Lichtkonzept" loading="lazy">
+        <figcaption><strong>Lichtkonzept Esszimmer</strong><span>Warmes, zoniertes Licht im Holzhaus</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal delay-1" data-cat="bad">
+        <img src="assets/bad-2.jpg" alt="Gäste-WC mit Lichtlinie" loading="lazy">
+        <figcaption><strong>Gästebad</strong><span>Nahtfreie Decke, Lichtlinie in 3000 K</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal delay-2" data-cat="objekt">
+        <img src="assets/objekt-2.jpg" alt="AMG Showroom mit rotem Lichtdesign" loading="lazy">
+        <figcaption><strong>AMG Showroom Essen</strong><span>Lichtdesign im Verkaufsraum</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal" data-cat="wohnen">
+        <img src="assets/akustik-1.jpg" alt="Saal mit Akustikdecke" loading="lazy">
+        <figcaption><strong>Saal mit Akustikdecke</strong><span>Gewölbte Decke, ruhige Raumakustik</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal delay-1" data-cat="bad">
+        <img src="assets/bad-3.jpg" alt="Badezimmer mit indirekter Lichtlinie" loading="lazy">
+        <figcaption><strong>Bad im Neubau</strong><span>Indirekte Lichtführung, Spots</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal delay-2" data-cat="objekt">
+        <img src="assets/objekt-3.jpg" alt="Lichtlinien im Boden und Decke eines Studios" loading="lazy">
+        <figcaption><strong>Studioausbau</strong><span>Lichtlinien präzise im Raster</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ABLAUF ======= -->
+<section class="section section--tint" id="ablauf">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">So läuft Dein Projekt</span>
+      <h2>Fünf Schritte.<br>Null Überraschungen.</h2>
+      <p>Ein Ablauf wie unsere Decken: klar, präzise und ohne lose Enden.</p>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span>01</span><h3>Anfrage und Aufmaß</h3><p>Du sendest uns Raum, Maße und Lichtwunsch. Oder wir messen kostenlos bei Dir vor Ort.</p></li>
+      <li class="reveal delay-1"><span>02</span><h3>Klares Angebot</h3><p>Jede Leistung als eigene Position, jeder Preis nachvollziehbar. Nichts versteckt sich im Kleingedruckten.</p></li>
+      <li class="reveal delay-2"><span>03</span><h3>Verbindlicher Termin</h3><p>Abgestimmt auf andere Gewerke und Deinen Zeitplan. Zugesagt ist zugesagt.</p></li>
+      <li class="reveal delay-3"><span>04</span><h3>Saubere Montage</h3><p>Meist an einem Tag, staubarm und nach DIN 18168. Licht inklusive.</p></li>
+      <li class="reveal delay-4"><span>05</span><h3>Gemeinsame Abnahme</h3><p>Wir gehen das Ergebnis mit Dir durch, dokumentiert und vollständig. Dann gehört der Raum Dir.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======= TESTIMONIALS ======= -->
+<section class="section" id="stimmen">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">Das sagen unsere Kunden</span>
+      <h2>Fünf Sterne sind bei uns<br>keine Ausnahme. Sie sind der Schnitt.</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Tolles Team. Gute Beratung. Sehr professionell. Pünktlich auf die Minute, was man nicht immer von Handwerkern sagen kann. Jederzeit wieder."</p>
+        <footer>Volker R. <span>· Bewertung bei Google</span></footer>
+      </blockquote>
+      <blockquote class="reveal delay-1">
+        <div class="stars">★★★★★</div>
+        <p>„Die Spanndecken in unserem Wohn- und Esszimmer mit den passenden Lichtelementen sind bis ins letzte Detail perfekt."</p>
+        <footer>Achim K. <span>· Bewertung bei Google</span></footer>
+      </blockquote>
+      <blockquote class="reveal delay-2">
+        <div class="stars">★★★★★</div>
+        <p>„Die ganze Decke war mit Beleuchtung an einem Tag montiert, sehr sauber und ordentlich. Wir sind total begeistert!"</p>
+        <footer>Familie F. <span>· Bewertung bei Google</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FAQ ======= -->
+<section class="section section--tint faq-section" id="faq">
+  <div class="container faq__grid">
+    <div class="faq__head">
+      <span class="eyebrow reveal">Häufige Fragen</span>
+      <h2 class="reveal delay-1">Gut zu wissen,<br>bevor Du anfragst.</h2>
+      <p class="reveal delay-2">Noch etwas offen? Ruf uns einfach an. Wir beraten ehrlich, konkret und unverbindlich.</p>
+      <a href="tel:+4972489273050" class="btn btn--ghost reveal delay-3">07248 927 30 50</a>
+    </div>
+    <div class="faq__list reveal delay-1">
+      <details open>
+        <summary>Was kostet eine Spanndecke im Bad?<span class="faq__icon"></span></summary>
+        <div class="faq__body">
+          <p>Ein typisches Bad mit rund 9 m², inklusive Lichtlinie und Betriebsgeräten, liegt als Referenzrahmen bei etwa 2.000 bis 2.500 Euro. Der genaue Preis hängt von Umfang, Bestandsdecke und Lichtwunsch ab. Du bekommst vorab ein transparentes Angebot mit klaren Leistungspositionen, ohne versteckte Kosten.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Wie lange dauert die Montage?<span class="faq__icon"></span></summary>
+        <div class="faq__body">
+          <p>Ein Bad oder ein einzelner Raum ist in der Regel an einem Tag fertig montiert, inklusive Licht. Es entsteht kein Abriss und kaum Staub, Dein Bad bleibt nutzbar.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Ist eine Spanndecke fürs Bad geeignet?<span class="faq__icon"></span></summary>
+        <div class="faq__body">
+          <p>Ja. Spanndecken sind feuchtraumgeeignet, schimmelresistent und pflegeleicht. Unsere Folien sind phthalatfrei, RoHS konform und schwer entflammbar nach Brandschutzklasse B-s2, d0 gemäß DIN EN 14716.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Spots oder Lichtlinie: Was passt zu mir?<span class="faq__icon"></span></summary>
+        <div class="faq__body">
+          <p>Spots liefern gezieltes, punktuelles Licht und sind der Klassiker im Bad. Die Lichtlinie, etwa 16 mm schmal und dimmbar, wirkt ruhiger und moderner. Ideal als indirekte Grundbeleuchtung. Oft kombinieren wir beides und planen es passend zu Deinen Zonen, mit Lichtfarbe wahlweise in 3000 K oder 4000 K.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Muss die alte Decke raus?<span class="faq__icon"></span></summary>
+        <div class="faq__body">
+          <p>Nein. Die Spanndecke wird meist direkt unter der Bestandsdecke montiert, auch über alten Paneeldecken oder Balkendecken. Das spart Abriss, Schmutz und Zeit.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Meine Spanndecke ist beschädigt. Könnt Ihr das reparieren?<span class="faq__icon"></span></summary>
+        <div class="faq__body">
+          <p>Ja, auch wenn andere sie montiert haben. Wir tauschen die Folie, entsorgen die alte fachgerecht und setzen Deine bestehende Beleuchtung sauber wieder ein.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======= B2B STRIP ======= -->
+<section class="section section--dark b2b" id="b2b">
+  <div class="container b2b__grid">
+    <div>
+      <span class="eyebrow reveal">Für Bauträger, Hausverwaltungen und Gewerbe</span>
+      <h2 class="reveal delay-1">Im Objekt zählt kein schönes Versprechen. Nur saubere Ausführung.</h2>
+      <p class="reveal delay-2">Ob durchhängende Betondecke im bewohnten Objekt, Renovierung im Büro oder Showroom: Wir liefern normgerechte Ausführung mit verbindlichem Terminfenster, sauberer Baustelle und vollständiger Dokumentation bis zur Abnahme.</p>
+      <ul class="b2b__list reveal delay-3">
+        <li>Brandschutzklasse B-s2, d0 nach DIN EN 14716</li>
+        <li>Montage nach DIN 18168 mit zertifiziertem Qualitätsmanagement</li>
+        <li>Erfahrung im bewohnten Objekt und im Gewährleistungsfall</li>
+        <li>Referenzen: Daimler, AMG Essen, Rensch Haus und viele mehr</li>
+      </ul>
+      <div class="reveal delay-4">
+        <a href="#kontakt" class="btn btn--primary">Angebot fürs Objekt anfordern</a>
+      </div>
+    </div>
+    <div class="b2b__img reveal delay-2">
+      <img src="assets/objekt-2.jpg" alt="AMG Showroom mit Lichtdesign von Trend in Form" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ======= KONTAKT / FORMULAR ======= -->
+<section class="section section--tint contact" id="kontakt">
+  <div class="container contact__grid">
+    <div class="contact__info">
+      <span class="eyebrow reveal">Kontakt</span>
+      <h2 class="reveal delay-1">Zwei Minuten für Dich.<br>Ein klarer Kostenrahmen von uns.</h2>
+      <p class="reveal delay-2">Sende uns die wichtigsten Eckdaten und Du bekommst schnell eine klare Rückmeldung mit Kostenrahmen und Terminvorschlag. Gerne beraten wir Dich auch persönlich in unserer Ausstellung.</p>
+      <div class="contact__card reveal delay-3">
+        <p class="contact__person"><strong>Marius Kästel</strong><br>Geschäftsführer und Dein Ansprechpartner</p>
+        <a href="tel:+4972489273050">07248 927 30 50</a>
+        <a href="mailto:mk@trend-in-form.de">mk@trend-in-form.de</a>
+        <address>Hardtstraße 70 · 76185 Karlsruhe</address>
+        <p class="contact__hint">Ausstellung: Termine nach Vereinbarung</p>
+      </div>
+      <ul class="contact__proof reveal delay-4">
+        <li>✓ Kostenlose Erstberatung</li>
+        <li>✓ Antwort an Werktagen innerhalb von 24 Stunden</li>
+        <li>✓ Transparente Angebote ohne versteckte Kosten</li>
+      </ul>
+    </div>
+
+    <form class="form reveal delay-2" id="leadForm" novalidate>
+      <div class="form__progress"><span id="formBar"></span></div>
+
+      <fieldset class="form__step is-active" data-step="1">
+        <legend>Schritt 1 von 2 · Dein Projekt</legend>
+        <label class="form__label">Worum geht es?</label>
+        <div class="form__options" id="usecaseOptions">
+          <label><input type="radio" name="usecase" value="Badezimmer" checked><span>Bad</span></label>
+          <label><input type="radio" name="usecase" value="Wohnen und Essen"><span>Wohnen und Essen</span></label>
+          <label><input type="radio" name="usecase" value="Flur oder anderer Raum"><span>Flur und Sonstiges</span></label>
+          <label><input type="radio" name="usecase" value="Reparatur oder Folientausch"><span>Reparatur</span></label>
+          <label><input type="radio" name="usecase" value="Objekt oder Gewerbe"><span>Objekt und Gewerbe</span></label>
+        </div>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="ort">Ort oder PLZ *</label>
+            <input type="text" id="ort" name="ort" placeholder="z. B. 76185 Karlsruhe" required>
+          </div>
+          <div class="form__field">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Vorname und Nachname" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="tel">Telefon oder E-Mail *</label>
+            <input type="text" id="tel" name="kontakt" placeholder="Für die schnelle Rückmeldung" required>
+          </div>
+        </div>
+        <button type="button" class="btn btn--primary btn--block" id="toStep2">Weiter zu den Details →</button>
+        <p class="form__note">Dauert keine zwei Minuten · unverbindlich und kostenlos</p>
+      </fieldset>
+
+      <fieldset class="form__step" data-step="2">
+        <legend>Schritt 2 von 2 · Details für Deinen Kostenrahmen</legend>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="flaeche">Raumgröße in m² (circa)</label>
+            <input type="text" id="flaeche" name="flaeche" placeholder="z. B. 9">
+          </div>
+          <div class="form__field">
+            <label for="licht">Lichtwunsch</label>
+            <select id="licht" name="licht">
+              <option>Noch offen, bitte beraten</option>
+              <option>Spots</option>
+              <option>Lichtlinie</option>
+              <option>Spots und Lichtlinie</option>
+              <option>Bestehende Leuchten übernehmen</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="lichtfarbe">Lichtfarbe</label>
+            <select id="lichtfarbe" name="lichtfarbe">
+              <option>Noch offen</option>
+              <option>Warmweiß (3000 K)</option>
+              <option>Neutralweiß (4000 K)</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="termin">Wunschtermin</label>
+            <input type="text" id="termin" name="termin" placeholder="z. B. bis Ende April">
+          </div>
+        </div>
+        <div class="form__field">
+          <label for="nachricht">Dein Projekt in ein bis zwei Sätzen (optional)</label>
+          <textarea id="nachricht" name="nachricht" rows="3" placeholder="z. B. Badsanierung, Decke aktuell abgehängt, zwei Spots vorhanden …"></textarea>
+        </div>
+        <div class="form__actions">
+          <button type="button" class="btn btn--ghost" id="backStep1">← Zurück</button>
+          <button type="submit" class="btn btn--primary">Kostenvoranschlag anfragen</button>
+        </div>
+        <p class="form__note">Mit dem Absenden stimmst Du der Verarbeitung Deiner Daten zur Bearbeitung der Anfrage zu.</p>
+      </fieldset>
+
+      <div class="form__success" id="formSuccess" hidden>
+        <div class="form__success-icon">✓</div>
+        <h3>Danke für Deine Anfrage!</h3>
+        <p>Wir melden uns an Werktagen innerhalb von 24 Stunden mit Kostenrahmen und Terminvorschlag. So geht es weiter: <strong>Aufmaß, Angebot, Terminfenster, Montage, Abnahme.</strong></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="assets/logo_negativ.png" alt="Trend in Form GmbH" class="footer__logo">
+      <p>Trend in Form GmbH<br>Licht | Spanndecken | Akustik</p>
+      <div class="shape-trio" aria-hidden="true"></div>
+    </div>
+    <div>
+      <h4>Leistungen</h4>
+      <a href="#leistungen">Spanndecke im Bad</a>
+      <a href="#leistungen">Wohnen und Essen</a>
+      <a href="#lichtlinie">Lichtlinie</a>
+      <a href="#leistungen">Akustik</a>
+      <a href="#b2b">Objekt und Gewerbe</a>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <a href="tel:+4972489273050">07248 927 30 50</a>
+      <a href="mailto:mk@trend-in-form.de">mk@trend-in-form.de</a>
+      <p>Hardtstraße 70<br>76185 Karlsruhe</p>
+    </div>
+    <div>
+      <h4>Region</h4>
+      <p>Karlsruhe · Pforzheim · Ettlingen · Keltern · Straubenhardt · Pfinztal und Umgebung</p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Trend in Form GmbH · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+    <p class="footer__badges">Montage nach DIN 18168 · Brandschutz B-s2, d0 · phthalatfrei und RoHS konform</p>
+  </div>
+</footer>
+
+<!-- ======= MOBILE STICKY CTA ======= -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="tel:+4972489273050" class="sticky-cta__call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Anrufen
+  </a>
+  <a href="#kontakt" class="sticky-cta__form">Termin vor Ort anfragen</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
