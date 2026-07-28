@@ -250,8 +250,72 @@ const statObserver = new IntersectionObserver(entries => {
     requestAnimationFrame(tick);
     statObserver.unobserve(el);
   });
-}, { threshold: 0.6 });
-document.querySelectorAll('.stat strong').forEach(el => statObserver.observe(el));
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => statObserver.observe(el));
+
+// ===== Reviews Slider =====
+(() => {
+  const track = document.getElementById('reviewsTrack');
+  const viewport = document.getElementById('reviewsViewport');
+  const prev = document.getElementById('reviewsPrev');
+  const next = document.getElementById('reviewsNext');
+  const bar = document.getElementById('reviewsBar');
+  if (!track || !viewport || !prev || !next || !bar) return;
+
+  const cards = [...track.querySelectorAll('.reviews__card')];
+  let index = 0;
+
+  const gap = () => parseFloat(getComputedStyle(track).gap) || 20;
+  const step = () => (cards[0]?.offsetWidth || 0) + gap();
+  const maxIndex = () => {
+    const overflow = track.scrollWidth - viewport.clientWidth;
+    if (overflow <= 0) return 0;
+    return Math.ceil(overflow / step());
+  };
+
+  const update = () => {
+    const max = maxIndex();
+    index = Math.max(0, Math.min(index, max));
+    track.style.transform = `translateX(${-index * step()}px)`;
+    const progress = max === 0 ? 1 : (index + 1) / (max + 1);
+    bar.style.width = `${Math.max(20, progress * 100)}%`;
+    prev.disabled = index <= 0;
+    next.disabled = index >= max;
+  };
+
+  prev.addEventListener('click', () => { index -= 1; update(); });
+  next.addEventListener('click', () => { index += 1; update(); });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+
+// ===== B2B Objekt-Slider =====
+(() => {
+  const root = document.getElementById('b2bSlider');
+  if (!root) return;
+  const slides = [...root.querySelectorAll('.b2b__slide')];
+  const dots = [...root.querySelectorAll('#b2bDots button')];
+  const prev = document.getElementById('b2bPrev');
+  const next = document.getElementById('b2bNext');
+  let index = 0;
+  let timer;
+
+  const go = (i) => {
+    index = (i + slides.length) % slides.length;
+    slides.forEach((slide, n) => slide.classList.toggle('is-active', n === index));
+    dots.forEach((dot, n) => dot.classList.toggle('is-active', n === index));
+  };
+
+  const start = () => {
+    clearInterval(timer);
+    timer = setInterval(() => go(index + 1), 5000);
+  };
+
+  prev?.addEventListener('click', () => { go(index - 1); start(); });
+  next?.addEventListener('click', () => { go(index + 1); start(); });
+  dots.forEach((dot, n) => dot.addEventListener('click', () => { go(n); start(); }));
+  start();
+})();
 
 // ===== Galerie-Filter =====
 document.querySelectorAll('.gallery__filter .chip').forEach(chip => {
