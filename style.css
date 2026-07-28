@@ -629,16 +629,16 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .reviews__viewport::after {
   content: "";
   position: absolute; top: 0; bottom: 0; z-index: 2;
-  width: clamp(48px, 8vw, 120px);
+  width: clamp(72px, 14vw, 180px);
   pointer-events: none;
 }
 .reviews__viewport::before {
   left: 0;
-  background: linear-gradient(90deg, var(--paper) 0%, transparent 100%);
+  background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 35%, transparent 100%);
 }
 .reviews__viewport::after {
   right: 0;
-  background: linear-gradient(270deg, var(--paper) 0%, transparent 100%);
+  background: linear-gradient(270deg, var(--paper) 0%, var(--paper) 35%, transparent 100%);
 }
 .reviews__track {
   display: flex; gap: 20px; align-items: stretch;
