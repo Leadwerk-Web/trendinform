@@ -1182,3 +1182,60 @@ body.is-static .preloader { display: none; }
 .nav.is-open .nav__links a { padding: 14px 6vw; border-bottom: 1px solid var(--line); }
 .nav.is-open { background: #fff; }
 .nav.is-open .nav__phone, .nav.is-open .nav__burger { color: var(--text); }
+
+/* ============================================================
+   Trefferflächen am Handy
+   ------------------------------------------------------------
+   Apple empfiehlt 44 x 44 Punkt, Google 48 x 48 dp als kleinste
+   bedienbare Fläche. Mehrere Bedienelemente lagen deutlich darunter,
+   allen voran das Telefon-Icon in der Kopfzeile mit 17 x 17 und die
+   Punkte des Objekt-Sliders mit 8 x 8.
+
+   Gelöst über ein unsichtbares Feld hinter dem Element. Dadurch bleibt
+   das Aussehen exakt gleich, nur die berührbare Fläche wächst.
+   ============================================================ */
+@media (max-width: 767px) {
+
+  /* Telefon in der Kopfzeile: der Text ist am Handy ausgeblendet,
+     übrig bleibt sonst nur das kleine Symbol. */
+  .nav__phone { position: relative; }
+  .nav__phone::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px; height: 44px;
+  }
+
+  /* Menüknopf */
+  .nav__burger { padding: 10px; }
+
+  /* Punkte des Objekt-Sliders. Sie lagen bei 8 x 8 Pixeln und waren mit dem
+     Finger kaum zu treffen. Der Knopf bekommt jetzt 32 x 44 Pixel Fläche, der
+     sichtbare Punkt bleibt bei 8 Pixeln und wandert ins Pseudo-Element.
+     Nebeneinander liegende Punkte können sich keine 44 Pixel Breite teilen,
+     ohne sich zu überlappen. 32 x 44 erfüllt die Vorgabe der Barrierefreiheit
+     nach WCAG 2.5.8 mit deutlichem Abstand. */
+  .b2b__dots { gap: 0; }
+  .b2b__dots button {
+    position: relative;
+    width: 32px; height: 44px;
+    background: none; transform: none;
+  }
+  .b2b__dots button::before {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transition: background .15s ease, transform .15s ease;
+  }
+  .b2b__dots button.is-active {
+    background: none; transform: none;
+  }
+  .b2b__dots button.is-active::before {
+    background: var(--yellow);
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  /* Links im Fußbereich standen zu eng untereinander. */
+  .footer__grid div > a { display: block; padding: 9px 0; }
+  .footer__bottom { font-size: 13px; line-height: 2.2; }
+}
