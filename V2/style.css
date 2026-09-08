@@ -1239,3 +1239,50 @@ body.is-static .preloader { display: none; }
   .footer__grid div > a { display: block; padding: 9px 0; }
   .footer__bottom { font-size: 13px; line-height: 2.2; }
 }
+
+/* ---------- Referenzen mobil: Reiter nach Leistung, je Rubrik ein Slider ----------
+   Desktop bleibt beim Raster mit Filter. Bis 720 px wird das Raster ausgeblendet und
+   script.js baut aus denselben Bildern die Reiter und Slider (Entscheidung vom 01.09.2026). */
+.refmobile { display: none; }
+.refmobile__tabs { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; margin: -2px -2px 20px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.refmobile__tabs::-webkit-scrollbar { display: none; }
+.refmobile__tabs .chip { flex: 0 0 auto; white-space: nowrap; }
+.refmobile__panel { display: none; }
+.refmobile__panel.is-active { display: block; }
+.refgroup + .refgroup { margin-top: 28px; }
+.refgroup__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.refgroup__head h3 { font-size: 19px; font-weight: 500; }
+.refgroup__head span { font-size: 13px; color: var(--text-soft); white-space: nowrap; }
+.refslider { position: relative; }
+.refslider__track { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 2px; margin: -2px; }
+.refslider__track::-webkit-scrollbar { display: none; }
+.refslider__track .gallery__item { flex: 0 0 86%; scroll-snap-align: start; aspect-ratio: 4 / 3.2;
+  opacity: 1; transform: none; }
+.refslider__btn {
+  position: absolute; top: 50%; z-index: 2; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25); background: rgba(14,15,17,0.62); color: var(--text-inverse);
+  display: grid; place-items: center; cursor: pointer; backdrop-filter: blur(8px);
+  transform: translateY(-50%);
+}
+.refslider__btn svg { width: 18px; height: 18px; }
+.refslider__btn--prev { left: 10px; }
+.refslider__btn--next { right: 10px; }
+.refslider.is-single .refslider__btn, .refslider.is-single .refslider__dots { display: none; }
+/* Die Pfeile bewegen sich leicht, bis der Slider zum ersten Mal bedient wurde */
+.refslider:not(.is-touched) .refslider__btn--next { animation: refNudgeR 1.6s ease-in-out infinite; }
+.refslider:not(.is-touched) .refslider__btn--prev { animation: refNudgeL 1.6s ease-in-out infinite; }
+@keyframes refNudgeR { 0%, 100% { transform: translate(0, -50%); } 50% { transform: translate(5px, -50%); } }
+@keyframes refNudgeL { 0%, 100% { transform: translate(0, -50%); } 50% { transform: translate(-5px, -50%); } }
+.refslider__dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+.refslider__dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(14,15,17,0.18); transition: background .2s ease; }
+.refslider__dots span.is-active { background: var(--sec); }
+.contact__regions { font-size: 14.5px; color: var(--text-soft); margin-top: -10px; }
+@media (max-width: 720px) {
+  .refmobile { display: block; }
+  .gallery__filter, .gallery--desktop { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .refslider__btn { animation: none !important; }
+}

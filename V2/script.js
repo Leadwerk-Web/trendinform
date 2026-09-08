@@ -452,3 +452,81 @@ form.addEventListener('submit', e => {
   form.querySelector('.form__progress').style.display = 'none';
   document.getElementById('formSuccess').hidden = false;
 });
+
+// ===== Referenzen mobil: Reiter nach Leistung, je Rubrik ein Slider =====
+// Quelle sind die Bilder im Desktop-Raster (data-leistung, data-rubrik). Wer ein Bild
+// ergänzt, ergänzt es nur dort. Die Pfeile bewegen sich leicht, bis der Nutzer den
+// Slider zum ersten Mal bedient hat (Klasse is-touched).
+(() => {
+  const root = document.getElementById('refMobile');
+  const items = [...document.querySelectorAll('.gallery .gallery__item[data-leistung]')];
+  if (!root || !items.length) return;
+  const LEISTUNGEN = [
+    ['spanndecke', 'Spanndecke'], ['lichtdecke', 'Lichtdecke'], ['lichtkonzept', 'Lichtkonzept'],
+    ['akustik', 'Akustik'], ['reparatur', 'Reparatur'], ['objekt', 'Objekt und Gewerbe']
+  ];
+  const tabs = root.querySelector('.refmobile__tabs');
+  const panels = root.querySelector('.refmobile__panels');
+  const arrow = dir => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + (dir === 'l' ? 'M15 18l-6-6 6-6' : 'M9 18l6-6-6-6') + '"/></svg>';
+  let first = true;
+
+  LEISTUNGEN.forEach(([key, label]) => {
+    const mine = items.filter(f => f.dataset.leistung === key);
+    if (!mine.length) return;
+    const tab = document.createElement('button');
+    tab.type = 'button'; tab.className = 'chip' + (first ? ' is-active' : '');
+    tab.setAttribute('role', 'tab'); tab.textContent = label; tab.dataset.panel = key;
+    tabs.appendChild(tab);
+
+    const panel = document.createElement('div');
+    panel.className = 'refmobile__panel' + (first ? ' is-active' : '');
+    panel.dataset.panel = key;
+    first = false;
+
+    const rubriken = [...new Set(mine.map(f => f.dataset.rubrik || 'Projekte'))];
+    rubriken.forEach(r => {
+      const list = mine.filter(f => (f.dataset.rubrik || 'Projekte') === r);
+      const g = document.createElement('div');
+      g.className = 'refgroup';
+      g.innerHTML =
+        '<div class="refgroup__head"><h3>' + r + '</h3><span>' + list.length + (list.length === 1 ? ' Projekt' : ' Projekte') + '</span></div>' +
+        '<div class="refslider' + (list.length < 2 ? ' is-single' : '') + '">' +
+          '<button type="button" class="refslider__btn refslider__btn--prev" aria-label="Vorheriges Bild">' + arrow('l') + '</button>' +
+          '<div class="refslider__track"></div>' +
+          '<button type="button" class="refslider__btn refslider__btn--next" aria-label="Nächstes Bild">' + arrow('r') + '</button>' +
+          '<div class="refslider__dots" aria-hidden="true"></div>' +
+        '</div>';
+      const slider = g.querySelector('.refslider');
+      const track = g.querySelector('.refslider__track');
+      const dots = g.querySelector('.refslider__dots');
+      list.forEach((f, n) => {
+        const c = f.cloneNode(true);
+        c.classList.remove('reveal', 'is-hidden', 'delay-1', 'delay-2', 'delay-3');
+        c.classList.add('is-visible');
+        c.removeAttribute('data-cat');
+        track.appendChild(c);
+        const d = document.createElement('span');
+        if (n === 0) d.classList.add('is-active');
+        dots.appendChild(d);
+      });
+      const step = () => (track.firstElementChild ? track.firstElementChild.offsetWidth : 0) + 12;
+      const touched = () => slider.classList.add('is-touched');
+      g.querySelector('.refslider__btn--prev').addEventListener('click', () => { touched(); track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+      g.querySelector('.refslider__btn--next').addEventListener('click', () => { touched(); track.scrollBy({ left: step(), behavior: 'smooth' }); });
+      track.addEventListener('scroll', () => {
+        touched();
+        const i = Math.round(track.scrollLeft / step());
+        [...dots.children].forEach((d, n) => d.classList.toggle('is-active', n === i));
+      }, { passive: true });
+      panel.appendChild(g);
+    });
+    panels.appendChild(panel);
+  });
+
+  tabs.addEventListener('click', e => {
+    const t = e.target.closest('.chip');
+    if (!t) return;
+    tabs.querySelectorAll('.chip').forEach(c => c.classList.toggle('is-active', c === t));
+    panels.querySelectorAll('.refmobile__panel').forEach(p => p.classList.toggle('is-active', p.dataset.panel === t.dataset.panel));
+  });
+})();
