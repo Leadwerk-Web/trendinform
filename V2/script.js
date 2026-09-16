@@ -26,10 +26,12 @@ if (STATIC_MODE) {
     }, wait);
   };
 
-  if (document.readyState === 'complete') hide();
-  else window.addEventListener('load', hide);
-  // Sicherheitsnetz: nie länger als 4 s warten
-  setTimeout(hide, 4000);
+  // Vorhang hebt sich, sobald Struktur und Schriften stehen. Auf Bilder und Video wird nicht
+  // gewartet, das Poster ist vorgeladen. Sicherheitsnetz: nie länger als 2,5 s.
+  const ready = () => { if (document.fonts && document.fonts.ready) document.fonts.ready.then(hide); else hide(); };
+  if (document.readyState !== 'loading') ready();
+  else document.addEventListener('DOMContentLoaded', ready);
+  setTimeout(hide, 2500);
 })();
 
 // ===== Lichtschweif: dezente Leuchtspur, die der Maus nachzieht =====
@@ -183,14 +185,37 @@ if (window.matchMedia('(pointer: fine)').matches) {
   requestAnimationFrame(tick);
 })();
 
-// ===== Hero-Video: deutlich verlangsamt für ruhige Wirkung =====
+// ===== Hero-Video: erst nach dem Seitenaufbau laden, deutlich verlangsamt =====
+// Das Poster ist das LCP-Bild. Das Video (6 MB, am Handy 2,8 MB) kommt erst, wenn die
+// Seite steht. Bei Datensparmodus oder reduzierter Bewegung bleibt es beim Poster.
 const heroVideo = document.querySelector('.hero__bg video');
 if (heroVideo) {
   const slowDown = () => { heroVideo.playbackRate = 0.4; };
-  slowDown();
-  // Manche Browser setzen die Rate beim Laden/Loopen zurück
   heroVideo.addEventListener('loadeddata', slowDown);
   heroVideo.addEventListener('play', slowDown);
+  const conn = navigator.connection || {};
+  const skip = STATIC_MODE || conn.saveData || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const loadVideo = () => {
+    if (skip || heroVideo.src) return;
+    const mobile = window.innerWidth <= 720 && heroVideo.dataset.srcMobile;
+    heroVideo.src = mobile ? heroVideo.dataset.srcMobile : heroVideo.dataset.src;
+    heroVideo.load();
+    const p = heroVideo.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+  const start = () => {
+    if (window.innerWidth <= 720) {
+      // Am Handy zählt das Poster als größtes Element. Das Video kommt, sobald der Nutzer
+      // scrollt oder tippt, spätestens nach sechs Sekunden.
+      const once = () => { loadVideo(); ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach(ev => window.removeEventListener(ev, once)); };
+      ['scroll', 'touchstart', 'pointerdown', 'keydown'].forEach(ev => window.addEventListener(ev, once, { passive: true }));
+      setTimeout(once, 6000);
+    } else {
+      setTimeout(loadVideo, 300);
+    }
+  };
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
 }
 
 // ===== Navigation: Scroll-Zustand + Mobile-Menü =====
@@ -253,82 +278,6 @@ const statObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 document.querySelectorAll('[data-count]').forEach(el => statObserver.observe(el));
 
-// ===== Reviews Slider =====
-(() => {
-  const track = document.getElementById('reviewsTrack');
-  const viewport = document.getElementById('reviewsViewport');
-  const prev = document.getElementById('reviewsPrev');
-  const next = document.getElementById('reviewsNext');
-  const bar = document.getElementById('reviewsBar');
-  if (!track || !viewport || !prev || !next || !bar) return;
-
-  const cards = [...track.querySelectorAll('.reviews__card')];
-  let index = 0;
-
-  const gap = () => parseFloat(getComputedStyle(track).gap) || 20;
-  const step = () => (cards[0]?.offsetWidth || 0) + gap();
-  const maxIndex = () => {
-    const overflow = track.scrollWidth - viewport.clientWidth;
-    if (overflow <= 0) return 0;
-    return Math.ceil(overflow / step());
-  };
-
-  const update = () => {
-    const max = maxIndex();
-    index = Math.max(0, Math.min(index, max));
-    track.style.transform = `translateX(${-index * step()}px)`;
-    const progress = max === 0 ? 1 : (index + 1) / (max + 1);
-    bar.style.width = `${Math.max(20, progress * 100)}%`;
-    prev.disabled = index <= 0;
-    next.disabled = index >= max;
-  };
-
-  prev.addEventListener('click', () => { index -= 1; update(); });
-  next.addEventListener('click', () => { index += 1; update(); });
-  window.addEventListener('resize', update, { passive: true });
-  update();
-})();
-
-// ===== B2B Objekt-Slider =====
-(() => {
-  const root = document.getElementById('b2bSlider');
-  if (!root) return;
-  const slides = [...root.querySelectorAll('.b2b__slide')];
-  const dots = [...root.querySelectorAll('#b2bDots button')];
-  const prev = document.getElementById('b2bPrev');
-  const next = document.getElementById('b2bNext');
-  let index = 0;
-  let timer;
-
-  const go = (i) => {
-    index = (i + slides.length) % slides.length;
-    slides.forEach((slide, n) => slide.classList.toggle('is-active', n === index));
-    dots.forEach((dot, n) => dot.classList.toggle('is-active', n === index));
-  };
-
-  const start = () => {
-    clearInterval(timer);
-    timer = setInterval(() => go(index + 1), 5000);
-  };
-
-  prev?.addEventListener('click', () => { go(index - 1); start(); });
-  next?.addEventListener('click', () => { go(index + 1); start(); });
-  dots.forEach((dot, n) => dot.addEventListener('click', () => { go(n); start(); }));
-  start();
-})();
-
-// ===== Galerie-Filter =====
-document.querySelectorAll('.gallery__filter .chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('.gallery__filter .chip').forEach(c => c.classList.remove('is-active'));
-    chip.classList.add('is-active');
-    const f = chip.dataset.filter;
-    document.querySelectorAll('.gallery__item').forEach(item => {
-      item.classList.toggle('is-hidden', f !== 'all' && item.dataset.cat !== f);
-    });
-  });
-});
-
 // ===== Vorher/Nachher-Vergleich =====
 const stage = document.getElementById('compareStage');
 if (stage) {
@@ -382,10 +331,15 @@ if (stage) {
     chip.addEventListener('click', () => {
       document.querySelectorAll('.compare__chips .chip').forEach(c => c.classList.remove('is-active'));
       chip.classList.add('is-active');
+      imgVorher.srcset = chip.dataset.vorherSet || '';
+      imgNachher.srcset = chip.dataset.nachherSet || '';
       imgVorher.src = chip.dataset.vorher;
       imgNachher.src = chip.dataset.nachher;
       imgVorher.alt = 'Vorher: ' + chip.dataset.alt;
       imgNachher.alt = 'Nachher: ' + chip.dataset.alt;
+      // Bildausschnitt je Paar (data-pos), etwa "50% 0%" damit die Decke im Bild bleibt
+      imgVorher.style.objectPosition = chip.dataset.pos || '';
+      imgNachher.style.objectPosition = chip.dataset.pos || '';
       lineEl.textContent = chip.dataset.line;
       pct = 40;
       apply();
@@ -453,80 +407,142 @@ form.addEventListener('submit', e => {
   document.getElementById('formSuccess').hidden = false;
 });
 
-// ===== Referenzen mobil: Reiter nach Leistung, je Rubrik ein Slider =====
-// Quelle sind die Bilder im Desktop-Raster (data-leistung, data-rubrik). Wer ein Bild
-// ergänzt, ergänzt es nur dort. Die Pfeile bewegen sich leicht, bis der Nutzer den
-// Slider zum ersten Mal bedient hat (Klasse is-touched).
+// ===== Endlos-Slider (Referenzen, Bewertungen, Objekt und Gewerbe) =====
+// Jonas, Miro 14.09.2026: Desktop wie am Handy, wischen, nach dem letzten Bild kommt wieder
+// das erste. Umsetzung: an beide Enden werden Klone gehängt; steht der Slider auf einem Klon,
+// springt er ohne Animation auf das echte Bild. Die Pfeile bewegen sich leicht, bis der Slider
+// zum ersten Mal bedient wurde (Klasse is-touched). Mit ?static (Screenshots) bleibt alles
+// stehen und die Klone entfallen.
 (() => {
-  const root = document.getElementById('refMobile');
-  const items = [...document.querySelectorAll('.gallery .gallery__item[data-leistung]')];
-  if (!root || !items.length) return;
-  const LEISTUNGEN = [
-    ['spanndecke', 'Spanndecke'], ['lichtdecke', 'Lichtdecke'], ['lichtkonzept', 'Lichtkonzept'],
-    ['akustik', 'Akustik'], ['reparatur', 'Reparatur'], ['objekt', 'Objekt und Gewerbe']
-  ];
-  const tabs = root.querySelector('.refmobile__tabs');
-  const panels = root.querySelector('.refmobile__panels');
-  const arrow = dir => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + (dir === 'l' ? 'M15 18l-6-6 6-6' : 'M9 18l6-6-6-6') + '"/></svg>';
-  let first = true;
+  const sliders = [...document.querySelectorAll('.lslider')];
+  if (!sliders.length) return;
 
-  LEISTUNGEN.forEach(([key, label]) => {
-    const mine = items.filter(f => f.dataset.leistung === key);
-    if (!mine.length) return;
-    const tab = document.createElement('button');
-    tab.type = 'button'; tab.className = 'chip' + (first ? ' is-active' : '');
-    tab.setAttribute('role', 'tab'); tab.textContent = label; tab.dataset.panel = key;
-    tabs.appendChild(tab);
+  const setup = root => {
+    const track = root.querySelector('.lslider__track');
+    const dots = root.querySelector('.lslider__dots');
+    const prev = root.querySelector('.lslider__btn--prev');
+    const next = root.querySelector('.lslider__btn--next');
+    const items = [...track.children];
+    const n = items.length;
+    if (!n) return;
+    const perView = () => {
+      const pv = parseInt(getComputedStyle(root).getPropertyValue('--perview'), 10) || 1;
+      return Math.max(1, Math.min(pv, n));
+    };
+    // Alles sichtbar oder Screenshot-Modus: kein Slider nötig
+    const staticNow = STATIC_MODE || n <= perView();
+    if (staticNow) {
+      root.classList.add('is-static');
+      if (STATIC_MODE) {
+        track.querySelectorAll('img[data-src]').forEach(img => { if (img.dataset.srcset) img.srcset = img.dataset.srcset; img.src = img.dataset.src; });
+        return;
+      }
+    }
+    const CL = Math.min(n, 3);   // Klone je Seite
+    let cloned = false;
+    const clone = () => {
+      if (cloned) return;
+      cloned = true;
+      items.slice(-CL).forEach(el => { const c = el.cloneNode(true); c.setAttribute('data-clone', ''); c.setAttribute('aria-hidden', 'true'); track.insertBefore(c, track.firstChild); });
+      items.slice(0, CL).forEach(el => { const c = el.cloneNode(true); c.setAttribute('data-clone', ''); c.setAttribute('aria-hidden', 'true'); track.appendChild(c); });
+    };
+    if (!staticNow) clone();
 
-    const panel = document.createElement('div');
-    panel.className = 'refmobile__panel' + (first ? ' is-active' : '');
-    panel.dataset.panel = key;
-    first = false;
+    const gap = () => parseFloat(getComputedStyle(track).gap) || 0;
+    let stepCache = 0;
+    const measure = () => { stepCache = (track.children[0] ? track.children[0].getBoundingClientRect().width : 0) + gap(); return stepCache; };
+    const step = () => stepCache || measure();
+    const offset = () => (cloned ? CL : 0);
+    const current = () => Math.round(track.scrollLeft / (step() || 1));
+    const jump = i => { track.style.scrollSnapType = 'none'; track.scrollLeft = i * step(); track.style.scrollSnapType = ''; };
+    const go = (i) => track.scrollTo({ left: i * step(), behavior: 'smooth' });
+    const real = i => (((i - offset()) % n) + n) % n;
+    let aligned = false;
 
-    const rubriken = [...new Set(mine.map(f => f.dataset.rubrik || 'Projekte'))];
-    rubriken.forEach(r => {
-      const list = mine.filter(f => (f.dataset.rubrik || 'Projekte') === r);
-      const g = document.createElement('div');
-      g.className = 'refgroup';
-      g.innerHTML =
-        '<div class="refgroup__head"><h3>' + r + '</h3><span>' + list.length + (list.length === 1 ? ' Projekt' : ' Projekte') + '</span></div>' +
-        '<div class="refslider' + (list.length < 2 ? ' is-single' : '') + '">' +
-          '<button type="button" class="refslider__btn refslider__btn--prev" aria-label="Vorheriges Bild">' + arrow('l') + '</button>' +
-          '<div class="refslider__track"></div>' +
-          '<button type="button" class="refslider__btn refslider__btn--next" aria-label="Nächstes Bild">' + arrow('r') + '</button>' +
-          '<div class="refslider__dots" aria-hidden="true"></div>' +
-        '</div>';
-      const slider = g.querySelector('.refslider');
-      const track = g.querySelector('.refslider__track');
-      const dots = g.querySelector('.refslider__dots');
-      list.forEach((f, n) => {
-        const c = f.cloneNode(true);
-        c.classList.remove('reveal', 'is-hidden', 'delay-1', 'delay-2', 'delay-3');
-        c.classList.add('is-visible');
-        c.removeAttribute('data-cat');
-        track.appendChild(c);
-        const d = document.createElement('span');
-        if (n === 0) d.classList.add('is-active');
-        dots.appendChild(d);
-      });
-      const step = () => (track.firstElementChild ? track.firstElementChild.offsetWidth : 0) + 12;
-      const touched = () => slider.classList.add('is-touched');
-      g.querySelector('.refslider__btn--prev').addEventListener('click', () => { touched(); track.scrollBy({ left: -step(), behavior: 'smooth' }); });
-      g.querySelector('.refslider__btn--next').addEventListener('click', () => { touched(); track.scrollBy({ left: step(), behavior: 'smooth' }); });
-      track.addEventListener('scroll', () => {
-        touched();
-        const i = Math.round(track.scrollLeft / step());
-        [...dots.children].forEach((d, n) => d.classList.toggle('is-active', n === i));
-      }, { passive: true });
-      panel.appendChild(g);
+    // Bilder ab dem vierten je Spur tragen data-src und werden erst geladen, wenn sie in Sicht
+    // kommen oder der Nutzer in ihre Richtung blättert. Klone teilen sich das Verhalten.
+    const load = img => {
+      if (!img || !img.dataset.src) return;
+      if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+      img.src = img.dataset.src;
+      delete img.dataset.src; delete img.dataset.srcset;
+    };
+    const loadRange = (from, to) => {
+      const kids = [...track.children];
+      for (let i = Math.max(0, from); i <= Math.min(kids.length - 1, to); i++) kids[i].querySelectorAll('img[data-src]').forEach(load);
+    };
+    const io = ('IntersectionObserver' in window) ? new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '400px 0px' }) : null;
+    const watch = () => track.querySelectorAll('img[data-src]').forEach(img => io ? io.observe(img) : load(img));
+    watch();
+
+    if (dots) {
+      dots.innerHTML = '';
+      for (let i = 0; i < n; i++) { const d = document.createElement('span'); if (i === 0) d.classList.add('is-active'); dots.appendChild(d); }
+    }
+    const paint = () => {
+      if (!dots) return;
+      const r = real(current());
+      [...dots.children].forEach((d, k) => d.classList.toggle('is-active', k === r));
+    };
+    const touched = () => root.classList.add('is-touched');
+
+    // Startposition auf dem ersten echten Bild, sobald Breiten bekannt sind
+    const align = () => {
+      if (!measure()) return;          // noch unsichtbar (Reiter), später erneut
+      if (cloned && !aligned) jump(offset());
+      aligned = true;
+      loadRange(current() - 1, current() + perView() + 1);
+      paint();
+    };
+    requestAnimationFrame(align);
+    window.addEventListener('load', align, { once: true });
+
+    let settle;
+    track.addEventListener('scroll', () => {
+      paint();
+      loadRange(current() - 1, current() + perView() + 1);
+      clearTimeout(settle);
+      settle = setTimeout(() => {
+        if (!cloned) return;
+        const i = current();
+        if (i < offset()) jump(i + n);
+        else if (i >= offset() + n) jump(i - n);
+        paint();
+      }, 90);
+    }, { passive: true });
+    track.addEventListener('pointerdown', touched, { passive: true });
+    track.addEventListener('touchstart', touched, { passive: true });
+
+    prev?.addEventListener('click', () => { touched(); loadRange(current() - 2, current() + perView()); go(current() - 1); });
+    next?.addEventListener('click', () => { touched(); loadRange(current(), current() + perView() + 2); go(current() + 1); });
+
+    let resize;
+    window.addEventListener('resize', () => {
+      clearTimeout(resize);
+      resize = setTimeout(() => {
+        if (!aligned) { align(); return; }
+        const r = real(current());
+        root.classList.toggle('is-static', n <= perView());
+        measure();
+        jump(offset() + r);
+        loadRange(current() - 1, current() + perView() + 1);
+      }, 120);
+    }, { passive: true });
+  };
+  sliders.forEach(setup);
+
+  // Reiter: nur das gewählte Panel ist sichtbar
+  document.querySelectorAll('.refs').forEach(refs => {
+    const tabs = refs.querySelector('.refs__tabs');
+    tabs.addEventListener('click', e => {
+      const t = e.target.closest('.chip');
+      if (!t) return;
+      tabs.querySelectorAll('.chip').forEach(c => { const on = c === t; c.classList.toggle('is-active', on); c.setAttribute('aria-selected', on ? 'true' : 'false'); });
+      refs.querySelectorAll('.refs__panel').forEach(p => p.classList.toggle('is-active', p.dataset.panel === t.dataset.panel));
+      // Slider im neu sichtbaren Panel auf das erste echte Bild setzen
+      window.dispatchEvent(new Event('resize'));
     });
-    panels.appendChild(panel);
-  });
-
-  tabs.addEventListener('click', e => {
-    const t = e.target.closest('.chip');
-    if (!t) return;
-    tabs.querySelectorAll('.chip').forEach(c => c.classList.toggle('is-active', c === t));
-    panels.querySelectorAll('.refmobile__panel').forEach(p => p.classList.toggle('is-active', p.dataset.panel === t.dataset.panel));
   });
 })();
