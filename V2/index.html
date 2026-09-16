@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="leadwerk:focus-keyphrase" content="Spanndecken Karlsruhe">
 <title>Spanndecken Karlsruhe | Licht und Akustik | Trend in Form GmbH</title>
 <meta name="description" content="Spanndecke, Licht und Akustik aus einer Hand: Montage meist an einem Tag, ohne Abriss. Termin vor Ort in Karlsruhe, Pforzheim, Ettlingen und Umgebung.">
-<link rel="canonical" href="https://trend-in-form.de/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Spanndecken Karlsruhe | Licht und Akustik | Trend in Form GmbH">
 <meta property="og:description" content="Spanndecke, Lichtlinie und Akustik aus einer Hand. Montage meist an einem Tag, ohne Abriss. Jetzt Termin vor Ort anfragen.">
-<meta property="og:url" content="https://trend-in-form.de/">
-<meta property="og:image" content="https://trend-in-form.de/assets/og-image.jpg">
+<meta property="og:image" content="assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Trend in Form GmbH">
@@ -105,6 +104,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#content">Zum Inhalt</a>
 
 <!-- Preloader: Formen-Trio aus dem Logo -->
 <div class="preloader" id="preloader" aria-hidden="true">
@@ -125,8 +125,8 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#top" class="nav__logo">
-      <img src="assets/logo_negativ.png" alt="Trend in Form GmbH | Licht, Spanndecken, Akustik" class="nav__logo--dark" width="2000" height="1300">
-      <img src="assets/logo.png" alt="" aria-hidden="true" class="nav__logo--light" width="2000" height="1500">
+      <img src="assets/logo_negativ.png" alt="Trend in Form GmbH | Licht, Spanndecken, Akustik" class="nav__logo--dark" data-lw-global="brand.logo_dark" data-lw-type="image" width="2000" height="1300">
+      <img src="assets/logo.png" alt="" aria-hidden="true" class="nav__logo--light" data-lw-global="brand.logo_light" data-lw-type="image" data-lw-decorative="true" width="2000" height="1500">
     </a>
     <nav class="nav__links" id="navLinks">
       <a href="#leistungen">Spanndecken</a>
@@ -142,16 +142,19 @@
         <span>07248 927 30 50</span>
       </a>
       <a href="#kontakt" class="btn btn--primary btn--nav">Termin vor Ort anfragen</a>
+      <div class="site-language-switcher" data-lw-language-switcher-slot hidden></div>
       <button class="nav__burger" id="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
+<main id="content">
 <!-- ======= HERO ======= -->
 <section class="hero" id="top">
   <div class="hero__bg">
     <!-- Video wird erst nach dem Seitenaufbau geladen (script.js), am Handy die kleine Fassung. Poster ist das LCP-Bild. -->
     <video muted loop playsinline preload="none" poster="assets/hero-poster.jpg" width="1080" height="1080" aria-label="Imagefilm: Spanndecken-Montage von Trend in Form"
+           data-lw-field="hero.video" data-lw-type="video" data-lw-attribute="data-src" data-lw-label="Hero-Video" data-lw-node="hero-bg-video"
            data-src="assets/hero-video.mp4" data-src-mobile="assets/hero-video-mobile.mp4"></video>
     <div class="hero__overlay"></div>
   </div>
@@ -165,12 +168,12 @@
       <span class="stars" aria-hidden="true">★★★★★</span>
       <span>„Ausgezeichnet" bei Google, basierend auf 40 Bewertungen</span>
     </div>
-    <h1 class="hero__title">
+    <h1 class="hero__title" data-lw-field="hero.title" data-lw-type="richtext">
       <span class="line"><span>Morgens Baustelle,</span></span>
       <span class="line"><span>abends ein Raum,</span></span>
       <span class="line"><span class="accent">der begeistert.</span></span>
     </h1>
-    <p class="hero__sub reveal delay-2">Wir verbinden Spanndecke, Licht und Akustik zu einem Ergebnis, welches man spürt: eine makellose Fläche, ruhiges Licht und ein klarer Plan von der ersten Beratung bis zur Abnahme.</p>
+    <p class="hero__sub reveal delay-2" data-lw-field="hero.intro" data-lw-type="textarea">Wir verbinden Spanndecke, Licht und Akustik zu einem Ergebnis, welches man spürt: eine makellose Fläche, ruhiges Licht und ein klarer Plan von der ersten Beratung bis zur Abnahme.</p>
     <div class="hero__cta reveal delay-3">
       <a href="#kontakt" class="btn btn--primary btn--lg">Termin vor Ort anfragen</a>
       <a href="#vergleich" class="btn btn--ghost btn--lg">
@@ -196,7 +199,7 @@
     <div class="section__head reveal">
       <span class="eyebrow">Ideen brauchen Raum</span>
       <h2>Jeder Raum hat eine Decke.<br>Wenige haben ein Konzept.</h2>
-      <p>Decke, Licht und Akustik greifen ineinander. Sag uns, wo Dein Projekt spielt, wir zeigen Dir, was darüber möglich ist. Alles zur <a href="spanndecke.html">Spanndecke in Karlsruhe und Pforzheim</a> findest Du auf einer eigenen Seite.</p>
+      <p>Decke, Licht und Akustik greifen ineinander. Sag uns, wo Dein Projekt spielt, wir zeigen Dir, was darüber möglich ist. Alles zur <a href="spanndecke.html" data-lw-page-ref="tif-spanndecke">Spanndecke in Karlsruhe und Pforzheim</a> findest Du auf einer eigenen Seite.</p>
     </div>
     <div class="cases">
       <a href="#kontakt" class="case reveal" data-usecase="Spanndecke">
@@ -231,18 +234,18 @@
           <span class="case__link">Beratung anfragen →</span>
         </div>
       </a>
-      <a href="#kontakt" class="case reveal delay-1" data-usecase="Reparatur & Folientausch">
+      <a href="#kontakt" class="case reveal delay-1" data-usecase="Reparatur &amp; Folientausch">
         <img src="assets/leistung-reparatur.jpg" srcset="assets/leistung-reparatur-640.webp 640w, assets/leistung-reparatur-960.webp 960w, assets/leistung-reparatur.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1080px) 46vw, 380px" alt="Bad mit beschädigter, durchhängender Spanndecke vor dem Folientausch" loading="lazy" width="1024" height="1536">
         <div class="case__body">
-          <h3>Reparatur & Folientausch</h3>
+          <h3>Reparatur &amp; Folientausch</h3>
           <p>Wir reparieren beschädigte Spanndecken oder tauschen sie fachgerecht aus. Schnell, sauber und passend zu Deiner bestehenden Decke.</p>
           <span class="case__link">Schaden melden →</span>
         </div>
       </a>
-      <a href="#kontakt" class="case reveal delay-2" data-usecase="Objekt & Gewerbe">
+      <a href="#kontakt" class="case reveal delay-2" data-usecase="Objekt &amp; Gewerbe">
         <img src="assets/leistung-objekt.jpg" srcset="assets/leistung-objekt-640.webp 640w, assets/leistung-objekt-960.webp 960w, assets/leistung-objekt.webp 1600w" sizes="(max-width: 720px) 92vw, (max-width: 1080px) 46vw, 380px" alt="Showroom mit Maybach unter einer geformten Lichtdecke" loading="lazy" width="1600" height="1200">
         <div class="case__body">
-          <h3>Objekt & Gewerbe</h3>
+          <h3>Objekt &amp; Gewerbe</h3>
           <p>Wir bieten individuelle Lösungen für Gewerbe und Objekt, von der Planung bis zur fachgerechten Umsetzung. Normgerecht ausgeführt und termintreu.</p>
           <span class="case__link">Angebot fürs Objekt →</span>
         </div>
@@ -467,19 +470,19 @@
                 <figcaption><strong>Designbad in Schwarz</strong><span>Hochglanzfolie, Lichtlinie über der Dusche</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-04.jpg" data-srcset="assets/referenz-spanndecke-bad-04-640.webp 640w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit anthrazitfarbener Hochglanz-Spanndecke und Lichtlinie" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-04.jpg" data-srcset="assets/referenz-spanndecke-bad-04-640.webp 640w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit anthrazitfarbener Hochglanz-Spanndecke und Lichtlinie" width="1200" height="1600">
                 <figcaption><strong>Gäste-WC</strong><span>Hochglanzdecke in Anthrazit, präzise Lichtlinie</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-05.jpg" data-srcset="assets/referenz-spanndecke-bad-05-640.webp 640w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Schmales Bad mit weißer Hochglanz-Spanndecke und durchgehender Lichtlinie" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-05.jpg" data-srcset="assets/referenz-spanndecke-bad-05-640.webp 640w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Schmales Bad mit weißer Hochglanz-Spanndecke und durchgehender Lichtlinie" width="1200" height="1600">
                 <figcaption><strong>Bad mit Walk-in-Dusche</strong><span>Nahtfreie Hochglanzdecke, Lichtlinie über die ganze Länge</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-06.jpg" data-srcset="assets/referenz-spanndecke-bad-06-640.webp 640w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Hochglanz-Spanndecke mit indirekter Lichtlinie in einem Bad mit Jalousien" width="1200" height="800">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-06.jpg" data-srcset="assets/referenz-spanndecke-bad-06-640.webp 640w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Hochglanz-Spanndecke mit indirekter Lichtlinie in einem Bad mit Jalousien" width="1200" height="800">
                 <figcaption><strong>Badsanierung</strong><span>Hochglanzdecke in Weiß, indirekte Lichtlinie</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-07.jpg" data-srcset="assets/referenz-spanndecke-bad-07-640.webp 640w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit weißer Spanndecke, umlaufender Lichtlinie und Fenster" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-07.jpg" data-srcset="assets/referenz-spanndecke-bad-07-640.webp 640w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit weißer Spanndecke, umlaufender Lichtlinie und Fenster" width="1200" height="1600">
                 <figcaption><strong>Gäste-WC mit Lichtlinie</strong><span>Weiße Spanndecke, Lichtlinie entlang der Wände</span></figcaption>
               </figure>
             </div>
@@ -505,15 +508,15 @@
                 <figcaption><strong>Küche mit Lichtlinie</strong><span>Hochglanzdecke, Lichtlinie über der Arbeitsfläche</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-kueche-04.jpg" data-srcset="assets/referenz-spanndecke-kueche-04-640.webp 640w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Esszimmer mit Hochglanz-Spanndecke, Lichtlinie und Pendelleuchten über dem Esstisch" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-kueche-04.jpg" data-srcset="assets/referenz-spanndecke-kueche-04-640.webp 640w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Esszimmer mit Hochglanz-Spanndecke, Lichtlinie und Pendelleuchten über dem Esstisch" width="1200" height="900">
                 <figcaption><strong>Esszimmer</strong><span>Hochglanzdecke, Lichtlinie, Pendelleuchten</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-kueche-05.jpg" data-srcset="assets/referenz-spanndecke-kueche-05-640.webp 640w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Küche mit matter Spanndecke und umlaufender Lichtlinie" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-kueche-05.jpg" data-srcset="assets/referenz-spanndecke-kueche-05-640.webp 640w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Küche mit matter Spanndecke und umlaufender Lichtlinie" width="1200" height="900">
                 <figcaption><strong>Küche in Weiß</strong><span>Matte Spanndecke, umlaufende Lichtlinie</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-kueche-06.jpg" data-srcset="assets/referenz-spanndecke-kueche-06-640.webp 640w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Küche unter der Dachschräge mit Spanndecke und Lichtrahmen in Hochglanz" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-kueche-06.jpg" data-srcset="assets/referenz-spanndecke-kueche-06-640.webp 640w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Küche unter der Dachschräge mit Spanndecke und Lichtrahmen in Hochglanz" width="1200" height="900">
                 <figcaption><strong>Küche im Dachgeschoss</strong><span>Spanndecke mit Hochglanzfeld und Lichtlinie</span></figcaption>
               </figure>
             </div>
@@ -561,11 +564,11 @@
                 <figcaption><strong>Wohnzimmer mit Lichtlinien</strong><span>Zwei Lichtlinien über den ganzen Raum</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-wohnzimmer-04.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-04-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnzimmer mit schwarzem Hochglanzfeld in der Spanndecke und indirekter Beleuchtung" width="1200" height="800">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-wohnzimmer-04.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-04-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnzimmer mit schwarzem Hochglanzfeld in der Spanndecke und indirekter Beleuchtung" width="1200" height="800">
                 <figcaption><strong>Hochglanzfeld in Schwarz</strong><span>Abgesetztes Deckenfeld, indirektes Licht</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-wohnzimmer-05.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-05-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnraum im Altbau mit Spanndecke und Lichtlinie über einer Wand in Betonoptik" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-wohnzimmer-05.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-05-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnraum im Altbau mit Spanndecke und Lichtlinie über einer Wand in Betonoptik" width="1200" height="900">
                 <figcaption><strong>Altbau mit Lichtlinie</strong><span>Spanndecke, Lichtlinie über der Wand</span></figcaption>
               </figure>
             </div>
@@ -593,7 +596,7 @@
                 <figcaption><strong>Bedruckte Lichtdecke</strong><span>Blätterdach und Himmel, hinterleuchtet</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtdecke-08.jpg" data-srcset="assets/referenz-lichtdecke-08-640.webp 640w, assets/referenz-lichtdecke-08-960.webp 960w, assets/referenz-lichtdecke-08-960.webp 960w, assets/referenz-lichtdecke-08.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Duschbad mit Marmorfliesen und Lichtdecke mit umlaufender Lichtkante" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtdecke-08.jpg" data-srcset="assets/referenz-lichtdecke-08-640.webp 640w, assets/referenz-lichtdecke-08-960.webp 960w, assets/referenz-lichtdecke-08-960.webp 960w, assets/referenz-lichtdecke-08.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Duschbad mit Marmorfliesen und Lichtdecke mit umlaufender Lichtkante" width="1200" height="1600">
                 <figcaption><strong>Duschbad mit Lichtdecke</strong><span>Lichtdecke über Dusche und Waschtisch</span></figcaption>
               </figure>
             </div>
@@ -657,11 +660,11 @@
                 <figcaption><strong>Dachgeschoss</strong><span>Indirekte Beleuchtung entlang des Giebels</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtkonzept-04.jpg" data-srcset="assets/referenz-lichtkonzept-04-640.webp 640w, assets/referenz-lichtkonzept-04-960.webp 960w, assets/referenz-lichtkonzept-04-960.webp 960w, assets/referenz-lichtkonzept-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Treppenhaus mit Pendelleuchte aus vielen Glaskugeln" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtkonzept-04.jpg" data-srcset="assets/referenz-lichtkonzept-04-640.webp 640w, assets/referenz-lichtkonzept-04-960.webp 960w, assets/referenz-lichtkonzept-04-960.webp 960w, assets/referenz-lichtkonzept-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Treppenhaus mit Pendelleuchte aus vielen Glaskugeln" width="1200" height="1600">
                 <figcaption><strong>Treppenhaus</strong><span>Leuchte über zwei Geschosse</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtkonzept-05.jpg" data-srcset="assets/referenz-lichtkonzept-05-640.webp 640w, assets/referenz-lichtkonzept-05-960.webp 960w, assets/referenz-lichtkonzept-05-960.webp 960w, assets/referenz-lichtkonzept-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnraum mit indirekt beleuchteten Holzbalken" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtkonzept-05.jpg" data-srcset="assets/referenz-lichtkonzept-05-640.webp 640w, assets/referenz-lichtkonzept-05-960.webp 960w, assets/referenz-lichtkonzept-05-960.webp 960w, assets/referenz-lichtkonzept-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnraum mit indirekt beleuchteten Holzbalken" width="1200" height="900">
                 <figcaption><strong>Holzbalken mit Licht</strong><span>Indirekte Beleuchtung zwischen den Balken</span></figcaption>
               </figure>
             </div>
@@ -711,7 +714,7 @@
                 <figcaption><strong>Akustikbild am Arbeitsplatz</strong><span>Absorber als Wandbild</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-akustik-04.jpg" data-srcset="assets/referenz-akustik-04-640.webp 640w, assets/referenz-akustik-04-960.webp 960w, assets/referenz-akustik-04-960.webp 960w, assets/referenz-akustik-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Akustikmessung mit Messmikrofon und Lautsprecher in einem leeren Raum" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-akustik-04.jpg" data-srcset="assets/referenz-akustik-04-640.webp 640w, assets/referenz-akustik-04-960.webp 960w, assets/referenz-akustik-04-960.webp 960w, assets/referenz-akustik-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Akustikmessung mit Messmikrofon und Lautsprecher in einem leeren Raum" width="1200" height="900">
                 <figcaption><strong>Akustikmessung</strong><span>Erst messen, dann planen</span></figcaption>
               </figure>
             </div>
@@ -739,7 +742,7 @@
                 <figcaption><strong>Showroom mit Lichtring</strong><span>Ringförmige Lichtdecke über dem Fahrzeug</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-objekt-04.jpg" data-srcset="assets/referenz-objekt-04-640.webp 640w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="AMG Showroom mit roter Lichtlinie im Boden und Videowand" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-objekt-04.jpg" data-srcset="assets/referenz-objekt-04-640.webp 640w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="AMG Showroom mit roter Lichtlinie im Boden und Videowand" width="1200" height="900">
                 <figcaption><strong>AMG Showroom</strong><span>Lichtlinie im Boden, Videowand</span></figcaption>
               </figure>
             </div>
@@ -771,7 +774,6 @@
         </div>
       </div>
       </div>
-    </div>
     </div>
   </div>
 </section>
@@ -953,11 +955,11 @@
     <ul class="partners__grid">
       <!-- Wand Atelier: Logo kommt von Jonas (Miro 14.09.2026), bis dahin Wortmarke. Dann: <a><img src="assets/partner/wand-atelier.png" alt="Wand Atelier"></a> -->
       <li class="reveal"><span class="partners__wordmark" aria-label="Wand Atelier">Wand<em>Atelier</em></span></li>
-      <li class="reveal delay-1"><a href="https://www.raumundfreude.org/" target="_blank" rel="noopener nofollow" aria-label="Raum und Freude (öffnet in neuem Tab)"><img src="assets/partner/raum-und-freude.png" alt="Raum und Freude" loading="lazy" width="304" height="169"></a></li>
-      <li class="reveal delay-2"><a href="https://das-goehner-ich-mir.de/" target="_blank" rel="noopener nofollow" aria-label="Dirk Göhner (öffnet in neuem Tab)"><img src="assets/partner/dirk-goehner.png" alt="Dirk Göhner" loading="lazy" width="509" height="240"></a></li>
-      <li class="reveal delay-3"><a href="https://fuller.de/" target="_blank" rel="noopener nofollow" aria-label="Fuller (öffnet in neuem Tab)"><img src="assets/partner/fuller.png" alt="Fuller" loading="lazy" width="322" height="240"></a></li>
-      <li class="reveal delay-4"><a href="https://www.derfliesenbruder.de/" target="_blank" rel="noopener nofollow" aria-label="Der Fliesenbruder (öffnet in neuem Tab)"><img src="assets/partner/der-fliesenbruder.png" alt="Der Fliesenbruder" loading="lazy" width="419" height="240"></a></li>
-      <li class="reveal delay-4"><a href="https://www.fliesenforum.de/" target="_blank" rel="noopener nofollow" aria-label="Fliesenforum (öffnet in neuem Tab)"><img src="assets/partner/fliesenforum.png" alt="Fliesenforum" loading="lazy" width="640" height="146"></a></li>
+      <li class="reveal delay-1"><a href="https://www.raumundfreude.org/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Raum und Freude (öffnet in neuem Tab)"><img src="assets/partner/raum-und-freude.png" alt="Raum und Freude" loading="lazy" width="304" height="169"></a></li>
+      <li class="reveal delay-2"><a href="https://das-goehner-ich-mir.de/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Dirk Göhner (öffnet in neuem Tab)"><img src="assets/partner/dirk-goehner.png" alt="Dirk Göhner" loading="lazy" width="509" height="240"></a></li>
+      <li class="reveal delay-3"><a href="https://fuller.de/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Fuller (öffnet in neuem Tab)"><img src="assets/partner/fuller.png" alt="Fuller" loading="lazy" width="322" height="240"></a></li>
+      <li class="reveal delay-4"><a href="https://www.derfliesenbruder.de/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Der Fliesenbruder (öffnet in neuem Tab)"><img src="assets/partner/der-fliesenbruder.png" alt="Der Fliesenbruder" loading="lazy" width="419" height="240"></a></li>
+      <li class="reveal delay-4"><a href="https://www.fliesenforum.de/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Fliesenforum (öffnet in neuem Tab)"><img src="assets/partner/fliesenforum.png" alt="Fliesenforum" loading="lazy" width="640" height="146"></a></li>
     </ul>
   </div>
 </section>
@@ -997,47 +999,47 @@
               <figcaption>Showroom: ringförmige Lichtdecke über dem Fahrzeug</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-objekt-04.jpg" data-srcset="assets/referenz-objekt-04-640.webp 640w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="AMG Showroom mit roter Lichtlinie im Boden und Videowand" width="1200" height="900">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-objekt-04.jpg" data-srcset="assets/referenz-objekt-04-640.webp 640w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04-960.webp 960w, assets/referenz-objekt-04.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="AMG Showroom mit roter Lichtlinie im Boden und Videowand" width="1200" height="900">
               <figcaption>AMG Showroom: Lichtlinie im Boden, Videowand</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/gewerbe-albtherme.jpg" data-srcset="assets/gewerbe-albtherme-640.webp 640w, assets/gewerbe-albtherme-960.webp 960w, assets/gewerbe-albtherme-960.webp 960w, assets/gewerbe-albtherme.webp 1600w" sizes="(max-width: 1080px) 92vw, 540px" alt="Ruheraum der AlbTherme Waldbronn mit hinterleuchteter Waldwand" width="1600" height="1067">
+              <img src="assets/lazy-pixel.gif" data-src="assets/gewerbe-albtherme.jpg" data-srcset="assets/gewerbe-albtherme-640.webp 640w, assets/gewerbe-albtherme-960.webp 960w, assets/gewerbe-albtherme-960.webp 960w, assets/gewerbe-albtherme.webp 1600w" sizes="(max-width: 1080px) 92vw, 540px" alt="Ruheraum der AlbTherme Waldbronn mit hinterleuchteter Waldwand" width="1600" height="1067">
               <figcaption>AlbTherme Waldbronn: hinterleuchtete Motivwand im Ruheraum</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtdecke-06.jpg" data-srcset="assets/referenz-lichtdecke-06-640.webp 640w, assets/referenz-lichtdecke-06-960.webp 960w, assets/referenz-lichtdecke-06-960.webp 960w, assets/referenz-lichtdecke-06.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Lichtdecke über einem Porsche in einem Showroom" width="1200" height="900">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtdecke-06.jpg" data-srcset="assets/referenz-lichtdecke-06-640.webp 640w, assets/referenz-lichtdecke-06-960.webp 960w, assets/referenz-lichtdecke-06-960.webp 960w, assets/referenz-lichtdecke-06.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Lichtdecke über einem Porsche in einem Showroom" width="1200" height="900">
               <figcaption>Showroom: flächiges Licht für die Fahrzeugpräsentation</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtdecke-07.jpg" data-srcset="assets/referenz-lichtdecke-07-640.webp 640w, assets/referenz-lichtdecke-07-960.webp 960w, assets/referenz-lichtdecke-07-960.webp 960w, assets/referenz-lichtdecke-07.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Lichtdecke in einem Autohaus mit Sportwagen darunter" width="1200" height="900">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtdecke-07.jpg" data-srcset="assets/referenz-lichtdecke-07-640.webp 640w, assets/referenz-lichtdecke-07-960.webp 960w, assets/referenz-lichtdecke-07-960.webp 960w, assets/referenz-lichtdecke-07.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Lichtdecke in einem Autohaus mit Sportwagen darunter" width="1200" height="900">
               <figcaption>Autohaus: gleichmäßiges, schattenfreies Licht</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-objekt-06.jpg" data-srcset="assets/referenz-objekt-06-640.webp 640w, assets/referenz-objekt-06-960.webp 960w, assets/referenz-objekt-06-960.webp 960w, assets/referenz-objekt-06.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Optikergeschäft mit runder Lichtdecke über dem Beratungstisch" width="1200" height="800">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-objekt-06.jpg" data-srcset="assets/referenz-objekt-06-640.webp 640w, assets/referenz-objekt-06-960.webp 960w, assets/referenz-objekt-06-960.webp 960w, assets/referenz-objekt-06.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Optikergeschäft mit runder Lichtdecke über dem Beratungstisch" width="1200" height="800">
               <figcaption>Fesser Optik: runde Lichtdecke im Verkaufsraum</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtdecke-05.jpg" data-srcset="assets/referenz-lichtdecke-05-640.webp 640w, assets/referenz-lichtdecke-05-960.webp 960w, assets/referenz-lichtdecke-05-960.webp 960w, assets/referenz-lichtdecke-05.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Lichtdecke in einem Empfangsbereich, links in Kaltweiß, rechts in Warmweiß" width="1200" height="662">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtdecke-05.jpg" data-srcset="assets/referenz-lichtdecke-05-640.webp 640w, assets/referenz-lichtdecke-05-960.webp 960w, assets/referenz-lichtdecke-05-960.webp 960w, assets/referenz-lichtdecke-05.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Lichtdecke in einem Empfangsbereich, links in Kaltweiß, rechts in Warmweiß" width="1200" height="662">
               <figcaption>Empfang: dieselbe Lichtdecke in Kalt- und Warmweiß</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtkonzept-06.jpg" data-srcset="assets/referenz-lichtkonzept-06-640.webp 640w, assets/referenz-lichtkonzept-06-960.webp 960w, assets/referenz-lichtkonzept-06-960.webp 960w, assets/referenz-lichtkonzept-06.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Saal mit Gewölbedecke und sternförmigen Leuchten" width="1200" height="1600">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtkonzept-06.jpg" data-srcset="assets/referenz-lichtkonzept-06-640.webp 640w, assets/referenz-lichtkonzept-06-960.webp 960w, assets/referenz-lichtkonzept-06-960.webp 960w, assets/referenz-lichtkonzept-06.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Saal mit Gewölbedecke und sternförmigen Leuchten" width="1200" height="1600">
               <figcaption>Saal: Leuchten nach Maß für das Gewölbe</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtkonzept-07.jpg" data-srcset="assets/referenz-lichtkonzept-07-640.webp 640w, assets/referenz-lichtkonzept-07-960.webp 960w, assets/referenz-lichtkonzept-07-960.webp 960w, assets/referenz-lichtkonzept-07.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Hinterleuchtete Lichtwand mit Bergmotiv in einem Büro" width="1200" height="900">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtkonzept-07.jpg" data-srcset="assets/referenz-lichtkonzept-07-640.webp 640w, assets/referenz-lichtkonzept-07-960.webp 960w, assets/referenz-lichtkonzept-07-960.webp 960w, assets/referenz-lichtkonzept-07.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Hinterleuchtete Lichtwand mit Bergmotiv in einem Büro" width="1200" height="900">
               <figcaption>Büro: hinterleuchtete Lichtwand mit Motivdruck</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-lichtkonzept-08.jpg" data-srcset="assets/referenz-lichtkonzept-08-640.webp 640w, assets/referenz-lichtkonzept-08-960.webp 960w, assets/referenz-lichtkonzept-08-960.webp 960w, assets/referenz-lichtkonzept-08.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Café mit Lichtrahmen vor einer Backsteinwand" width="1200" height="1600">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-lichtkonzept-08.jpg" data-srcset="assets/referenz-lichtkonzept-08-640.webp 640w, assets/referenz-lichtkonzept-08-960.webp 960w, assets/referenz-lichtkonzept-08-960.webp 960w, assets/referenz-lichtkonzept-08.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Café mit Lichtrahmen vor einer Backsteinwand" width="1200" height="1600">
               <figcaption>Café in Frankfurt: Lichtrahmen vor Backstein</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-objekt-07.jpg" data-srcset="assets/referenz-objekt-07-640.webp 640w, assets/referenz-objekt-07-960.webp 960w, assets/referenz-objekt-07-960.webp 960w, assets/referenz-objekt-07.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Bürogebäude bei Dämmerung mit senkrechten Lichtlinien an der Fassade" width="1200" height="899">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-objekt-07.jpg" data-srcset="assets/referenz-objekt-07-640.webp 640w, assets/referenz-objekt-07-960.webp 960w, assets/referenz-objekt-07-960.webp 960w, assets/referenz-objekt-07.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Bürogebäude bei Dämmerung mit senkrechten Lichtlinien an der Fassade" width="1200" height="899">
               <figcaption>Bürogebäude: senkrechte Lichtlinien an der Fassade</figcaption>
             </figure>
             <figure class="b2b__slide">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-akustik-01.jpg" data-srcset="assets/referenz-akustik-01-640.webp 640w, assets/referenz-akustik-01-960.webp 960w, assets/referenz-akustik-01-960.webp 960w, assets/referenz-akustik-01.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Deckensegel als Akustiklamellen in einem lichtdurchfluteten Foyer" width="1200" height="900">
+              <img src="assets/lazy-pixel.gif" data-src="assets/referenz-akustik-01.jpg" data-srcset="assets/referenz-akustik-01-640.webp 640w, assets/referenz-akustik-01-960.webp 960w, assets/referenz-akustik-01-960.webp 960w, assets/referenz-akustik-01.webp 1200w" sizes="(max-width: 1080px) 92vw, 540px" alt="Deckensegel als Akustiklamellen in einem lichtdurchfluteten Foyer" width="1200" height="900">
               <figcaption>Foyer: Akustiklamellen für ruhige Raumakustik</figcaption>
             </figure>
           </div>
@@ -1098,7 +1100,7 @@
       </ul>
     </div>
 
-    <form class="form reveal delay-2" id="leadForm" novalidate>
+    <form class="form reveal delay-2" id="leadForm" data-wpforms-replace="contact" novalidate>
       <div class="form__progress"><span id="formBar"></span></div>
 
       <fieldset class="form__step is-active" data-step="1">
@@ -1109,8 +1111,8 @@
           <label><input type="radio" name="usecase" value="Lichtdecke"><span>Lichtdecke</span></label>
           <label><input type="radio" name="usecase" value="Lichtkonzept"><span>Lichtkonzept</span></label>
           <label><input type="radio" name="usecase" value="Akustiklösungen"><span>Akustik</span></label>
-          <label><input type="radio" name="usecase" value="Reparatur & Folientausch"><span>Reparatur</span></label>
-          <label><input type="radio" name="usecase" value="Objekt & Gewerbe"><span>Objekt und Gewerbe</span></label>
+          <label><input type="radio" name="usecase" value="Reparatur &amp; Folientausch"><span>Reparatur</span></label>
+          <label><input type="radio" name="usecase" value="Objekt &amp; Gewerbe"><span>Objekt und Gewerbe</span></label>
         </div>
         <div class="form__row">
           <div class="form__field">
@@ -1171,7 +1173,7 @@
           <button type="button" class="btn btn--ghost" id="backStep1">← Zurück</button>
           <button type="submit" class="btn btn--primary">Kostenvoranschlag anfragen</button>
         </div>
-        <p class="form__note">Mit dem Absenden stimmst Du der Verarbeitung Deiner Daten zur Bearbeitung der Anfrage zu. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        <p class="form__note">Mit dem Absenden stimmst Du der Verarbeitung Deiner Daten zur Bearbeitung der Anfrage zu. Details in der <a href="datenschutz.html" data-lw-page-ref="tif-datenschutz">Datenschutzerklärung</a>.</p>
       </fieldset>
 
       <div class="form__success" id="formSuccess" hidden>
@@ -1183,6 +1185,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ======= FOOTER ======= -->
 <footer class="footer">
   <div class="container footer__grid">
@@ -1193,12 +1197,12 @@
     </div>
     <div>
       <h3>Leistungen</h3>
-      <a href="spanndecke.html">Spanndecke</a>
+      <a href="spanndecke.html" data-lw-page-ref="tif-spanndecke">Spanndecke</a>
       <a href="#leistungen">Lichtdecke</a>
       <a href="#lichtlinie">Lichtkonzept</a>
       <a href="#leistungen">Akustiklösungen</a>
-      <a href="#leistungen">Reparatur & Folientausch</a>
-      <a href="#b2b">Objekt & Gewerbe</a>
+      <a href="#leistungen">Reparatur &amp; Folientausch</a>
+      <a href="#b2b">Objekt &amp; Gewerbe</a>
     </div>
     <div>
       <h3>Kontakt</h3>
@@ -1212,7 +1216,7 @@
     </div>
   </div>
   <div class="container footer__bottom">
-    <p>© 2026 Trend in Form GmbH · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p>© 2026 Trend in Form GmbH · <a href="impressum.html" data-lw-page-ref="tif-impressum">Impressum</a> · <a href="datenschutz.html" data-lw-page-ref="tif-datenschutz">Datenschutz</a></p>
   </div>
 </footer>
 

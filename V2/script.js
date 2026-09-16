@@ -221,21 +221,23 @@ if (heroVideo) {
 // ===== Navigation: Scroll-Zustand + Mobile-Menü =====
 const nav = document.getElementById('nav');
 const burger = document.getElementById('burger');
+const stickyCta = document.getElementById('stickyCta');
 
-const onScroll = () => {
-  nav.classList.toggle('is-scrolled', window.scrollY > 40);
-  stickyCta.classList.toggle('is-visible', window.scrollY > 500);
-};
-window.addEventListener('scroll', onScroll, { passive: true });
-
-burger.addEventListener('click', () => nav.classList.toggle('is-open'));
-document.querySelectorAll('.nav__links a').forEach(a =>
-  a.addEventListener('click', () => nav.classList.remove('is-open'))
-);
+if (nav) {
+  const onScroll = () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 40);
+    if (stickyCta) stickyCta.classList.toggle('is-visible', window.scrollY > 500);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  if (burger) burger.addEventListener('click', () => nav.classList.toggle('is-open'));
+  document.querySelectorAll('.nav__links a').forEach(a =>
+    a.addEventListener('click', () => nav.classList.remove('is-open'))
+  );
+  onScroll();
+}
 
 // ===== Sticky Mobile CTA =====
-const stickyCta = document.getElementById('stickyCta');
-onScroll();
+// Sichtbarkeit steuert onScroll oben, sobald #stickyCta vorhanden ist.
 
 // ===== Scroll-Reveal =====
 const revealObserver = new IntersectionObserver(entries => {
@@ -377,35 +379,45 @@ document.querySelectorAll('.case[data-usecase]').forEach(card => {
 
 // ===== Zwei-Stufen-Formular =====
 const form = document.getElementById('leadForm');
-const step1 = form.querySelector('[data-step="1"]');
-const step2 = form.querySelector('[data-step="2"]');
-const formBar = document.getElementById('formBar');
+if (form) {
+  const step1 = form.querySelector('[data-step="1"]');
+  const step2 = form.querySelector('[data-step="2"]');
+  const formBar = document.getElementById('formBar');
+  const toStep2 = document.getElementById('toStep2');
+  const backStep1 = document.getElementById('backStep1');
+  const formSuccess = document.getElementById('formSuccess');
 
-document.getElementById('toStep2').addEventListener('click', () => {
-  let valid = true;
-  step1.querySelectorAll('input[required]').forEach(input => {
-    const ok = input.value.trim().length > 1;
-    input.classList.toggle('is-invalid', !ok);
-    if (!ok) valid = false;
+  if (toStep2 && step1 && step2) {
+    toStep2.addEventListener('click', () => {
+      let valid = true;
+      step1.querySelectorAll('input[required]').forEach(input => {
+        const ok = input.value.trim().length > 1;
+        input.classList.toggle('is-invalid', !ok);
+        if (!ok) valid = false;
+      });
+      if (!valid) return;
+      step1.classList.remove('is-active');
+      step2.classList.add('is-active');
+      if (formBar) formBar.style.width = '100%';
+    });
+  }
+
+  if (backStep1 && step1 && step2) {
+    backStep1.addEventListener('click', () => {
+      step2.classList.remove('is-active');
+      step1.classList.add('is-active');
+      if (formBar) formBar.style.width = '50%';
+    });
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (step2) step2.classList.remove('is-active');
+    const progress = form.querySelector('.form__progress');
+    if (progress) progress.style.display = 'none';
+    if (formSuccess) formSuccess.hidden = false;
   });
-  if (!valid) return;
-  step1.classList.remove('is-active');
-  step2.classList.add('is-active');
-  formBar.style.width = '100%';
-});
-
-document.getElementById('backStep1').addEventListener('click', () => {
-  step2.classList.remove('is-active');
-  step1.classList.add('is-active');
-  formBar.style.width = '50%';
-});
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  step2.classList.remove('is-active');
-  form.querySelector('.form__progress').style.display = 'none';
-  document.getElementById('formSuccess').hidden = false;
-});
+}
 
 // ===== Endlos-Slider (Referenzen, Bewertungen, Objekt und Gewerbe) =====
 // Jonas, Miro 14.09.2026: Desktop wie am Handy, wischen, nach dem letzten Bild kommt wieder

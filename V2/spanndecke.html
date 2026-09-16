@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="leadwerk:focus-keyphrase" content="Spanndecke Karlsruhe">
 <title>Spanndecke Karlsruhe &amp; Pforzheim: fertig an einem Tag | Trend in Form</title>
 <meta name="description" content="Spanndecke in Karlsruhe, Pforzheim und Umgebung: neue Decke ohne Abriss, meist an einem Tag montiert, inklusive Licht. Jetzt Kostenvoranschlag anfragen.">
-<link rel="canonical" href="https://trend-in-form.de/spanndecke/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Spanndecke Karlsruhe &amp; Pforzheim: fertig an einem Tag | Trend in Form">
 <meta property="og:description" content="Neue Decke ohne Abriss, meist an einem Tag fertig, inklusive Licht. Kostenvoranschlag und Termin vor Ort in Karlsruhe, Pforzheim und Umgebung.">
-<meta property="og:url" content="https://trend-in-form.de/spanndecke/">
-<meta property="og:image" content="https://trend-in-form.de/assets/og-image.jpg">
+<meta property="og:image" content="assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Trend in Form GmbH">
@@ -72,6 +71,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#content">Zum Inhalt</a>
 
 <!-- Preloader: Formen-Trio aus dem Logo -->
 <div class="preloader" id="preloader" aria-hidden="true">
@@ -90,9 +90,9 @@
 <!-- ======= NAVIGATION ======= -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo">
-      <img src="assets/logo_negativ.png" alt="Trend in Form GmbH | Licht, Spanndecken, Akustik" class="nav__logo--dark" width="2000" height="1300">
-      <img src="assets/logo.png" alt="" aria-hidden="true" class="nav__logo--light" width="2000" height="1500">
+    <a href="index.html" data-lw-page-ref="tif-home" class="nav__logo">
+      <img src="assets/logo_negativ.png" alt="Trend in Form GmbH | Licht, Spanndecken, Akustik" class="nav__logo--dark" data-lw-global="brand.logo_dark" data-lw-type="image" width="2000" height="1300">
+      <img src="assets/logo.png" alt="" aria-hidden="true" class="nav__logo--light" data-lw-global="brand.logo_light" data-lw-type="image" data-lw-decorative="true" width="2000" height="1500">
     </a>
     <nav class="nav__links" id="navLinks">
       <a href="#vorteile">Vorteile</a>
@@ -100,7 +100,7 @@
       <a href="#kosten">Kosten</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#referenzen">Referenzen</a>
-      <a href="index.html">Alle Leistungen</a>
+      <a href="index.html" data-lw-page-ref="tif-home">Alle Leistungen</a>
     </nav>
     <div class="nav__actions">
       <a href="tel:+4972489273050" class="nav__phone" aria-label="Anrufen: 07248 927 30 50">
@@ -108,16 +108,19 @@
         <span>07248 927 30 50</span>
       </a>
       <a href="#anfrage" class="btn btn--primary btn--nav">Kostenvoranschlag anfragen</a>
+      <div class="site-language-switcher" data-lw-language-switcher-slot hidden></div>
       <button class="nav__burger" id="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
+<main id="content">
 <!-- ======= HERO ======= -->
 <section class="hero" id="top">
   <div class="hero__bg">
     <!-- Video wird erst nach dem Seitenaufbau geladen (script.js), am Handy die kleine Fassung. Poster ist das LCP-Bild. -->
     <video muted loop playsinline preload="none" poster="assets/hero-poster.jpg" width="1080" height="1080" aria-label="Imagefilm: Spanndecken-Montage von Trend in Form"
+           data-lw-field="hero.video" data-lw-type="video" data-lw-attribute="data-src" data-lw-label="Hero-Video" data-lw-node="hero-bg-video"
            data-src="assets/hero-video.mp4" data-src-mobile="assets/hero-video-mobile.mp4"></video>
     <div class="hero__overlay"></div>
   </div>
@@ -131,12 +134,12 @@
       <span class="stars" aria-hidden="true">★★★★★</span>
       <span>„Ausgezeichnet" bei Google, basierend auf 40 Bewertungen</span>
     </div>
-    <h1 class="hero__title">
+    <h1 class="hero__title" data-lw-field="hero.title" data-lw-type="richtext">
       <span class="line"><span>Spanndecke in Karlsruhe</span></span>
       <span class="line"><span>und Pforzheim:</span></span>
       <span class="line"><span class="accent">an einem Tag fertig.</span></span>
     </h1>
-    <p class="hero__sub reveal delay-2">Neue Decke ohne Abriss, Staub und Wochenbaustelle. Wir montieren Deine Spanndecke meist an einem Tag, inklusive Licht. Kostenvoranschlag und Termin vor Ort in Karlsruhe, Pforzheim, Ettlingen, Keltern, Straubenhardt, Pfinztal und Umgebung.</p>
+    <p class="hero__sub reveal delay-2" data-lw-field="hero.intro" data-lw-type="textarea">Neue Decke ohne Abriss, Staub und Wochenbaustelle. Wir montieren Deine Spanndecke meist an einem Tag, inklusive Licht. Kostenvoranschlag und Termin vor Ort in Karlsruhe, Pforzheim, Ettlingen, Keltern, Straubenhardt, Pfinztal und Umgebung.</p>
     <div class="hero__cta reveal delay-3">
       <a href="#anfrage" class="btn btn--primary btn--lg">Kostenvoranschlag anfragen</a>
       <a href="#vergleich" class="btn btn--ghost btn--lg">
@@ -354,19 +357,19 @@
                 <figcaption><strong>Designbad in Schwarz</strong><span>Hochglanzfolie, Lichtlinie über der Dusche</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-04.jpg" data-srcset="assets/referenz-spanndecke-bad-04-640.webp 640w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit anthrazitfarbener Hochglanz-Spanndecke und Lichtlinie" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-04.jpg" data-srcset="assets/referenz-spanndecke-bad-04-640.webp 640w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04-960.webp 960w, assets/referenz-spanndecke-bad-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit anthrazitfarbener Hochglanz-Spanndecke und Lichtlinie" width="1200" height="1600">
                 <figcaption><strong>Gäste-WC</strong><span>Hochglanzdecke in Anthrazit, präzise Lichtlinie</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-05.jpg" data-srcset="assets/referenz-spanndecke-bad-05-640.webp 640w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Schmales Bad mit weißer Hochglanz-Spanndecke und durchgehender Lichtlinie" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-05.jpg" data-srcset="assets/referenz-spanndecke-bad-05-640.webp 640w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05-960.webp 960w, assets/referenz-spanndecke-bad-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Schmales Bad mit weißer Hochglanz-Spanndecke und durchgehender Lichtlinie" width="1200" height="1600">
                 <figcaption><strong>Bad mit Walk-in-Dusche</strong><span>Nahtfreie Hochglanzdecke, Lichtlinie über die ganze Länge</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-06.jpg" data-srcset="assets/referenz-spanndecke-bad-06-640.webp 640w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Hochglanz-Spanndecke mit indirekter Lichtlinie in einem Bad mit Jalousien" width="1200" height="800">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-06.jpg" data-srcset="assets/referenz-spanndecke-bad-06-640.webp 640w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06-960.webp 960w, assets/referenz-spanndecke-bad-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Hochglanz-Spanndecke mit indirekter Lichtlinie in einem Bad mit Jalousien" width="1200" height="800">
                 <figcaption><strong>Badsanierung</strong><span>Hochglanzdecke in Weiß, indirekte Lichtlinie</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-bad-07.jpg" data-srcset="assets/referenz-spanndecke-bad-07-640.webp 640w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit weißer Spanndecke, umlaufender Lichtlinie und Fenster" width="1200" height="1600">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-bad-07.jpg" data-srcset="assets/referenz-spanndecke-bad-07-640.webp 640w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07-960.webp 960w, assets/referenz-spanndecke-bad-07.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Gäste-WC mit weißer Spanndecke, umlaufender Lichtlinie und Fenster" width="1200" height="1600">
                 <figcaption><strong>Gäste-WC mit Lichtlinie</strong><span>Weiße Spanndecke, Lichtlinie entlang der Wände</span></figcaption>
               </figure>
             </div>
@@ -394,15 +397,15 @@
                 <figcaption><strong>Küche mit Lichtlinie</strong><span>Hochglanzdecke, Lichtlinie über der Arbeitsfläche</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-kueche-04.jpg" data-srcset="assets/referenz-spanndecke-kueche-04-640.webp 640w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Esszimmer mit Hochglanz-Spanndecke, Lichtlinie und Pendelleuchten über dem Esstisch" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-kueche-04.jpg" data-srcset="assets/referenz-spanndecke-kueche-04-640.webp 640w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04-960.webp 960w, assets/referenz-spanndecke-kueche-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Esszimmer mit Hochglanz-Spanndecke, Lichtlinie und Pendelleuchten über dem Esstisch" width="1200" height="900">
                 <figcaption><strong>Esszimmer</strong><span>Hochglanzdecke, Lichtlinie, Pendelleuchten</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-kueche-05.jpg" data-srcset="assets/referenz-spanndecke-kueche-05-640.webp 640w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Küche mit matter Spanndecke und umlaufender Lichtlinie" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-kueche-05.jpg" data-srcset="assets/referenz-spanndecke-kueche-05-640.webp 640w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05-960.webp 960w, assets/referenz-spanndecke-kueche-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Weiße Küche mit matter Spanndecke und umlaufender Lichtlinie" width="1200" height="900">
                 <figcaption><strong>Küche in Weiß</strong><span>Matte Spanndecke, umlaufende Lichtlinie</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-kueche-06.jpg" data-srcset="assets/referenz-spanndecke-kueche-06-640.webp 640w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Küche unter der Dachschräge mit Spanndecke und Lichtrahmen in Hochglanz" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-kueche-06.jpg" data-srcset="assets/referenz-spanndecke-kueche-06-640.webp 640w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06-960.webp 960w, assets/referenz-spanndecke-kueche-06.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Küche unter der Dachschräge mit Spanndecke und Lichtrahmen in Hochglanz" width="1200" height="900">
                 <figcaption><strong>Küche im Dachgeschoss</strong><span>Spanndecke mit Hochglanzfeld und Lichtlinie</span></figcaption>
               </figure>
             </div>
@@ -454,11 +457,11 @@
                 <figcaption><strong>Wohnzimmer mit Lichtlinien</strong><span>Zwei Lichtlinien über den ganzen Raum</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-wohnzimmer-04.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-04-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnzimmer mit schwarzem Hochglanzfeld in der Spanndecke und indirekter Beleuchtung" width="1200" height="800">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-wohnzimmer-04.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-04-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-04.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnzimmer mit schwarzem Hochglanzfeld in der Spanndecke und indirekter Beleuchtung" width="1200" height="800">
                 <figcaption><strong>Hochglanzfeld in Schwarz</strong><span>Abgesetztes Deckenfeld, indirektes Licht</span></figcaption>
               </figure>
               <figure class="gallery__item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/referenz-spanndecke-wohnzimmer-05.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-05-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnraum im Altbau mit Spanndecke und Lichtlinie über einer Wand in Betonoptik" width="1200" height="900">
+                <img src="assets/lazy-pixel.gif" data-src="assets/referenz-spanndecke-wohnzimmer-05.jpg" data-srcset="assets/referenz-spanndecke-wohnzimmer-05-640.webp 640w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05-960.webp 960w, assets/referenz-spanndecke-wohnzimmer-05.webp 1200w" sizes="(max-width: 720px) 86vw, (max-width: 1080px) 46vw, 380px" alt="Wohnraum im Altbau mit Spanndecke und Lichtlinie über einer Wand in Betonoptik" width="1200" height="900">
                 <figcaption><strong>Altbau mit Lichtlinie</strong><span>Spanndecke, Lichtlinie über der Wand</span></figcaption>
               </figure>
             </div>
@@ -534,7 +537,7 @@
       </ul>
     </div>
 
-    <form class="form reveal delay-2" id="leadForm" novalidate>
+    <form class="form reveal delay-2" id="leadForm" data-wpforms-replace="contact" novalidate>
       <div class="form__progress"><span id="formBar"></span></div>
 
       <fieldset class="form__step is-active" data-step="1">
@@ -544,7 +547,7 @@
           <label><input type="radio" name="usecase" value="Spanndecke" checked><span>Spanndecke</span></label>
           <label><input type="radio" name="usecase" value="Lichtdecke"><span>Lichtdecke</span></label>
           <label><input type="radio" name="usecase" value="Lichtkonzept"><span>Lichtkonzept</span></label>
-          <label><input type="radio" name="usecase" value="Reparatur & Folientausch"><span>Reparatur</span></label>
+          <label><input type="radio" name="usecase" value="Reparatur &amp; Folientausch"><span>Reparatur</span></label>
         </div>
         <div class="form__row">
           <div class="form__field">
@@ -606,7 +609,7 @@
           <button type="button" class="btn btn--ghost" id="backStep1">← Zurück</button>
           <button type="submit" class="btn btn--primary">Kostenvoranschlag anfragen</button>
         </div>
-        <p class="form__note">Mit dem Absenden stimmst Du der Verarbeitung Deiner Daten zur Bearbeitung der Anfrage zu. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        <p class="form__note">Mit dem Absenden stimmst Du der Verarbeitung Deiner Daten zur Bearbeitung der Anfrage zu. Details in der <a href="datenschutz.html" data-lw-page-ref="tif-datenschutz">Datenschutzerklärung</a>.</p>
       </fieldset>
 
       <div class="form__success" id="formSuccess" hidden>
@@ -618,6 +621,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ======= FOOTER ======= -->
 <footer class="footer">
   <div class="container footer__grid">
@@ -628,12 +633,12 @@
     </div>
     <div>
       <h3>Leistungen</h3>
-      <a href="spanndecke.html">Spanndecke</a>
-      <a href="index.html#leistungen">Lichtdecke</a>
-      <a href="index.html#lichtlinie">Lichtkonzept</a>
-      <a href="index.html#leistungen">Akustiklösungen</a>
-      <a href="index.html#leistungen">Reparatur &amp; Folientausch</a>
-      <a href="index.html#b2b">Objekt &amp; Gewerbe</a>
+      <a href="spanndecke.html" data-lw-page-ref="tif-spanndecke">Spanndecke</a>
+      <a href="index.html#leistungen" data-lw-page-ref="tif-home">Lichtdecke</a>
+      <a href="index.html#lichtlinie" data-lw-page-ref="tif-home">Lichtkonzept</a>
+      <a href="index.html#leistungen" data-lw-page-ref="tif-home">Akustiklösungen</a>
+      <a href="index.html#leistungen" data-lw-page-ref="tif-home">Reparatur &amp; Folientausch</a>
+      <a href="index.html#b2b" data-lw-page-ref="tif-home">Objekt &amp; Gewerbe</a>
     </div>
     <div>
       <h3>Kontakt</h3>
@@ -647,7 +652,7 @@
     </div>
   </div>
   <div class="container footer__bottom">
-    <p>© 2026 Trend in Form GmbH · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p>© 2026 Trend in Form GmbH · <a href="impressum.html" data-lw-page-ref="tif-impressum">Impressum</a> · <a href="datenschutz.html" data-lw-page-ref="tif-datenschutz">Datenschutz</a></p>
   </div>
 </footer>
 

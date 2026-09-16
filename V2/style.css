@@ -29,6 +29,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
@@ -51,6 +52,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 
 .accent { color: var(--yellow); }
+.skip-link {
+  position: fixed; left: 12px; top: -80px; z-index: 400;
+  padding: 10px 16px; border-radius: 999px;
+  background: var(--ink); color: #fff; font-weight: 500;
+}
+.skip-link:focus { top: 12px; }
+.site-language-switcher { flex: 0 0 auto; align-self: center; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -857,6 +865,62 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .form__success h3 { font-size: 22px; margin-bottom: 12px; }
 .form__success p { color: var(--text-soft); font-size: 15px; }
 
+.form,
+.leadwerk-wpforms .wpforms-field-container {
+  display: grid;
+  gap: 0;
+}
+.leadwerk-wpforms .wpforms-container,
+.leadwerk-wpforms .wpforms-form {
+  margin: 0;
+  max-width: none;
+}
+.form label,
+.leadwerk-wpforms .wpforms-field-label {
+  display: block; font-size: 13.5px; font-weight: 500; margin-bottom: 7px;
+}
+.form input:not([type="checkbox"]):not([type="radio"]),
+.form select,
+.form textarea,
+.leadwerk-wpforms .wpforms-field input:not([type="checkbox"]):not([type="radio"]),
+.leadwerk-wpforms .wpforms-field select,
+.leadwerk-wpforms .wpforms-field textarea {
+  width: 100%; padding: 13px 16px; font-family: var(--font-body); font-size: 15px;
+  border: 1.5px solid var(--line); border-radius: 12px; background: var(--paper-tint);
+  transition: border-color .2s ease, background .2s ease; color: var(--text);
+}
+.leadwerk-wpforms .wpforms-field-label-inline { font-weight: 500; }
+.form .btn,
+.leadwerk-wpforms .wpforms-submit {
+  font-family: var(--font-head);
+}
+.leadwerk-wpforms .wpforms-submit {
+  width: 100%;
+  margin-top: 8px;
+}
+.leadwerk-wpforms .leadwerk-privacy-link,
+.form__note a { color: var(--sec-deep); text-decoration: underline; }
+.leadwerk-form-fallback {
+  padding: 22px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper-tint); color: var(--text-soft);
+}
+.leadwerk-wpforms {
+  --wpforms-field-border-radius: 12px;
+  --wpforms-field-background-color: var(--paper-tint);
+  --wpforms-field-border-color: var(--line);
+  --wpforms-field-text-color: var(--text);
+  --wpforms-label-color: var(--text);
+  --wpforms-button-background-color: var(--yellow);
+  --wpforms-button-border-color: var(--yellow);
+  --wpforms-button-text-color: var(--ink);
+  --wpforms-button-border-radius: 999px;
+  --wpforms-button-size-height: 52px;
+  --wpforms-button-size-padding-h: 26px;
+  --wpforms-button-size-font-size: 15px;
+  --wpforms-field-size-input-height: 50px;
+  --wpforms-field-size-padding-h: 16px;
+}
+
 /* ---------- Footer ---------- */
 .footer { background: var(--ink); color: var(--text-inverse-soft); padding: 70px 0 30px; }
 .footer__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
@@ -1057,6 +1121,8 @@ body.is-static .preloader { display: none; }
 /* ---------- Rechtsseiten (Impressum, Datenschutz) ---------- */
 .legal-nav { position: sticky; }
 .legal-page .nav__logo img { height: 48px; }
+.legal-page .nav__logo--light { display: block; }
+.legal-page .nav__logo--dark { display: none; }
 .legal {
   padding: 72px 0 96px;
 }
@@ -1253,4 +1319,83 @@ body.is-static .preloader { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .lslider__btn { animation: none !important; }
+}
+
+.utility-page { min-height: 100vh; display: flex; flex-direction: column; }
+.utility-page .utility-main { flex: 1; display: flex; }
+.utility-stage {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  min-height: clamp(560px, 68vh, 780px);
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0 80px;
+  background: var(--paper-tint);
+}
+.utility-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, .7fr);
+  align-items: center;
+  gap: clamp(36px, 7vw, 96px);
+}
+.utility-content { position: relative; z-index: 2; max-width: 720px; }
+.utility-content h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  margin: 14px 0 18px;
+  max-width: 14ch;
+}
+.utility-content .lead { max-width: 58ch; color: var(--text-soft); font-size: 17px; }
+.utility-page .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.utility-page .btn--ghost { color: var(--text); border-color: var(--line); }
+.utility-page .btn--ghost:hover { color: var(--sec); border-color: var(--sec); }
+.utility-art {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: clamp(260px, 34vw, 420px);
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 36px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.utility-mark {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: clamp(160px, 20vw, 240px);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--yellow);
+  font-family: var(--font-head);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+.utility-mark--404 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+.utility-mark--success { font-size: clamp(4rem, 9vw, 7rem); line-height: 1; }
+.utility-ring { position: absolute; border: 1px solid rgba(62, 124, 135, 0.28); border-radius: 50%; }
+.utility-ring--one { width: 78%; aspect-ratio: 1; }
+.utility-ring--two { width: 102%; aspect-ratio: 1; border-style: dashed; }
+.utility-orb { position: absolute; z-index: -1; border-radius: 50%; filter: blur(2px); opacity: .55; }
+.utility-orb--one {
+  width: min(42vw, 560px); aspect-ratio: 1; top: -28%; right: -10%;
+  background: radial-gradient(circle, rgba(247, 217, 84, 0.35), transparent 68%);
+}
+.utility-orb--two {
+  width: min(34vw, 440px); aspect-ratio: 1; bottom: -36%; left: -8%;
+  background: radial-gradient(circle, rgba(62, 124, 135, 0.28), transparent 68%);
+}
+@media (max-width: 820px) {
+  .utility-stage { min-height: 0; padding: 110px 0 64px; }
+  .utility-layout { grid-template-columns: 1fr; gap: 36px; }
+  .utility-art { min-height: 260px; order: -1; }
+}
+@media (max-width: 520px) {
+  .utility-page .actions { display: grid; }
+  .utility-page .actions .btn { width: 100%; }
 }
