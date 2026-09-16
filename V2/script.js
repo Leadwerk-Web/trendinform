@@ -195,10 +195,13 @@ if (heroVideo) {
   heroVideo.addEventListener('play', slowDown);
   const conn = navigator.connection || {};
   const skip = STATIC_MODE || conn.saveData || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desktopSrc = heroVideo.getAttribute('src') || heroVideo.dataset.src || '';
+  const mobileSrc = heroVideo.dataset.srcMobile || '';
+  heroVideo.removeAttribute('src');
   const loadVideo = () => {
-    if (skip || heroVideo.src) return;
-    const mobile = window.innerWidth <= 720 && heroVideo.dataset.srcMobile;
-    heroVideo.src = mobile ? heroVideo.dataset.srcMobile : heroVideo.dataset.src;
+    if (skip || heroVideo.getAttribute('src')) return;
+    const mobile = window.innerWidth <= 720 && mobileSrc;
+    heroVideo.src = mobile ? mobileSrc : desktopSrc;
     heroVideo.load();
     const p = heroVideo.play();
     if (p && p.catch) p.catch(() => {});
