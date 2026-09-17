@@ -1,0 +1,66 @@
+{
+  "version": "7",
+  "site_title": "Trend in Form GmbH",
+  "site_tagline": "Licht, Spanndecken und Akustik aus einer Hand – in Karlsruhe, Pforzheim und Umgebung.",
+  "pages": [
+    {
+      "source_key": "trend-home",
+      "source_file": "index.html",
+      "slug": "home",
+      "title": "Startseite",
+      "is_front": true,
+      "seo": {
+        "focus_keyphrase": "Spanndecken Karlsruhe",
+        "title": "Spanndecken Karlsruhe | Licht und Akustik | Trend in Form GmbH",
+        "meta_description": "Spanndecke mit Licht und Akustik aus einer Hand: Montage meist an einem Tag, ohne Abriss und Staub. Jetzt Termin vor Ort anfragen."
+      }
+    },
+    {
+      "source_key": "trend-danke",
+      "source_file": "danke.html",
+      "slug": "danke",
+      "title": "Vielen Dank",
+      "seo": {
+        "focus_keyphrase": "Vielen Dank für deine Nachricht",
+        "title": "Vielen Dank für deine Nachricht | Trend in Form GmbH",
+        "meta_description": "Vielen Dank für deine Nachricht. Das Team von Trend in Form meldet sich zeitnah bei dir.",
+        "noindex": true
+      }
+    },
+    {
+      "source_key": "trend-legal",
+      "source_file": "legal.html",
+      "slug": "rechtliches",
+      "title": "Rechtliche Informationen",
+      "seo": {
+        "focus_keyphrase": "Rechtliche Informationen Trend in Form",
+        "title": "Rechtliche Informationen | Trend in Form GmbH",
+        "meta_description": "Rechtliche Informationen der Trend in Form GmbH: Impressum und Datenschutzerklärung im Überblick."
+      }
+    },
+    {
+      "source_key": "trend-impressum",
+      "source_file": "impressum.html",
+      "slug": "impressum",
+      "title": "Impressum",
+      "seo": {
+        "focus_keyphrase": "Impressum Trend in Form",
+        "title": "Impressum | Trend in Form GmbH",
+        "meta_description": "Impressum der Trend in Form GmbH mit Anschriften, Geschäftsführung, Register- und Kontaktdaten.",
+        "noindex": true
+      }
+    },
+    {
+      "source_key": "trend-datenschutz",
+      "source_file": "datenschutz.html",
+      "slug": "datenschutz",
+      "title": "Datenschutzerklärung",
+      "seo": {
+        "focus_keyphrase": "Datenschutz Trend in Form",
+        "title": "Datenschutzerklärung | Trend in Form GmbH",
+        "meta_description": "Datenschutzerklärung der Trend in Form GmbH mit Informationen zu Hosting, Kontaktformular, Cookies, Diensten und Betroffenenrechten.",
+        "noindex": true
+      }
+    }
+  ]
+}

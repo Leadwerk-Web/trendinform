@@ -1,0 +1,189 @@
+[
+  {
+    "id": "0",
+    "fields": {
+      "0": {
+        "id": "0",
+        "type": "pagebreak",
+        "position": "top",
+        "indicator": "progress",
+        "indicator_color": "#3E7C87",
+        "progress_text": "Schritt {current_page} von {last_page}",
+        "title": "Dein Projekt",
+        "nav_align": "split"
+      },
+      "1": {
+        "id": "1",
+        "type": "radio",
+        "label": "Worum geht es?",
+        "required": "1",
+        "choices": {
+          "1": {"label": "Bad", "value": "Badezimmer", "default": "1"},
+          "2": {"label": "Wohnen und Essen", "value": "Wohnen und Essen"},
+          "3": {"label": "Flur und Sonstiges", "value": "Flur oder anderer Raum"},
+          "4": {"label": "Reparatur", "value": "Reparatur oder Folientausch"},
+          "5": {"label": "Objekt und Gewerbe", "value": "Objekt oder Gewerbe"}
+        },
+        "show_values": "1",
+        "choice_layout": "inline"
+      },
+      "2": {
+        "id": "2",
+        "type": "text",
+        "label": "Ort oder PLZ",
+        "required": "1",
+        "size": "large",
+        "placeholder": "z. B. 76185 Karlsruhe",
+        "css": "wpforms-one-half wpforms-first"
+      },
+      "3": {
+        "id": "3",
+        "type": "name",
+        "format": "simple",
+        "label": "Name",
+        "required": "1",
+        "size": "large",
+        "placeholder": "Vorname und Nachname",
+        "css": "wpforms-one-half"
+      },
+      "4": {
+        "id": "4",
+        "type": "phone",
+        "format": "international",
+        "label": "Telefon",
+        "required": "1",
+        "size": "large",
+        "placeholder": "z. B. 07248 927 30 50",
+        "css": "wpforms-one-half wpforms-first"
+      },
+      "5": {
+        "id": "5",
+        "type": "email",
+        "label": "E-Mail",
+        "required": "1",
+        "size": "large",
+        "placeholder": "name@beispiel.de",
+        "css": "wpforms-one-half"
+      },
+      "6": {
+        "id": "6",
+        "type": "pagebreak",
+        "title": "Details für Deinen Kostenrahmen",
+        "prev": "",
+        "prev_toggle": "",
+        "next": "Weiter zu den Details →"
+      },
+      "7": {
+        "id": "7",
+        "type": "number",
+        "label": "Raumgröße in m² (circa)",
+        "required": "0",
+        "size": "large",
+        "placeholder": "z. B. 9",
+        "css": "wpforms-one-half wpforms-first"
+      },
+      "8": {
+        "id": "8",
+        "type": "select",
+        "label": "Lichtwunsch",
+        "required": "0",
+        "size": "large",
+        "css": "wpforms-one-half",
+        "choices": {
+          "1": {"label": "Noch offen, bitte beraten", "value": "offen"},
+          "2": {"label": "Spots", "value": "spots"},
+          "3": {"label": "Lichtlinie", "value": "lichtlinie"},
+          "4": {"label": "Spots und Lichtlinie", "value": "kombination"},
+          "5": {"label": "Bestehende Leuchten übernehmen", "value": "bestand"}
+        },
+        "show_values": "1"
+      },
+      "9": {
+        "id": "9",
+        "type": "select",
+        "label": "Lichtfarbe",
+        "required": "0",
+        "size": "large",
+        "css": "wpforms-one-half wpforms-first",
+        "choices": {
+          "1": {"label": "Noch offen", "value": "offen"},
+          "2": {"label": "Warmweiß (3000 K)", "value": "3000k"},
+          "3": {"label": "Neutralweiß (4000 K)", "value": "4000k"}
+        },
+        "show_values": "1"
+      },
+      "10": {
+        "id": "10",
+        "type": "text",
+        "label": "Wunschtermin",
+        "required": "0",
+        "size": "large",
+        "placeholder": "z. B. bis Ende April",
+        "css": "wpforms-one-half"
+      },
+      "11": {
+        "id": "11",
+        "type": "textarea",
+        "label": "Dein Projekt in ein bis zwei Sätzen",
+        "required": "0",
+        "size": "large",
+        "placeholder": "z. B. Badsanierung, Decke aktuell abgehängt, zwei Spots vorhanden …",
+        "limit_count": "2000",
+        "limit_mode": "characters"
+      },
+      "12": {
+        "id": "12",
+        "type": "gdpr-checkbox",
+        "label": "Datenschutz",
+        "required": "1",
+        "choices": {
+          "1": {
+            "label": "Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage gemäß der Datenschutzerklärung zu.",
+            "value": "",
+            "default": ""
+          }
+        }
+      },
+      "13": {
+        "id": "13",
+        "type": "pagebreak",
+        "position": "bottom",
+        "title": "",
+        "prev": "← Zurück",
+        "prev_toggle": "1"
+      }
+    },
+    "field_id": "14",
+    "settings": {
+      "form_title": "Trend in Form Projektanfrage",
+      "form_desc": "Kontakt- und Projektanfrage für Spanndecken, Licht und Akustik",
+      "submit_text": "Kostenvoranschlag anfragen",
+      "submit_text_processing": "Wird gesendet…",
+      "antispam_v3": "1",
+      "notification_enable": "1",
+      "notifications": {
+        "1": {
+          "notification_name": "Trend in Form – neue Projektanfrage",
+          "email": "{admin_email}",
+          "subject": "Neue Website-Anfrage von {field_id=\"3\"}",
+          "sender_name": "Trend in Form Website",
+          "sender_address": "{admin_email}",
+          "replyto": "{field_id=\"5\"}",
+          "message": "{all_fields}"
+        }
+      },
+      "confirmations": {
+        "1": {
+          "name": "Danke-Seite",
+          "type": "redirect",
+          "redirect": "/danke/",
+          "message_scroll": "1"
+        }
+      },
+      "ajax_submit": "1"
+    },
+    "meta": {
+      "template": "blank"
+    }
+  }
+]

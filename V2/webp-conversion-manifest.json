@@ -1,0 +1,438 @@
+{
+  "created_at": "2026-08-12T10:32:45",
+  "root": "/Users/atlas/Documents/Github/trendinform/V2",
+  "total_images": 43,
+  "recovered_after_successful_conversion": true,
+  "images": [
+    {
+      "filename": "akustik-1.jpg",
+      "stem": "akustik-1",
+      "extension": ".jpg",
+      "relative_path": "assets/akustik-1.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/akustik-1.jpg",
+      "target_webp_relative_path": "assets/akustik-1.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/akustik-1.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "bad-1.jpg",
+      "stem": "bad-1",
+      "extension": ".jpg",
+      "relative_path": "assets/bad-1.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-1.jpg",
+      "target_webp_relative_path": "assets/bad-1.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-1.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "bad-2.jpg",
+      "stem": "bad-2",
+      "extension": ".jpg",
+      "relative_path": "assets/bad-2.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-2.jpg",
+      "target_webp_relative_path": "assets/bad-2.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-2.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "bad-3.jpg",
+      "stem": "bad-3",
+      "extension": ".jpg",
+      "relative_path": "assets/bad-3.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-3.jpg",
+      "target_webp_relative_path": "assets/bad-3.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-3.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "bad-4.jpg",
+      "stem": "bad-4",
+      "extension": ".jpg",
+      "relative_path": "assets/bad-4.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-4.jpg",
+      "target_webp_relative_path": "assets/bad-4.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-4.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "bad-dark.jpg",
+      "stem": "bad-dark",
+      "extension": ".jpg",
+      "relative_path": "assets/bad-dark.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-dark.jpg",
+      "target_webp_relative_path": "assets/bad-dark.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/bad-dark.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "hero-poster.jpg",
+      "stem": "hero-poster",
+      "extension": ".jpg",
+      "relative_path": "assets/hero-poster.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/hero-poster.jpg",
+      "target_webp_relative_path": "assets/hero-poster.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/hero-poster.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "hero.jpg",
+      "stem": "hero",
+      "extension": ".jpg",
+      "relative_path": "assets/hero.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/hero.jpg",
+      "target_webp_relative_path": "assets/hero.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/hero.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "logo.png",
+      "stem": "logo",
+      "extension": ".png",
+      "relative_path": "assets/logo.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/logo.png",
+      "target_webp_relative_path": "assets/logo.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/logo.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "logo_negativ.png",
+      "stem": "logo_negativ",
+      "extension": ".png",
+      "relative_path": "assets/logo_negativ.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/logo_negativ.png",
+      "target_webp_relative_path": "assets/logo_negativ.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/logo_negativ.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "objekt-1.jpg",
+      "stem": "objekt-1",
+      "extension": ".jpg",
+      "relative_path": "assets/objekt-1.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/objekt-1.jpg",
+      "target_webp_relative_path": "assets/objekt-1.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/objekt-1.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "objekt-2.jpg",
+      "stem": "objekt-2",
+      "extension": ".jpg",
+      "relative_path": "assets/objekt-2.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/objekt-2.jpg",
+      "target_webp_relative_path": "assets/objekt-2.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/objekt-2.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "objekt-3.jpg",
+      "stem": "objekt-3",
+      "extension": ".jpg",
+      "relative_path": "assets/objekt-3.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/objekt-3.jpg",
+      "target_webp_relative_path": "assets/objekt-3.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/objekt-3.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "der-fliesenbruder.png",
+      "stem": "der-fliesenbruder",
+      "extension": ".png",
+      "relative_path": "assets/partner/der-fliesenbruder.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/der-fliesenbruder.png",
+      "target_webp_relative_path": "assets/partner/der-fliesenbruder.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/der-fliesenbruder.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "dirk-goehner.png",
+      "stem": "dirk-goehner",
+      "extension": ".png",
+      "relative_path": "assets/partner/dirk-goehner.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/dirk-goehner.png",
+      "target_webp_relative_path": "assets/partner/dirk-goehner.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/dirk-goehner.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "fliesenforum.png",
+      "stem": "fliesenforum",
+      "extension": ".png",
+      "relative_path": "assets/partner/fliesenforum.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/fliesenforum.png",
+      "target_webp_relative_path": "assets/partner/fliesenforum.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/fliesenforum.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "fuller.png",
+      "stem": "fuller",
+      "extension": ".png",
+      "relative_path": "assets/partner/fuller.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/fuller.png",
+      "target_webp_relative_path": "assets/partner/fuller.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/fuller.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "raum-und-freude.png",
+      "stem": "raum-und-freude",
+      "extension": ".png",
+      "relative_path": "assets/partner/raum-und-freude.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/raum-und-freude.png",
+      "target_webp_relative_path": "assets/partner/raum-und-freude.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/raum-und-freude.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "ui-smarthome.png",
+      "stem": "ui-smarthome",
+      "extension": ".png",
+      "relative_path": "assets/partner/ui-smarthome.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/ui-smarthome.png",
+      "target_webp_relative_path": "assets/partner/ui-smarthome.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/partner/ui-smarthome.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "adrian-mikoc.jpg",
+      "stem": "adrian-mikoc",
+      "extension": ".jpg",
+      "relative_path": "assets/reviews/adrian-mikoc.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/reviews/adrian-mikoc.jpg",
+      "target_webp_relative_path": "assets/reviews/adrian-mikoc.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/reviews/adrian-mikoc.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "tim-hybl.jpg",
+      "stem": "tim-hybl",
+      "extension": ".jpg",
+      "relative_path": "assets/reviews/tim-hybl.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/reviews/tim-hybl.jpg",
+      "target_webp_relative_path": "assets/reviews/tim-hybl.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/reviews/tim-hybl.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "vergleich-bad-nachher.jpg",
+      "stem": "vergleich-bad-nachher",
+      "extension": ".jpg",
+      "relative_path": "assets/vergleich-bad-nachher.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-bad-nachher.jpg",
+      "target_webp_relative_path": "assets/vergleich-bad-nachher.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-bad-nachher.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "vergleich-bad-vorher.jpg",
+      "stem": "vergleich-bad-vorher",
+      "extension": ".jpg",
+      "relative_path": "assets/vergleich-bad-vorher.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-bad-vorher.jpg",
+      "target_webp_relative_path": "assets/vergleich-bad-vorher.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-bad-vorher.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "vergleich-marmor-nachher.jpg",
+      "stem": "vergleich-marmor-nachher",
+      "extension": ".jpg",
+      "relative_path": "assets/vergleich-marmor-nachher.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-marmor-nachher.jpg",
+      "target_webp_relative_path": "assets/vergleich-marmor-nachher.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-marmor-nachher.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "vergleich-marmor-vorher.jpg",
+      "stem": "vergleich-marmor-vorher",
+      "extension": ".jpg",
+      "relative_path": "assets/vergleich-marmor-vorher.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-marmor-vorher.jpg",
+      "target_webp_relative_path": "assets/vergleich-marmor-vorher.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/vergleich-marmor-vorher.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "wohnen-1.jpg",
+      "stem": "wohnen-1",
+      "extension": ".jpg",
+      "relative_path": "assets/wohnen-1.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/wohnen-1.jpg",
+      "target_webp_relative_path": "assets/wohnen-1.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/assets/wohnen-1.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "logo-transparent.png",
+      "stem": "logo-transparent",
+      "extension": ".png",
+      "relative_path": "inspiration/logo-transparent.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/logo-transparent.png",
+      "target_webp_relative_path": "inspiration/logo-transparent.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/logo-transparent.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "ChatGPT Image Jul 14, 2026, 11_00_37 AM-c72e1f57.png",
+      "stem": "ChatGPT Image Jul 14, 2026, 11_00_37 AM-c72e1f57",
+      "extension": ".png",
+      "relative_path": "inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM-c72e1f57.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM-c72e1f57.png",
+      "target_webp_relative_path": "inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM-c72e1f57.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM-c72e1f57.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "ChatGPT Image Jul 14, 2026, 11_00_37 AM.png",
+      "stem": "ChatGPT Image Jul 14, 2026, 11_00_37 AM",
+      "extension": ".png",
+      "relative_path": "inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM.png",
+      "target_webp_relative_path": "inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/ChatGPT Image Jul 14, 2026, 11_00_37 AM.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "OEGR2922.JPG",
+      "stem": "OEGR2922",
+      "extension": ".JPG",
+      "relative_path": "inspiration/uploads/OEGR2922.JPG",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/OEGR2922.JPG",
+      "target_webp_relative_path": "inspiration/uploads/OEGR2922.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/OEGR2922.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "pasted-1783970902336-0.png",
+      "stem": "pasted-1783970902336-0",
+      "extension": ".png",
+      "relative_path": "inspiration/uploads/pasted-1783970902336-0.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1783970902336-0.png",
+      "target_webp_relative_path": "inspiration/uploads/pasted-1783970902336-0.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1783970902336-0.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "pasted-1783971385168-0.png",
+      "stem": "pasted-1783971385168-0",
+      "extension": ".png",
+      "relative_path": "inspiration/uploads/pasted-1783971385168-0.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1783971385168-0.png",
+      "target_webp_relative_path": "inspiration/uploads/pasted-1783971385168-0.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1783971385168-0.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "pasted-1784016066317-0.png",
+      "stem": "pasted-1784016066317-0",
+      "extension": ".png",
+      "relative_path": "inspiration/uploads/pasted-1784016066317-0.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1784016066317-0.png",
+      "target_webp_relative_path": "inspiration/uploads/pasted-1784016066317-0.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1784016066317-0.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "pasted-1784018008039-0.png",
+      "stem": "pasted-1784018008039-0",
+      "extension": ".png",
+      "relative_path": "inspiration/uploads/pasted-1784018008039-0.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1784018008039-0.png",
+      "target_webp_relative_path": "inspiration/uploads/pasted-1784018008039-0.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/uploads/pasted-1784018008039-0.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "vergleich-ettlingen-nachher.jpg",
+      "stem": "vergleich-ettlingen-nachher",
+      "extension": ".jpg",
+      "relative_path": "inspiration/vergleich-ettlingen-nachher.jpg",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/vergleich-ettlingen-nachher.jpg",
+      "target_webp_relative_path": "inspiration/vergleich-ettlingen-nachher.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/vergleich-ettlingen-nachher.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "vergleich-ettlingen-vorher.png",
+      "stem": "vergleich-ettlingen-vorher",
+      "extension": ".png",
+      "relative_path": "inspiration/vergleich-ettlingen-vorher.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/vergleich-ettlingen-vorher.png",
+      "target_webp_relative_path": "inspiration/vergleich-ettlingen-vorher.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/inspiration/vergleich-ettlingen-vorher.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "desktop.png",
+      "stem": "desktop",
+      "extension": ".png",
+      "relative_path": "preview/desktop.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/desktop.png",
+      "target_webp_relative_path": "preview/desktop.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/desktop.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "hero-mobil.png",
+      "stem": "hero-mobil",
+      "extension": ".png",
+      "relative_path": "preview/hero-mobil.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/hero-mobil.png",
+      "target_webp_relative_path": "preview/hero-mobil.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/hero-mobil.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "hero-neu.png",
+      "stem": "hero-neu",
+      "extension": ".png",
+      "relative_path": "preview/hero-neu.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/hero-neu.png",
+      "target_webp_relative_path": "preview/hero-neu.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/hero-neu.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "hero.png",
+      "stem": "hero",
+      "extension": ".png",
+      "relative_path": "preview/hero.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/hero.png",
+      "target_webp_relative_path": "preview/hero.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/hero.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "mobil.png",
+      "stem": "mobil",
+      "extension": ".png",
+      "relative_path": "preview/mobil.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/mobil.png",
+      "target_webp_relative_path": "preview/mobil.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/mobil.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "sektion-faq.png",
+      "stem": "sektion-faq",
+      "extension": ".png",
+      "relative_path": "preview/sektion-faq.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/sektion-faq.png",
+      "target_webp_relative_path": "preview/sektion-faq.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/sektion-faq.webp",
+      "size_bytes": null
+    },
+    {
+      "filename": "sektion-vergleich.png",
+      "stem": "sektion-vergleich",
+      "extension": ".png",
+      "relative_path": "preview/sektion-vergleich.png",
+      "absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/sektion-vergleich.png",
+      "target_webp_relative_path": "preview/sektion-vergleich.webp",
+      "target_webp_absolute_path": "/Users/atlas/Documents/Github/trendinform/V2/preview/sektion-vergleich.webp",
+      "size_bytes": null
+    }
+  ]
+}

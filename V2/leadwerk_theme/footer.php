@@ -1,0 +1,24 @@
+<?php
+/** Theme footer. @package Leadwerk_Theme */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+$company     = (string) leadwerk_theme_option( 'company_name', 'Trend in Form GmbH' );
+$tagline     = (string) leadwerk_theme_option( 'company_tagline', 'Licht | Spanndecken | Akustik' );
+$address     = (string) leadwerk_theme_option( 'company_address', "Hardtstraße 70\n76185 Karlsruhe" );
+$phone       = (string) leadwerk_theme_option( 'company_phone', '07248 927 30 50' );
+$phone_url   = (string) leadwerk_theme_option( 'company_phone_link', 'tel:+4972489273050' );
+$email       = (string) leadwerk_theme_option( 'company_email', 'mk@trend-in-form.de' );
+$whatsapp    = (string) leadwerk_theme_option( 'whatsapp_url', 'https://wa.me/4972489273050' );
+?>
+<footer class="footer">
+	<div class="container footer__grid">
+		<div class="footer__brand"><img src="<?php echo esc_url( leadwerk_theme_logo_light() ); ?>" alt="<?php echo esc_attr( $company ); ?>" class="footer__logo"><p><?php echo esc_html( $company ); ?><br><?php echo esc_html( $tagline ); ?></p><div class="shape-trio" aria-hidden="true"></div></div>
+		<div><h4><?php echo esc_html( (string) leadwerk_theme_option( 'footer_services_title', 'Leistungen' ) ); ?></h4><a href="<?php echo esc_url( leadwerk_theme_home_anchor( 'leistungen' ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_spanndecke_label', 'Spanndecke' ) ); ?></a><a href="<?php echo esc_url( leadwerk_theme_home_anchor( 'lichtlinie' ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_licht_label', 'Lichtkonzept' ) ); ?></a><a href="<?php echo esc_url( leadwerk_theme_home_anchor( 'leistungen' ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_akustik_label', 'Akustiklösungen' ) ); ?></a><a href="<?php echo esc_url( leadwerk_theme_home_anchor( 'leistungen' ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_repair_label', 'Reparatur & Folientausch' ) ); ?></a><a href="<?php echo esc_url( leadwerk_theme_home_anchor( 'b2b' ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_b2b_label', 'Objekt & Gewerbe' ) ); ?></a></div>
+		<div><h4><?php echo esc_html( (string) leadwerk_theme_option( 'footer_contact_title', 'Kontakt' ) ); ?></h4><a href="<?php echo esc_url( $phone_url ); ?>"><?php echo esc_html( $phone ); ?></a><a href="mailto:<?php echo esc_attr( antispambot( $email ) ); ?>"><?php echo esc_html( antispambot( $email ) ); ?></a><p><?php echo nl2br( esc_html( $address ) ); ?></p></div>
+		<div><h4><?php echo esc_html( (string) leadwerk_theme_option( 'footer_region_title', 'Region' ) ); ?></h4><p><?php echo esc_html( (string) leadwerk_theme_option( 'footer_region_text', 'Karlsruhe · Pforzheim · Ettlingen · Keltern · Straubenhardt · Pfinztal und Umgebung' ) ); ?></p><a href="<?php echo esc_url( leadwerk_theme_page_url( 'trend-legal', home_url( '/rechtliches/' ) ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_legal_label', 'Rechtliches' ) ); ?></a></div>
+	</div>
+	<div class="container footer__bottom"><p>&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> <?php echo esc_html( $company ); ?> · <a href="<?php echo esc_url( leadwerk_theme_page_url( 'trend-impressum', home_url( '/impressum/' ) ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_imprint_label', 'Impressum' ) ); ?></a> · <a href="<?php echo esc_url( leadwerk_theme_page_url( 'trend-datenschutz', home_url( '/datenschutz/' ) ) ); ?>"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_privacy_label', 'Datenschutz' ) ); ?></a></p><p class="footer__badges"><?php echo esc_html( (string) leadwerk_theme_option( 'footer_badges', 'Montage nach DIN 18168 · Brandschutz B-s2, d0 · phthalatfrei und RoHS konform' ) ); ?></p></div>
+</footer>
+<div class="sticky-cta" id="stickyCta"><a href="<?php echo esc_url( $phone_url ); ?>" class="sticky-cta__call"><?php echo esc_html( (string) leadwerk_theme_option( 'sticky_call_label', 'Anrufen' ) ); ?></a><a href="<?php echo esc_url( leadwerk_theme_home_anchor( 'kontakt' ) ); ?>" class="sticky-cta__form"><?php echo esc_html( (string) leadwerk_theme_option( 'nav_cta_label', 'Termin vor Ort anfragen' ) ); ?></a></div>
+<a href="<?php echo esc_url( $whatsapp ); ?>" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-1.8-.9-3-1.7-4.2-3.8-.2-.3 0-.5.1-.6.2-.2.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3M12 21.8c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.6.9 1-3.5-.2-.4A9.7 9.7 0 0 1 2.6 12 9.4 9.4 0 1 1 12 21.8Z"/></svg></a>
+<?php wp_footer(); ?>
+</body></html>
