@@ -344,6 +344,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; margin-top: auto; padding-top: 8px;
 }
+.stats__foot:has(> :only-child) { justify-content: flex-start; }
 .stats__pill {
   display: inline-flex; align-items: center;
   padding: 8px 14px; border-radius: 999px;
@@ -360,7 +361,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .stats__go svg { width: 16px; height: 16px; }
 .stats__go:hover { transform: scale(1.06); background: var(--yellow-deep); }
 .stats__badge {
-  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 8px;
   padding: 9px 14px; border-radius: 999px;
   background: var(--ink); color: var(--text-inverse);
   font-family: var(--font-head); font-size: 12.5px; font-weight: 500;
@@ -374,23 +375,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 .stats__icon svg { width: 18px; height: 18px; }
 .stats__marks {
-  display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 6px;
-}
-.stats__marks span:nth-child(1) {
-  width: 18px; height: 18px; border-radius: 50%;
-  border: 1.5px solid rgba(244,244,242,0.35);
-}
-.stats__marks span:nth-child(2) {
-  width: 0; height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 12px solid var(--yellow);
-  transform: rotate(14deg);
-}
-.stats__marks span:nth-child(3) {
-  width: 16px; height: 16px;
-  border: 1.5px solid rgba(244,244,242,0.35);
-  border-radius: 2px;
+  display: block; width: 64px; height: 17px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 14'%3E%3Ccircle cx='7' cy='7' r='5' fill='none' stroke='%23F4F4F2' stroke-width='2.5'/%3E%3Cpath d='M26 1.23 L31 9.89 L21 9.89 Z' fill='%23F7D954' stroke='%23F7D954' stroke-width='2.5' stroke-linejoin='round' transform='rotate(72 26 7)'/%3E%3Crect x='39.4' y='2' width='10' height='10' fill='none' stroke='%23F4F4F2' stroke-width='2.5'/%3E%3C/svg%3E") no-repeat left center / contain;
+  opacity: .8;
 }
 
 /* ---------- Feature (Lichtlinie) ---------- */
@@ -780,12 +767,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .b2b__slide { position: relative; margin: 0; flex: 0 0 100%; height: 100%; scroll-snap-align: start; }
 .b2b__slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .b2b__slide figcaption {
-  position: absolute; left: 18px; top: 18px; right: 18px; z-index: 2;
-  background: rgba(14,15,17,0.78); backdrop-filter: blur(8px);
-  color: var(--text-inverse-soft); font-size: 13px;
-  padding: 10px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12);
-  width: fit-content; max-width: calc(100% - 36px);
+  position: absolute; inset: auto 0 0 0; z-index: 2;
+  padding: 56px 24px 44px;
+  background: linear-gradient(180deg, transparent, rgba(10,11,13,0.88));
+  color: var(--text-inverse); font-size: 14.5px; line-height: 1.45;
 }
+.b2b__slide--top img { object-position: 50% 0%; }
+.gallery__item--top img { object-position: 50% 0%; }
 /* ---------- Kontakt / Formular ---------- */
 .contact__grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 70px; align-items: start; }
 .contact__info h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 400; margin: 14px 0 16px; }
@@ -799,7 +787,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .contact__photo {
   position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
   width: 132px; height: 132px;
-  object-fit: cover; object-position: 64% 18%;
+  object-fit: cover; object-position: 50% 50%;
   border-radius: 50%; display: block;
   background:
     radial-gradient(ellipse 90% 45% at 28% 38%, rgba(120,124,132,0.45) 0%, transparent 58%),
@@ -1427,14 +1415,6 @@ body.is-static .preloader { display: none; }
 .lslider--b2b .lslider__dots { position: absolute; left: 0; right: 0; bottom: 16px; margin: 0; z-index: 2; }
 .lslider--b2b .lslider__dots span { background: rgba(255,255,255,0.35); }
 .lslider--b2b .lslider__dots span.is-active { background: var(--yellow); }
-
-/* Partner ohne Logodatei: Wortmarke, bis das Logo geliefert ist */
-.partners__wordmark {
-  display: flex; align-items: center; justify-content: center; height: 104px;
-  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
-  font-family: var(--font-head); font-weight: 500; font-size: 17px; letter-spacing: 0.02em; color: var(--text-soft);
-}
-.partners__wordmark em { font-style: normal; font-weight: 300; margin-left: 5px; }
 
 /* Vorteile (Leistungsseite): hell, gross, mit Kennzahlen (Jonas, 14.09.2026) */
 .vorteile__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
