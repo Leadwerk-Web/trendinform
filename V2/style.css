@@ -1545,3 +1545,54 @@ body.is-static .preloader { display: none; }
   .utility-page .actions { display: grid; }
   .utility-page .actions .btn { width: 100%; }
 }
+
+/* ===== Hero-Slider (startseite-v2, Weekly 23.09.2026) ===== */
+.hero__slides { position: absolute; inset: 0; }
+.hero__slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; }
+.hero__slide.is-active { opacity: 1; }
+.hero__slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 6.5s ease-out; }
+.hero__slide.is-active img { transform: scale(1); }
+.hero__dots {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 3;
+  display: flex; gap: 2px; align-items: center;
+}
+/* Tippfläche 28 px hoch, sichtbar ist der Punkt im ::before */
+.hero__dot {
+  position: relative; width: 28px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer;
+  transition: width .35s ease;
+}
+.hero__dot::before {
+  content: ""; position: absolute; left: 9px; right: 9px; top: 9px; height: 10px; border-radius: 5px;
+  background: rgba(255,255,255,0.45); transition: background-color .35s ease;
+}
+.hero__dot:hover::before { background: rgba(255,255,255,0.8); }
+.hero__dot.is-active { width: 52px; }
+.hero__dot.is-active::before { background: var(--yellow); }
+.hero__dot:focus-visible { outline: 2px solid var(--sec-soft); outline-offset: -2px; border-radius: 14px; }
+@media (max-width: 720px) { .hero__dots { bottom: 14px; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide, .hero__slide img, .hero__dot { transition: none; }
+  .hero__slide img { transform: none; }
+}
+
+/* Film im Ablauf (vorher Hero-Video) */
+.ablauf-film {
+  display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center;
+  margin-top: 56px; padding: 28px; border-radius: var(--radius);
+  background: var(--ink); color: var(--text-inverse);
+}
+.ablauf-film__text h3 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 400; margin: 10px 0 12px; }
+.ablauf-film__text p { color: var(--text-inverse-soft); max-width: 32em; }
+.ablauf-film__video { position: relative; aspect-ratio: 1; max-width: 460px; width: 100%; justify-self: center; border-radius: 14px; overflow: hidden; background: #000; }
+.ablauf-film__video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ablauf-film__play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 76px; height: 76px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--yellow); color: var(--ink); display: grid; place-items: center;
+  box-shadow: 0 16px 34px -12px rgba(0,0,0,.6); transition: transform .25s ease;
+}
+.ablauf-film__play:hover { transform: translate(-50%, -50%) scale(1.07); }
+.ablauf-film.is-playing .ablauf-film__play { display: none; }
+@media (min-width: 900px) {
+  .ablauf-film { grid-template-columns: 1.1fr 1fr; padding: 44px 48px; gap: 48px; }
+}

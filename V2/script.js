@@ -561,3 +561,41 @@ if (form) {
     });
   });
 })();
+
+// ===== Hero-Slider (startseite-v2, Weekly 23.09.2026) =====
+// Wechsel alle 5 Sekunden, Punkte zum Anklicken. Pausiert, wenn der Tab im Hintergrund ist.
+const heroSlides = document.querySelector('.hero__slides');
+if (heroSlides) {
+  const slides = [...heroSlides.querySelectorAll('.hero__slide')];
+  const dots = [...document.querySelectorAll('.hero__dot')];
+  const intervall = parseInt(heroSlides.dataset.intervall, 10) || 5000;
+  let aktiv = 0, timer = null;
+  const zeige = (i) => {
+    aktiv = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle('is-active', k === aktiv));
+    dots.forEach((d, k) => { d.classList.toggle('is-active', k === aktiv); d.toggleAttribute('aria-current', k === aktiv); });
+  };
+  const start = () => { clearInterval(timer); if (!document.body.classList.contains('is-static')) timer = setInterval(() => zeige(aktiv + 1), intervall); };
+  dots.forEach((d, k) => d.addEventListener('click', () => { zeige(k); start(); }));
+  document.addEventListener('visibilitychange', () => { if (document.hidden) clearInterval(timer); else start(); });
+  // Folgebilder erst nach dem Seitenaufbau laden, damit das erste Bild schnell steht
+  window.addEventListener('load', () => slides.forEach(s => { const img = s.querySelector('img'); if (img) img.loading = 'eager'; }));
+  start();
+}
+
+// ===== Film im Ablauf: lädt erst auf Klick =====
+const ablaufFilm = document.querySelector('.ablauf-film');
+if (ablaufFilm) {
+  const v = ablaufFilm.querySelector('video');
+  const knopf = ablaufFilm.querySelector('.ablauf-film__play');
+  const abspielen = () => {
+    if (!v.getAttribute('src')) {
+      const mobil = window.matchMedia('(max-width: 720px)').matches;
+      v.src = mobil && v.dataset.srcMobile ? v.dataset.srcMobile : v.dataset.src;
+    }
+    ablaufFilm.classList.add('is-playing');
+    v.play().catch(() => {});
+  };
+  knopf.addEventListener('click', abspielen);
+  v.addEventListener('play', () => ablaufFilm.classList.add('is-playing'));
+}
