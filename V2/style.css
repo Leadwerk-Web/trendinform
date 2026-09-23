@@ -1596,3 +1596,14 @@ body.is-static .preloader { display: none; }
 @media (min-width: 900px) {
   .ablauf-film { grid-template-columns: 1.1fr 1fr; padding: 44px 48px; gap: 48px; }
 }
+
+/* Slider-Version: hellere Abdeckung, damit die Projekte sichtbar bleiben */
+.hero--slider .hero__overlay {
+  background: linear-gradient(100deg, rgba(10,11,13,0.8) 0%, rgba(10,11,13,0.5) 44%, rgba(10,11,13,0.1) 100%),
+              linear-gradient(0deg, rgba(10,11,13,0.7) 0%, rgba(10,11,13,0) 30%);
+}
+@media (max-width: 900px) {
+  .hero--slider .hero__overlay {
+    background: linear-gradient(180deg, rgba(10,11,13,0.45) 0%, rgba(10,11,13,0.55) 45%, rgba(10,11,13,0.78) 100%);
+  }
+}
